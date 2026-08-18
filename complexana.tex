@@ -1,0 +1,136 @@
+\section{Complex Analysis}
+
+Here, we don't include proofs.
+
+\subsection{Basics of Holomorphic Functions}
+
+\begin{theorem}
+    Let $f \colon \Omega \rightarrow \C$, where $\Omega \subseteq \C$ is open.
+    The following statements are equivalent:
+    \begin{itemize}
+        \item $f$ is holomorphic at $a \in \Omega$.
+        \item $f$ has a convergent power series $\sum_{n \geq 0} c_n(z - a)^n$ in an open 
+            disc centered at $a \in \Omega$.
+    \end{itemize}
+\end{theorem}
+
+\begin{df}
+    A complex-valued function is entire if it is holomorphic over $\C$.
+\end{df}
+
+\begin{df}
+    Consider $f(z) = u + iv$ be a complex-valued function. Writing $z = x + iy$, the 
+    \emph{Cauchy-Riemann equations} refer to the set of differential equations
+    \[
+    \pfrac{u}{x} = \pfrac{v}{y}, \qquad \pfrac{u}{y} = -\pfrac{v}{x}.
+    \]
+\end{df}
+
+\begin{theorem}
+    Consider $f = u + iv \colon \Omega \rightarrow \C$, defomed on an open set $\Omega \subseteq \C$.
+    If $u$ and $v$ are continuously differentiable and satisfy the Cauchy-Riemann equations on $\Omega$,
+    then $f$ is holomorphic on $\Omega$ and $f'(z) = \frac{\partial f(z)}{\partial z}$.
+\end{theorem}
+
+\begin{example}
+    $f(z) = \bar{z}$ is not holomorphic on $\C$. $\bar{z} = x - iy$, 
+    so $u_x' = 1 \neq -1 = v_y'$.
+\end{example}
+
+\begin{exercise}
+Suppose that $f(x + iy) = u(x, y) + iv(x, y)$. If $u(x, y) = x^2 - y^2$ and $v(1,1) = 2$. Find $v(4,1)$.
+\end{exercise}
+\begin{solution}
+The key is the FTC and the Cuachy-Riemann equations, because $f$ is clearly holomorphic.
+\[
+v(4,1) - v(1,1) = \int_1^4 v_x'(x,1) dx = \int_1^4 - u_y'(x,1) dy = \int_1^4 2dy = 6.
+\]
+Therefore, $v(4,1) = 8$. Note the use of the Cauchy Riemann equations.
+\end{solution}
+
+\subsection{Cauchy's Integral Formula}
+
+\begin{theorem}[Cauchy]
+    Let $f$ be holomorphic in an open set $\Omega$, then  $f$ has infinitely many 
+    complex derivatives in $\Omega$. Moreover, for simple, closed, piecewise-smooth curve 
+    $\gamma \subset \Omega$ and any $z$ lying inside $\gamma$ we have
+    \[
+    \frac{d^nf(z)}{dz^n} = \frac{n!}{2 \pi i} \oint_{\gamma} \frac{f(\eta)}{(\eta - z)^{n + 1}} d\eta.
+    \]
+\end{theorem}
+
+\begin{exercise}
+    Evaluate the following integral, for $\gamma = \{ z \colon |z| = 2\}$:
+    \[
+    \frac{1}{2 \pi i} \oint_{\gamma} \frac{e^z}{(z + i)(z - i)} dz
+    \]
+\end{exercise}
+\begin{solution}
+    We have as follows:
+    \[
+    \frac{1}{2 \pi i} \oint_{\gamma} \frac{e^z}{(z + i)(z - i)} dz = \frac{1}{2 \pi i} \frac{1}{2i} \oint_{\{ z \colon |z| = 2\}} \left( \frac{e^z}{z + i} - \frac{e^z}{z - i} \right) dz = \frac{1}{2i} (e^i - e^{-i}) = \sin 1.
+    \]
+\end{solution}
+
+
+\begin{theorem}[Morera]
+    Suppose $f$ is a continuous function in the open disc $D$ such that 
+    for any triangle $T$ contained in $D$
+    \[
+    \int_T f(z) dz = 0,
+    \]
+    then $f$ is holomorphic.
+\end{theorem}
+
+
+\begin{corollary}[Liouville]
+    A bounded entire function is constant.
+\end{corollary}
+
+\subsection{Residue Theory}
+
+
+\begin{df}
+    Let $f(z) = \sum \limits_{-\infty}^{\infty} a_n(z - z_0)^n$, for $0 < |z - z_0| < R$
+    be the Laurent series for $f$ at $z_0$. The \emph{residue} of $f$ at $z_0$ is $\Res [f, z_0] = a_{-1}$.
+\end{df}
+\iffalse
+\begin{theorem}
+    Let $\gamma \subset \{z \colon 0 < |z - z_0| < R \}$ be a simple, closed, 
+    piecewise-smooth curve that contains $z_0$. Then,
+    \[
+    \Res [f, z_0] = \frac{1}{2 \pi i} \oint_{\gamma} f(z) dz.
+    \]
+\end{theorem}
+\fi
+\begin{theorem}
+    Let $f$ be holomorphic function inside and on a simple, closed, 
+    piecewise-smooth curve $\gamma$ except at the singularities $z_1, \dots, z_n$ in its interior. 
+    Then,
+    \[
+    \oint_{\gamma} f(z) dz = 2 \pi i \sum \limits_{j = 1}^n \Res [f, z_j]
+    \]
+\end{theorem}
+
+\begin{remark}
+    Note that we can find the residue of $f$ at a pole $z_0$ of order $m$ as follows:
+    \[
+    \Res [f, z_0] = \lim \limits_{z \rightarrow z_0} \frac{1}{(m - 1)!} \frac{d^{m - 1}}{dz^{m - 1}} ((z - z_0)^{m}f(z)).
+    \]
+\end{remark}
+
+\begin{exercise}
+    Evaluate $\oint_{\gamma} \frac{1}{z^5 - z^3} dz$, where 
+    $\gamma = \{ z \colon |z| = \frac{1}{2} \}$.
+\end{exercise}
+\begin{solution}
+    Let $f(z) = \frac{1}{z^5 - z^3}$. The only relevant singularity in $\gamma$ is $z = 0$. 
+    Thus, the integral is equal to $\Res[f,0]$, which is a pole of order $3$:
+    \begin{align*}
+    \lim_{z\rightarrow0} \frac{1}{2!}\frac{d^2}{dz^2} \left(z^3 \cdot f(z)\right)
+    &= \frac{1}{2} \lim_{z \rightarrow 0} \left(\frac{-2z}{(z^2-1)^2}\right)' \\
+    &= \frac{1}{2} \lim_{z \rightarrow 0} \frac{-2(z^2 - 1)^2 +4z(z^2 - 1)\cdot 2z}{(z^2-1)^4} \\\
+    &= -1
+    \end{align*}
+    Thus, the integral evaluates to $-2\pi i$.
+\end{solution}

@@ -1,0 +1,131 @@
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{mathrsfs}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+\usepackage{textcomp}
+\usepackage{enumerate}
+\usepackage[textsize=scriptsize,shadow]{todonotes}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{stmaryrd}
+\usepackage{wasysym}
+\usepackage{multirow}
+\usepackage{prerex}
+\usepackage{mathdots}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{lmodern}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{upquote}
+\usepackage{listings}
+\usepackage{appendix}
+\usepackage{enumitem}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{microtype}
+\usepackage{tikz-cd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+%Theorems
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{obs}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{df}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{properties}[theorem]{Properties}
+\newtheorem{nt}[theorem]{Notation}
+\newtheorem{remark}[theorem]{Remark}
+\newenvironment{solution}{\textit{Solution:}}{\hfill$\square$}
+
+
+%Tools
+\newcommand{\ord}{\ensuremath{\mathrm{ord}}}
+\newcommand{\im}{\ensuremath{\mathrm{im}}}
+\newcommand{\lcm}{\text{lcm}}
+\newcommand{\rank}{\ensuremath{\mathrm{Rank}}}
+\renewcommand{\char}{\ensuremath{\mathrm{char}}}
+\newcommand{\IM}{\text{Im }}
+\newcommand{\RE}{\text{Re }}
+\newcommand{\sep}{\text{sep}}
+\newcommand{\diag}{\text{diag}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\frako}{\mathfrak{o}}
+\newcommand{\frakp}{\mathfrak{p}}
+\newcommand{\frakk}{\mathfrak{k}}
+\newcommand{\frakf}{\mathfrak{f}}
+\newcommand{\frakm}{\mathfrak{m}}
+\newcommand{\fraka}{\mathfrak{a}}
+\newcommand{\frakc}{\mathfrak{c}}
+\newcommand{\tr}{\text{Tr}}
+\newcommand{\calO}{\mathcal{O}}
+\newcommand{\calM}{\mathcal{M}}
+\newcommand{\calA}{\mathcal{A}}
+\newcommand{\calP}{\mathcal{P}}
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calD}{\mathcal{D}}
+\newcommand{\frakB}{\mathfrak{B}}
+\newcommand{\frakQ}{\mathfrak{Q}}
+\newcommand{\frakM}{\mathfrak{M}}
+\newcommand{\frakb}{\mathfrak{b}}
+\newcommand{\fraku}{\mathfrak{u}}
+\newcommand{\frakO}{\mathfrak{O}}
+\newcommand{\frakq}{\mathfrak{q}}
+\newcommand{\boldN}{\mathbf{N}}
+\newcommand{\Frac}{\ensuremath{\mathrm{Frac}}}
+\newcommand{\SL}{\ensuremath{\mathrm{SL}}}
+\newcommand{\Frob}{\ensuremath{\mathrm{Frob}}}
+\newcommand{\Fl}{\mathbb{F}_{\ell}}
+\newcommand{\Flbar}{\mathbb{F}_{\bar{\ell}}}
+\newcommand{\tildeM}{\tilde{M}}
+\newcommand{\id}{\ensuremath{\mathrm{id}}}
+\newcommand{\Gal}{\ensuremath{\mathrm{Gal}}}
+\newcommand{\GL}{\ensuremath{\mathrm{GL}}}
+\newcommand{\Hom}{\ensuremath{\mathrm{Hom}}}
+\newcommand{\Aut}{\ensuremath{\mathrm{Aut}}}
+\newcommand{\End}{\ensuremath{\mathrm{End}}}
+\newcommand{\art}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\catMod}{\mathsf{\textbf{Mod}}}
+\newcommand{\Ind}{\ensuremath{\mathrm{Ind}}}
+\newcommand{\Coind}{\ensuremath{\mathrm{CoInd}}}
+\newcommand{\res}{\ensuremath{\operatorname{Res}}}
+\newcommand{\cores}{\ensuremath{\operatorname{Cor}}}
+\newcommand{\infla}{\ensuremath{\operatorname{Inf}}}
+\newcommand{\Nm}{\ensuremath{\operatorname{Nm}}}
+\newcommand{\Tor}{\ensuremath{\operatorname{Tor}}}
+\newcommand{\Ext}{\ensuremath{\operatorname{Ext}}}
+\newcommand{\Ab}{\ensuremath{\operatorname{Ab}}}
+\newcommand{\Fun}{\ensuremath{\operatorname{Fun}}}
+\newcommand{\pfrac}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\Res}{\ensuremath{\operatorname{Res}}}
+
+%%fakesection Links
+\hypersetup{
+    colorlinks,
+    linkcolor={blue},
+    citecolor={blue},
+    urlcolor={blue}
+}
+
+%%fakesection Bibliography
+\usepackage{biblatex}
+\addbibresource{references.bib}

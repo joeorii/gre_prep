@@ -1,0 +1,55 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{judson}{book}{}
+      \name{author}{2}{}{%
+        {{hash=cc19cca0c827b689562a4bfb6a92261b}{%
+           family={Judson},
+           familyi={J\bibinitperiod},
+           given={Thomas\bibnamedelima W.},
+           giveni={T\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=90482ce36553ddef91879a871dde6273}{%
+           family={Judson},
+           familyi={J\bibinitperiod},
+           given={Stephen\bibnamedelima F.},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Orthogonal Publishing L3C}%
+      }
+      \strng{namehash}{2780130e4b58d8af1a475b2a62dc308c}
+      \strng{fullhash}{2780130e4b58d8af1a475b2a62dc308c}
+      \strng{bibnamehash}{2780130e4b58d8af1a475b2a62dc308c}
+      \strng{authorbibnamehash}{2780130e4b58d8af1a475b2a62dc308c}
+      \strng{authornamehash}{2780130e4b58d8af1a475b2a62dc308c}
+      \strng{authorfullhash}{2780130e4b58d8af1a475b2a62dc308c}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Open-source textbook available at \url{http://abstract.ups.edu/}}
+      \field{title}{Abstract Algebra: Theory and Applications}
+      \field{year}{2020}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

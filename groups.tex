@@ -1,0 +1,181 @@
+\section{Group Theory}
+
+\subsection{Group Actions and Orbit-Stabilizers}
+
+Let $G$ be a group acting on a set $X$.
+
+\begin{df}
+The \emph{stabilizer} of $x \in X$ of a group action $G$, $G_x$, is the 
+set $\{g \in G \colon gx = x\}$. We denote the \emph{orbit} of which 
+contains $x$ as $\calO_x$.
+\end{df}
+
+\begin{proposition}
+$G_x$ is a subgroup of $G$.
+\end{proposition}
+\begin{proof}
+    Clear.
+\end{proof}
+
+\begin{proposition}
+    Let $X$ be finite. Then, $|\calO_x| = [G:G_x]$.
+\end{proposition}
+\begin{proof}
+    We define a bijective function between the cosets $G/G_x$ and $\calO_x$. We define
+    $\phi \colon \calO_x \rightarrow G/G_x$ as $y \mapsto gG_x$, where $gx = y$. Note that 
+    such a $g \in G$ exists because $y \in \calO_x$. This is also well-defined in the sense 
+    that $\phi(y)$ is not dependent on $g$ (easy check). The claim is that this is bijective,
+    but this is, again, a direct check.
+\end{proof}
+
+\begin{proposition}[The Class Equation]
+    Let $X$ be finite.
+    Let $X_G = \{x \in X \colon gx = x, \forall g \in G\}$ be the fixed points of $X$. Then,
+    \[
+    |X| = |X_G| + \sum |\calO_{x_i}|,
+    \]
+    where the $x_i$ are the representatives of each orbit.
+\end{proposition}
+\begin{proof}
+    This is clear. Elements not fixed by $G$ are in some orbit, while those fixed by $G$ are 
+    in $X_G$.
+\end{proof}
+
+\begin{corollary}
+    Let $G$ be a finite group and act on itself via conjugation. Then,
+    \[
+    |G| = |Z(G)| + \sum n_i,
+    \]
+    where each $n_i$ denotes the cardinality of each nontrivial conjugacy class.
+    Further, $n_i$ divides $|G|$ for all $i$.
+\end{corollary}
+\begin{proof}
+    The summation follows from the theorem above. The size of each orbit is also equal to 
+    the size of the cosets, which divide $|G|$ by Lagrange.
+\end{proof}
+
+\begin{theorem}
+    Let $|G| = p^n$, for $p$ prime. Then, $G$ has nontrivial center.
+\end{theorem}
+\begin{proof}
+    We let $G$ act on itself via conjugation. Then, the previous proposition says
+    \[
+    |G| = |Z(G)| + \sum n_i,
+    \]
+    where each $n_i$ is the size of the conjugacy classes. Then, $p \mid n_i$ and solution
+    $p \mid |Z(G)|$. The identity is always in the center, so $|Z(G)| \geq 1$. Therefore,
+    $|Z(G)| \geq p$ and so there is some nontrivial element in the center.
+\end{proof}
+
+\begin{corollary}
+    Every group of order $p^2$ is abelian.
+\end{corollary}
+\begin{proof}
+    By the previous theorem, if the center has order $p^2$, then 
+    clearly the group is abelian. Suppose not then.
+    It follows that $Z(G)$ and $G/Z(G)$ both have order $p$, which
+    are cyclic. Let $aZ(G)$ generate $G/Z(G)$. Then, we can write
+    $gZ(G), hZ(G)$ as $g = a^mx, h=a^my$ for some $x,y \in Z(G)$ and $m,n$.
+    We just check for commuting of $h$ and $g$, but this follow directly.
+\end{proof}
+
+\begin{nt}
+We write $x \sim y$ if $x$ and $y$ belond to the same orbit.
+\end{nt}
+
+\begin{proposition}
+    If $x \sim y$, for $x, y \in X$, then $G_x$ and $G_y$ are 
+    iomorphic (as groups).
+\end{proposition}
+\begin{proof}
+    Let $y = gx$, for some $g \in G$. Then, the map
+    $\phi \colon G_x \rightarrow G_y$ defined as $a \mapsto gag^{-1}$
+    defines a bijective group homomorphism (thus, a group isomorphim).
+\end{proof}
+
+\begin{theorem}[Burnide's Counting Lemma]
+    Let $k$ denote the number of orbit of $X$. We have as follows:
+    \[
+    k = \frac{1}{|G|} \cdot \sum_{g \in G} |X_g|.
+    \]
+\end{theorem}
+\begin{proof}
+    The cardinality of elements of $G$ which fix $x$ is the sum $\sum_{g \in G} |X_g|$.
+    Dually, viewed in terms of the stabilizer subgroups, this number is 
+    equal to the sum $\sum_{x \in X} |G_x|$. We also note that
+    \[
+    \sum_{y \in \calO_x} |G_y| = |\calO_x| \cdot |G_x| = |G|.
+    \]
+    Note that the first part follows by the previous lemma and the second
+    equality follows by Lagrange. Now, we sum over the $k$ distinct orbits to 
+    deduce that
+    \[
+    \sum_{g \in G} |X_g| = \sum_{x \in X} X = k \cdot |G|.
+    \]
+\end{proof}
+
+\subsection{Sylow's Theorems}
+
+\begin{df}
+    A group $G$ is a \emph{$p$-group} if every element in $G$ has as its order a 
+    power of $p$, for a prime $p$. A subgroup of a group is a \emph{$p$-subgroup} 
+    if it is a $p$-group.
+\end{df}
+
+Recall Cauchy's theorem.
+
+\begin{theorem}[Cauchy]
+    Let $G$ be a finite group be a finite group with $p$ dividing the order $|G|$.
+    Then, $G$ contains a subgroup of order $p$.
+\end{theorem}
+\begin{proof}[Proof Sketch]
+    Induct on the order of the group. The base case is immediate. Assume now 
+    that the result holds for all groups of order less than $n$ (and $p$ must divide 
+    $n$ by hypothesis). We use the class equation and case work. \\
+
+    If the order of some conjugacy class is divisible by $p$, then we are done by the 
+    inductive hypotehsis. \\
+
+    Now, suppose that the order of no conjugacy class has order divisible by $p$. 
+    In this case, $[G:C_i]$ are all diviible by $p$ (where $C_i$ are the conjugacy classes),
+    and the class equation implies that $p$ divides the center. Now, $Z(G)$ is a finite abelian 
+    group, so the structure theorem implies that there is an element of order $p$ in $Z(G)$.
+\end{proof}
+
+\begin{corollary}
+    If $G$ is finite, then $G$ is a $p$-group if and only if $|G| = p^n$.
+\end{corollary}
+
+The point of the Sylow theorem is to provide a partial converse 
+to Cauchy's theorem.
+
+
+\begin{theorem}[Sylow I]
+    Let $G$ be finite and $p$ be a prime such that $p^r$ divides $|G|$.
+    Then, $G$ contains a subgroup of order $p^r$.
+\end{theorem}
+\begin{proof}
+    Theorem 15.3 in \cite{judson}.
+\end{proof}
+
+\begin{df}
+    A Sylow $p$-subgroup of a group $G$ is a maximal $p$-subgroup of $G$.
+\end{df}
+
+\begin{theorem}[Sylow II]
+    Let $G$ be a finite group and $p$ be a prime dividing $|G|$. 
+    Then all Sylow $p$-subgroups of $G$ are conjugate to each other. 
+\end{theorem}
+\begin{proof}
+    Theorem 15.6 in \cite{judson}.
+\end{proof}
+
+\begin{theorem}[Sylow III]
+    Let $G$ be a finite group and let $p$ be a prime dividing the order of $G$. 
+    Then the number of Sylow $p$-subgroups is congruent to $1 \pmod{p}$ and 
+    divides $|G|$.
+\end{theorem}
+
+\begin{df}
+    A \emph{simple group} is one with no proper nontrivial normal subgroups.
+\end{df}
