@@ -1,14 +1,16 @@
-\contentsline {section}{\numberline {1}Group Theory}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Group Actions and Orbit-Stabilizers}{1}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Sylow's Theorems}{3}{subsection.1.2}%
-\contentsline {section}{\numberline {2}Complex Analysis}{3}{section.2}%
+\contentsline {section}{\numberline {1}Multivariable Calculus}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Grad, Div, Curl}{3}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Complex Analysis}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Basics of Holomorphic Functions}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Cauchy's Integral Formula}{4}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Residue Theory}{5}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Analysis and Point-Set Topology}{5}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Real Analysis}{5}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Topology}{5}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Open and Closed Sets}{5}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Hausdorff}{6}{subsubsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.3}Miscellanious}{6}{subsection.3.3}%
-\contentsline {section}{Bibliography}{7}{section*.2}%
+\contentsline {subsection}{\numberline {3.1}Real Analysis}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Topology}{6}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Open and Closed Sets}{6}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Hausdorff}{7}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}Miscellanious}{7}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Group Theory}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Group Actions and Orbit-Stabilizers}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Sylow's Theorems}{8}{subsection.4.2}%
+\contentsline {section}{Bibliography}{10}{section*.2}%

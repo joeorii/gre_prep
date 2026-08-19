@@ -1,0 +1,145 @@
+\section{Multivariable Calculus}
+
+Here, we include no proofs.
+
+\begin{exercise}
+    Find the equation of the plane in $\R^3$ passing through 
+    $P=(0,0,1), Q=(1,0,0), R=(1,1,1)$.
+\end{exercise}
+\begin{solution}
+    We use a reference point and use the vector cross product:
+    \[
+    v := \overrightarrow{PQ} = \langle 1,0,-1\rangle, \qquad 
+    w := \overrightarrow{PR} = \langle 1, 1, 0\rangle
+    \]
+    Now, the normal vector to $P$ is $v \times w$:
+    \[
+    v \times w = \langle 1,-1,1 \rangle
+    \]
+    The equation of the plane is given by 
+    \[
+    \langle 1,-1,1\rangle \cdot \langle x-0, y-0, z-1 \rangle,
+    \]
+    which is simply $x-y+z = 1$.
+\end{solution}
+
+\begin{exercise}
+    Compute the arc length of the helix $\gamma(t) = (\sin(t),-\cos(t), t)$
+    from $t = 0$ to $t = 2\pi$.
+\end{exercise}
+\begin{solution}
+    We must use the arc-length formula $\int_t \lVert \gamma'(t) \rVert dt$.
+    \[
+    \int_{t = 0}^{2\pi} \sqrt{\cos^2(t) + \sin^2(t) + 1^2} dt 
+        = \int_{t = 0}^{2\pi} \sqrt{2} dt = 2\pi \sqrt{2}.
+    \]
+\end{solution}
+
+The following is a nice way to determine if a limit doesn't exist:
+\begin{theorem}
+    $\lim \limits_{(x,y) \rightarrow (a,b)} f(x,y) = L$ if and only if for all
+    $\gamma \colon [-,1,1] \rightarrow \R^2$ such that $\gamma(0) = (a,b)$, then 
+    $\lim \limits_{t \to 0} f(\gamma(t)) = L$.
+\end{theorem}
+
+\begin{exercise}
+Prove that $\lim \limits_{(x,y) \rightarrow (0,0)} \frac{xy}{x^2 + y^2}$
+does not exist.
+\end{exercise}
+\begin{solution}
+We consider the paths $\gamma(t) = (t,t)$ and $\delta(t) = (t,-t)$, which both 
+tend to $(0,0)$ as $t \rightarrow 0$. Using $\gamma$, we have as follows:
+\[
+\lim \limits_{(x,y) \rightarrow (0,0)} \frac{xy}{x^2 + y^2} =
+\lim \limits_{t \rightarrow 0} \frac{t^2}{t^2 + t^2} = \frac{1}{2}
+\]    
+On the other hand, $\delta$ gives:
+\[
+\lim \limits_{(x,y) \rightarrow (0,0)} \frac{xy}{x^2 + y^2} =
+\lim \limits_{t \rightarrow 0} \frac{-t^2}{t^2 + t^2} = -\frac{1}{2}
+\]    
+Therefore, the limit doesn't exist.
+\end{solution}
+
+\begin{exercise}
+Find $\lim \limits_{(x,y) \rightarrow (0,0)} \frac{xy^2}{x^2 + y^2}$.
+\end{exercise}
+\begin{solution}
+We use polar coordinates and change the limit to $r \to 0$.
+\[
+\lim \limits_{(x,y) \rightarrow (0,0)} \frac{xy^2}{x^2 + y^2} = 
+\lim \limits_{r \rightarrow 0} \frac{r^3\cos \theta \sin^2\theta}{r^2} =
+\lim \limits_{r \rightarrow 0} r\cos \theta \sin^2 \theta
+\]
+Now,
+\[
+0 \leq |\lim \limits_{r \rightarrow 0} r\cos \theta \sin^2 \theta| \leq 
+|\lim \limits_{r \rightarrow 0} r | = 0,
+\]
+so the limit is $0$ via squeeze.
+\end{solution}
+
+\subsection{Grad, Div, Curl}
+
+Recall that the gradient satisfies the following:
+
+\begin{proposition}
+\[
+\nabla \phi = \left\langle\frac{\partial \phi}{\partial x},
+\frac{\partial \phi}{\partial y},  \frac{\partial \phi}{\partial z} \right\rangle
+\]
+Further, if we want the directional derivative of $\phi$ in the deriction of a
+unit vector $\hat{s}$, denoted $\pfrac{\phi}{s}$, we have
+\[
+\pfrac{\phi}{s} = \hat{s} \cdot \nabla \phi.
+\]
+\end{proposition}
+
+
+\begin{exercise}
+    If $\phi = axy^2 + byz + cx^3z^2$, where $a,b,c$ are constants, find $\nabla \phi$. 
+    Further, find the directional derivative of $\phi$ at the point $(1,4,2)$ in the 
+    direction towards the point $(2,0-1)$.
+\end{exercise}
+\begin{solution}
+    First, we compute the gradient:
+    \[
+    \nabla \phi = \left\langle ay^2 + 3cz^2z^2, 2axy + bz, by + 2cx^3z \right\rangle
+    \]
+    Therefore, the gradient at $P = (1,4,2)$ is:
+    \[
+    (\nabla \phi)_P = \left\langle 16a + 12c, 8a + 2b, 4b + 4c \right\rangle
+    \]
+    Now, $s$ is the difference between the two points, which is just
+     $s = (2,0,-1) - (1,4,2) = (1,-4,-3)$. Thus, $\hat{s}$ is
+    \[
+    \hat{s} = \frac{\langle 1, -4 , -3\rangle}{\sqrt{26}}
+    \]
+    Finally, the directional derivative $\frac{\partial \phi}{\partial s}$, is as follows:
+    \[
+    \frac{\partial \phi}{\partial s} = (\nabla \phi \cdot \hat{s})_P = \frac{(16a + 12c) - 4(8a + 2b) - 3 (4b + 4c)}{\sqrt{26}} = \frac{-16a - 20b}{\sqrt{26}}
+    \]
+\end{solution}
+
+\begin{df}
+    Let $F$ be a vector field.
+    \begin{itemize}
+        \item The \emph{divergence} of $F$ is the scalar product 
+        $\nabla \cdot F$, writing 
+        $\divergence F = \nabla \cdot F$.
+        \item The \emph{curl} of $F$ is the vector product 
+        $\nabla \times F$, writing $\curl F = \nabla \times F$.
+    \end{itemize}
+\end{df}
+
+We recall some useful identities relating these different notions.
+
+\begin{theorem}
+    Let $\phi \colon \R^3 \rightarrow \R$ and $F$ be a vector field (or 
+    more simply, a vector valued function).
+    \begin{itemize}
+        \item $\curl (\nabla \phi) = 0$
+        \item $\divergence (\curl F) = 0$
+        \item $\curl (\curl (F)) = \nabla (\divergence F) - \nabla ^2 F$
+    \end{itemize}
+\end{theorem}
