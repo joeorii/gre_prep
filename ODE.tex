@@ -1,0 +1,142 @@
+\section{ODEs}
+
+Here, we have some basic ways to solve ODEs. We first go 
+through some basic linear ODEs, which I wish to be familiar 
+with and make it just an easy computational exercise.
+
+\begin{example}[First-order linear ODE; Integrating Factors]
+Consider
+\[
+y' + p(x)y = q(x).
+\]
+Define the integrating factor
+\[
+I(x)=e^{\int p(x) dx}.
+\]
+This gives
+\[
+y(x)
+=
+e^{-\int p(x) dx}
+\left(
+\int e^{\int p(x) dx}q(x)dx+C
+\right) = \frac{1}{I(x)} \left( I(x) q(x) dx + C \right).
+\]
+Note that this comes from multiplying the ODE by $I(x)$ and
+integrating the differentiated chain rule.
+\end{example}
+
+
+\begin{exercise}
+Let $y(t)$ be the solution to the differential equation
+\[
+y' + 2ty = e^{-t^2}\sin t
+\]
+such that $y(0)=0$. What is $y(\pi)$?
+\end{exercise}
+\begin{solution}
+This is first order linear. The integrating factor is $e^{t^2}$.
+Thus,
+\[
+y(t) = e^{-t^2} \left(\int e^{t^2} \cdot e^{-t^2}\sin t dt +C \right)
+= e^{-t^2} (-\cos(t) + C).
+\]
+$y(0) = 0$, so $C = 1$. Thus, $y(\pi) = 2e^{-\pi^2}$.
+\end{solution}
+
+\begin{example}[Second-order linear ODE with Constant Coefficients]
+Consider the homogeneous equation
+\[
+a_2y''+a_1y'+a_0y=0.
+\]
+We consider $y = e^{\lambda x}$. 
+Substitution gives the characteristic equation
+\[
+a_2\lambda^2+a_1\lambda+a_0=0.
+\]
+If the characteristic roots are distinct $\lambda_1 \neq \lambda_2$, then
+\[
+y(x)=c_1e^{\lambda_1x}+c_2e^{\lambda_2x}.
+\]
+If the roots coincide, say to $\lambda$, then
+\[
+y(x) = c_1 e^{\lambda x} + c_2 x e^{\lambda x}.
+\]
+If the roots are complex, so $\lambda=\alpha\pm i\beta$, 
+then the real-valued general solution is
+\[
+y(x) = e^{\alpha x}
+\left(
+c_1\cos(\beta x)+c_2\sin(\beta x)
+\right).
+\]
+\end{example}
+
+\begin{example}[Euler-Cauchy Equation]
+A $k$th-order Euler-Cauchy equation has the form
+\[
+\beta_k x^k \frac{d^k y}{dx^k}
++
+\beta_{k-1}x^{k-1}\frac{d^{k-1}y}{dx^{k-1}}
++\cdots+
+\beta_1x\frac{dy}{dx}
++
+\beta_0y
+=
+f(x),
+\]
+where $\beta_0,\ldots,\beta_k$ are constants. 
+The key feature is that the coefficient of the $j$th derivative 
+is proportional to $x^j$.
+For this, use $x = e^z$. This makes
+\[
+x^j\frac{d^j y}{dx^j}
+\]
+to be expressed as a linear combination of
+\[
+\frac{d^j y}{dz^j},
+\frac{d^{j-1}y}{dz^{j-1}},
+\ldots,
+\frac{dy}{dz},
+\]
+with constant coefficients, so the substitution $x=e^z$ transforms 
+the Euler--Cauchy equation into a linear ODE with constant coefficients 
+in the variable $z$. After solving the resulting constant-coefficient ODE, substitute
+$z=\ln x$ to write the solution in terms of $x$.
+\end{example}
+
+We see how this plays out below.
+
+\begin{exercise}
+Find a solution to the ODE
+\[
+x^2y''+ 3xy'+ y= x^3.
+\]
+\end{exercise}
+\begin{solution}
+We use $x = e^z$. We calculate the differentials first.
+\[
+\Dfrac{y}{x} = \Dfrac{y}{z} \Dfrac{z}{x}
+= \frac{1}{x} \Dfrac{y}{z}
+\]
+Next, we differentiate this to find $\frac{d^2y}{dx^2}$.
+\[
+\frac{d^2y}{dx^2} = \Dfrac{}{x} \left(\frac{1}{x} \Dfrac{y}{z}\right) 
+= -\frac{1}{x^2} \Dfrac{y}{z} + \frac{1}{x^2} \frac{d^2y}{dz^2}.
+\]
+Here, we used the chain rule:
+\[
+\Dfrac{}{x} \left(\Dfrac{y}{z}\right) = \Dfrac{}{z} \left(\Dfrac{y}{z}\right)\Dfrac{z}{x}
+= \frac{1}{x^2} \frac{d^2y}{dz^2}
+\]
+We now substitute back in, which gives the following ODE:
+\[
+\frac{d^2y}{dz^2} + 2 \frac{dy}{dz} + y = e^{3z}.
+\]
+This is in our realm now. We attain the following:
+\[
+c_1 e^{-z} + c_2 z e^{-z} + \frac{1}{16} e^{3z}
+\]
+We just substitute back $z = \ln (x)$ to get the desired 
+form for $y(x)$.
+\end{solution}

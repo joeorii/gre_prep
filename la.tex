@@ -1,0 +1,222 @@
+\section{Linear Algebra}
+
+Here, we just include many problems that will be useful. Some exercises
+emphasize how some wishful statements do not hold.
+
+\begin{exercise}
+    Show that $\{1, (x-1), (x-1)(x-2)\}$ is a basis of $\P_3[x]$ and that
+    $W = \{p(x) \in \P_3[x] \colon p(1) = 0\}$ is a subspace of $\P_3[x]$. Find $\dim W$.
+    Here, $\P_3[x]$ denotes the space of real polynomials of degree strictly less than $3$.
+\end{exercise}
+\begin{solution}
+    The fact that this is a basis is clear. We find $\dim W$ using rank-nulity.
+    The image has dimension $1$, since two of the basis elements vanish. 
+    Thus, $\dim W=2$.
+\end{solution}
+
+\begin{exercise}
+    Let $\alpha_1,\alpha_2,\alpha_3,$ and $\alpha_4$ be linearly independent. 
+    Answer true or false.
+    \begin{enumerate}
+        \item $\alpha_1+\alpha_2, \alpha_2+\alpha_3, \alpha_3+\alpha_4, \alpha_4+\alpha_1$ are linearly independent.
+        \item $\alpha_1-\alpha_2, \alpha_2-\alpha_3, \alpha_3-\alpha_4, \alpha_4-\alpha_1$ are linearly independent.
+        \item $\alpha_1+\alpha_2, \alpha_2+\alpha_3, \alpha_3+\alpha_4, \alpha_4-\alpha_1$ are linearly independent.
+        \item $\alpha_1+\alpha_2, \alpha_2+\alpha_3, \alpha_3-\alpha_4, \alpha_4-\alpha_1$ are linearly independent.
+    \end{enumerate}
+\end{exercise}
+\begin{solution}
+    1. False. We can make an easy relation among these elements.\\
+
+    2. False. Just sum them all. \\
+
+    3. True. Just expand. \\
+
+    4. False. Sum of last two is equal to difference of second and first.
+\end{solution}
+
+\begin{exercise}
+Let $t \in \R$. Discuss the linear independence of the vectors over $\R$:
+\[
+\alpha_1=(1,1,0), \qquad
+\alpha_2=(1,3,-1), \qquad
+\alpha_3=(5,3,t).
+\]
+\end{exercise}
+\begin{solution}
+We have the relations:
+\[
+a + b + 5c = 0, \qquad a + 3b + 3c = 0, \qquad -b + tc = 0
+\]
+The first two equations provide that $2b - 2c = 0$, or $b = c$. Thus,
+so long as $t \neq 1$, these are LI. 
+More systematically, use the determinant condition.
+\end{solution}
+
+\begin{exercise}
+Let $W_1$ and $W_2$ be nontrivial subspaces of a vector space $V$. The sum
+$W_1+W_2$ is called a \emph{direct sum}, denoted as $W_1\oplus W_2$, if every element
+$\alpha\in W_1+W_2$ can be uniquely written as
+\[
+\alpha=w_1+w_2,
+\]
+where $w_1\in W_1$ and $w_2\in W_2$. Show that the following statements are equivalent:
+\begin{enumerate}
+\item $W_1+W_2$ is a direct sum.    
+\item If $w_1+w_2=0$ and $w_1\in W_1$, $w_2\in W_2$, then $w_1 = w_2 = 0$.
+\item $W_1\cap W_2=\{0\}$.
+\item $\dim(W_1+W_2)=\dim W_1+\dim W_2$.
+\end{enumerate}
+
+How can the direct sum be extended to more than two subspaces?
+\end{exercise}
+\begin{solution}
+Standard.
+\end{solution}
+
+\begin{exercise}
+Let $A,B,C$ be matrices. Prove if $r(A)$ denotes the rank of $A$, then 
+prove the following:
+\begin{enumerate}
+    \item $r(A+B)\leq r(A)+r(B)$.
+    \item $r(AB)\leq \min\{r(A),r(B)\}$.
+    \item $r(AB)+r(BC)-r(B)\leq r(ABC)$.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+Let $A \in M_n(\R)$.
+\begin{enumerate}
+    \item Show that if $A^t=-A$ and $n$ is odd, then $\det(A) = 0$.
+    \item Show that if $A^2 + I = 0$, then $n$ is even. What is $A \in M_n(\C)$ instead?
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+    1. We have $\det(A) = -\det(A)$, becaause $n$ is odd, so $\det(A) = 0$. \\
+
+    2. We have $\det(A)^2 = (-1)^n$. Therefore, $n$ must be even. If $A$ is complex,
+    then $n$ can be even, because $\det(A) \in \C$ now.
+\end{solution}
+
+\begin{exercise}
+Let $A, B \in M_n(\R)$. Show that
+\[
+\det 
+\begin{pmatrix}
+A & B\\
+-B & A
+\end{pmatrix} \geq 0.
+\]
+State the analogue for complex matrices.
+\end{exercise}
+\begin{solution}
+$\det(A)^2 + \det(B)^2$ is a sum of nonnegative reals, so is nonnegative. If we 
+want a similar statement for complex matrices, then we just need to conjugate the bottom two:
+\[
+\det 
+\begin{pmatrix}
+A & B\\
+\overline{-B} & \overline{A}
+\end{pmatrix} \geq 0
+\]
+\end{solution}
+
+\begin{exercise}
+Let $A, B \in M_n(\C)$. Show that
+\[
+\det
+\begin{pmatrix}
+A & B\\
+B & A
+\end{pmatrix}
+=
+\det(A + B) \det(A - B)
+\]
+\end{exercise}
+\begin{solution}
+    Just use the fact that $\det(A^2 - B^2) = \det((A - B)(A + B)) = \det(A - B)\det(A+B)$.
+\end{solution}
+
+\begin{exercise}
+For matrices of appropriate sizes, answer true or false:
+\begin{enumerate}
+\item If $A^2 = B^2$, then $A = B$ or $A = -B$.
+\item If $r(A) = r(B)$, then $r(A^2) = r(B^2)$.
+\item $r(A + kB) \leq r(A) + kr(B)$, where $k$ is a positive scalar.
+\item $r(A - B) \leq r(A) - r(B)$.
+\item If $r(AB) = 0$, then $r(BA) = 0$.
+\item If $r(AB) = 0$, then $r(A) = 0$ or $r(B) = 0$.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+1. False. Take $A = \begin{pmatrix}
+    1 & 0 \\ 0 & -1
+\end{pmatrix}, B =I$. \\
+
+2. Take $A = \begin{pmatrix}
+    0 & 1 \\ 0 & 0
+\end{pmatrix}, B = \begin{pmatrix}
+    1 & 0 \\ 0 & 0
+\end{pmatrix}$. \\
+
+3. False, take $A - 0$, $B \neq 0$, and $k = \frac{1}{2}$. The correct statement instead
+\[
+r(A + kB) \leq r(A) + kr(B).
+\]
+
+4. Take $A = 0$, $B \neq 0$. Then, $r(-B)$ is positive, while $-r(B)$ is negative. \\
+
+5. Take $A = \begin{pmatrix}
+    1 & 0 \\ 0 & 0
+\end{pmatrix}$, $B = \begin{pmatrix}
+    0 & 0 \\ 1 & 0
+\end{pmatrix}$. Then, $AB = 0$, while $BA = B \neq 0$. \\
+
+6. Use the same example as 2.
+\end{solution}
+
+\begin{proposition}
+Show that $AB = I$ implies $BA = I$, where $A$, $B$ are matrices over a field.
+\end{proposition}
+\begin{solution}
+This relies on some knowledge of algebra; particularly, about left or right Artinian rings. 
+Note that the ring of matrices (over a field) form a finite dimensional algbera, and so
+they form an Artinian ring. We recall that left or right Artinian rings are rings where
+the DCC holds for left or right ideals. Let us  use the left version. 
+The claim we prove is that $ab = 1$ implies $ba = 1$, for any elements $a,b$ 
+(which satisfies the desired condition). We let the Artinian ring be called $R$. We note that
+$R \subseteq bR \subseteq b^2R \subseteq \dots$ is a descending chain of left 
+ideals, and so $b^k R = b^{k + 1}R$ for some positive integer $k$.
+In other words, $b^k = b^{k + 1}c$, for some $c \in R$. Then, if we multiply by $a^k$ 
+on the left, we get that $bc = 1$. Then, $ba = babc = bc = 1$.
+\end{solution}
+
+\begin{exercise}
+Let $v_1, v_2, v_3, v_4$ be vectors in $\mathbb{R}^2$, and consider the following six dot products:
+\[
+v_1 \cdot v_2,\qquad
+v_1\cdot v_3,\qquad
+v_1\cdot v_4,\qquad
+v_2\cdot v_3,\qquad
+v_2\cdot v_4,\qquad
+v_3\cdot v_4.
+\]
+Which of the following statements about the six dot products could be true?
+\begin{enumerate}
+    \item All six are negative.
+    \item Two are negative, and four are equal to $0$.
+    \item Two are positive, and four are equal to $0$.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+Testing with some random vector might be good, but takes some clever guesses
+which I don't have the time to be searching for. The key is the dot product 
+identity, which measures the angle depending on the sign. If positive, then acute,
+if $0$, then perpendicular, if negative, then obtuse. Given four vectors 
+in $\R^2$, then all six are negative if all vectors are obtuse with respect to each 
+other. This is not possible. The remaining cases are possible.
+In the case 2, we situate them all perpendicularly to each other. In the case 3,
+we let $v_1 = v_2$, $v_3 = v_4$, and make these two vectors perpendicular to each other.
+\end{solution}
