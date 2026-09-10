@@ -1,0 +1,368 @@
+\section{Probability and Statistics}
+
+\subsection{Probability via Area}
+
+\begin{exercise}
+If $x,y$ are randomly chosen in $[0, 1]$, what is the probability that
+$x \geq 2y$?
+\end{exercise}
+\begin{solution}
+This probability can be determined by a ratio of areas. The total space has area $1$.
+The area of the condition $x \geq 2y$ is as follows:
+\[
+\int_{y = 0}^{\frac{1}{2}} \int_{x = 2y}^1 dx dy =
+\int_{y = 0}^{\frac{1}{2}} 1 - 2y dy =
+\frac{1}{2} - \left(\frac{1}{2}\right)^2 - \frac{1}{4}.
+\]
+Thus, the probability is $\frac{1}{4}$. Note that in this case, it's better to just 
+draw it out in $\R^2$ and use the triangle area formula.
+\end{solution}
+
+
+\subsection{Basic Probability}
+
+Let $\Omega$ be the sample space and let $A,B \subseteq \Omega$ be events.
+Recall that the complement of $A$ is $A^c = \Omega \setminus A$, and we have 
+\[
+\P(A^c)=1-\P(A).
+\]
+We can also talk about unions and intersections of events. This gives us the 
+principle of inclusion and exclusion (PIE):
+\[
+\P(A\cup B)=\P(A)+\P(B)-\P(A\cap B).
+\]
+\begin{remark}
+If $A$ and $B$ are disjoint, then $\P(A\cap B)=0$, so the above reads
+\[
+\P(A\cup B)=\P(A)+\P(B).
+\]
+\end{remark}
+
+\subsection{Conditional Probability}
+
+Recall that we also had the notion of conditional probability.
+If $\P(B)>0$, then
+\[
+\P(A\mid B)=
+\frac{\Pp(A\cap B)}{\Pp(B)}.
+\]
+Equivalently,
+\[
+\Pp(A\cap B)= \Pp(A\mid B)\Pp(B).
+\]
+Symmetrically, if $\P(A) > 0$, then
+\[
+\Pp(A\cap B) = \Pp(B\mid A)\Pp(A).
+\]
+What is nice is that we can now define the notion of independence of events.
+We say that events $A$ and $B$ are independent if
+\[
+\Pp(A\cap B)=\Pp(A)\Pp(B).
+\]
+In the case that $\P(B) > 0$, conditional probability tells us that independence
+is equivalent to
+\[
+\P(A\mid B)=\P(A).
+\]
+\begin{remark}
+Note that independence and disjointness are distinct.
+If $A$ and $B$ are disjoint and both have positive probability, then
+\[
+\Pp(A\cap B)=0,
+\]
+while
+\[
+\Pp(A)\Pp(B)>0.
+\]
+\end{remark}
+
+These lead to some very useful results:
+
+\begin{theorem}[Law of Total Probability]
+Suppose $B_1,\ldots,B_n$ form a partition of $\Omega$. Then
+\[
+\Pp(A)
+=
+\sum_{i=1}^n
+\Pp(A\mid B_i)\Pp(B_i).
+\]
+\end{theorem}
+
+\begin{theorem}[Bayes' Theorem]
+For events $A$ and $B$ with positive probability,
+\[
+\Pp(A\mid B)
+=
+\frac{\Pp(B\mid A)\Pp(A)}
+{\Pp(B)}.
+\]
+\end{theorem}
+
+Combining the two previous, we have Bayes's generalized theorem:
+
+\begin{theorem}
+If $B_1,\ldots,B_n$ form a partition of $\Omega$, then
+\[
+\Pp(B_j\mid A)
+=
+\frac{\Pp(A\mid B_j)\Pp(B_j)}
+{\sum_{i=1}^n \Pp(A\mid B_i)\Pp(B_i)}.
+\]
+\end{theorem}
+
+
+
+\subsection{Random Variables}
+
+\begin{df}[Discrete Random Variable]
+A discrete random variable $X$ assigns a real number to each outcome in the
+sample space. Its probability mass function (pmf) is
+\[
+p_X(x)=\Pp(X=x),
+\]
+where
+\[
+\sum_x p_X(x)=1.
+\]
+\end{df}
+
+\begin{df}[Continuous Random Variable]
+A continuous random variable $X$ has a probability density function (pdf) $f_X$
+satisfying
+\[
+f_X(x)\geq0
+\]
+and
+\[
+\int_{-\infty}^{\infty}f_X(x) dx=1.
+\]
+For $a<b$,
+\[
+\Pp(a\leq X\leq b) = \int_a^b f_X(x) dx.
+\]
+\end{df}
+
+\begin{remark}
+For a continuous random variable,
+\[
+\Pp(X=a)=0.
+\]
+\end{remark}
+
+We also have the notion of the cumulative distributive function.
+
+\begin{df}[Cumulative Distribution Function]
+The cumulative distribution function of $X$ is
+\[
+F_X(x)=\Pp(X\leq x).
+\]
+\end{df}
+
+\begin{remark}
+For a continuous random variable, this means
+\[
+F_X(x)
+=
+\int_{-\infty}^x f_X(t) dt,
+\]
+where $f_X$ is the pdf. Therefore, whenever $F_X$ is differentiable,
+\[
+f_X(x)=F_X'(x).
+\]
+\end{remark}
+
+\subsubsection{Expected Values of Random Variables}
+
+If $X$ is a discrete random variable,
+\[
+\boxed{\E[X] =\sum_x x\Pp(X=x)}.
+\]
+If $X$ is a continuous random variable,
+\[
+\boxed{\E[X] =\int_{-\infty}^{\infty}x f_X(x) dx}.
+\]
+
+\begin{remark}
+More generally, for a function $g$,
+\[
+\boxed{\E[g(X)]
+=
+\sum_x g(x)\Pp(X=x)}
+\]
+in the discrete case, and
+\[
+\boxed{\E[g(X)]
+=
+\int_{-\infty}^{\infty}g(x)f_X(x)\,dx}
+\]
+in the continuous case.
+\end{remark}
+
+Note that expectation is linear (for both discrete and continuous cases). 
+That is, for any (real) constants $a,b$,
+\[
+\boxed{\E[aX+bY] = a\E[X]+b\E[Y]}.
+\]
+Of course, more generally, this says
+\[
+\E\left[\sum_{i=1}^n a_iX_i\right]
+=
+\sum_{i=1}^na_i\E[X_i],
+\]
+where the $a_i$ are constants.
+
+\begin{remark}
+Note that independence is not required for the lienarity of expectation.
+\end{remark}
+
+
+\subsubsection{Variance}
+
+There is also the notion of variance. If we denote $\mu=\E[X]$, then
+\[
+\boxed{\Var(X)=\E[(X-\mu)^2] =\E[X^2]-\E[X]^2}.
+\]
+The second equality is justified by linearity. With this, we can define the 
+standard deviation:
+\[
+\boxed{\sqrt{\Var(X)}}.
+\]
+Clearly, for constants $a,b$,
+\[
+\boxed{\Var(aX+b)=a^2\Var(X)}.
+\]
+Particularly,
+\[
+\Var(X+b)=\Var(X).
+\]
+We can also define covariance of two random variables $X$ and $Y$:
+\[
+\boxed{\Cov(X,Y) = \E[(X-\E[X])(Y-\E[Y])] = \E[XY]-\E[X]\E[Y]}.
+\]
+For arbitrary $X$ and $Y$,
+\[
+\boxed{
+\Var(X+Y)
+=
+\Var(X)+\Var(Y)+2\Cov(X,Y).
+}
+\]
+If $X$ and $Y$ are independent, then we note that
+\[
+\Cov(X,Y)=0,
+\]
+so
+\[
+\boxed{
+\Var(X+Y)
+=
+\Var(X)+\Var(Y).
+}
+\]
+\begin{remark}
+Note that $\Cov(X,Y) = 0$ does not in general imply that $X$ and $Y$ are independent.
+\end{remark}
+
+
+\subsection{Common Distributions}
+
+\begin{example}[Indicator Random Variable]
+For an event $A$, define
+\[
+I_A=
+\begin{cases}
+1, & \text{if $A$ occurs},\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+Then
+\[
+\E[I_A]= 1 \cdot \P(A) + 0 \cdot \P(A^c) = \P(A).
+\]
+If
+\[
+X=I_1+\cdots+I_n
+\]
+counts how many of a collection of events occur, then linaerity implies
+\[
+\E[X]
+=
+\E[I_1]+\cdots+\E[I_n].
+\]
+\end{example}
+
+\begin{example}
+If
+\[
+X=
+\begin{cases}
+1, & \text{with probability $p$},\\
+0, & \text{with probability $1-p$},
+\end{cases}
+\]
+then
+\[
+\E[X]=p, \qquad\Var(X)=p(1-p).
+\]
+\end{example}
+
+\begin{example}[Binomial Distribution]  
+If $X$ counts the number of successes in $n$ independent trials, each with
+success probability $p$, then $X\sim\Bin(n,p)$.  
+Its pmf is
+\[
+\Pp(X=k) =\binom{n}{k}p^k(1-p)^{n-k}.
+\]   
+Moreover,
+\[
+\E[X]=np, \qquad \Var(X)=np(1-p).
+\]  
+\end{example}
+
+\begin{example}[Geometric Distribution]
+If $X$ is the number of trials required to obtain the first success, then
+\[
+\Pp(X=k)=(1-p)^{k-1}p, \qquad k=1,2,\ldots
+\]
+and
+\[
+\E[X]=\frac1p,
+\qquad
+\Var(X)=\frac{1-p}{p^2}.
+\]
+The geometric distribution has the interesting property
+\[
+\Pp(X>m+n\mid X>m) = \Pp(X>n).
+\]
+\end{example}
+
+\begin{example}[Poisson Distribution]
+If $X\sim\Pois(\lambda)$, then
+\[
+\Pp(X=k) = e^{-\lambda}\frac{\lambda^k}{k!}, \qquad
+k=0,1,2,\ldots
+\]
+and
+\[
+\E[X]=\lambda,
+\qquad
+\Var(X)=\lambda.
+\]
+\end{example}
+
+\begin{example}[Uniform Distribution]
+If $X$ is uniformly distributed on $[a,b]$, then
+\[
+f_X(x)
+=
+\frac{1}{b-a},
+\qquad
+a\leq x\leq b.
+\]
+Moreover,
+\[
+\E[X]=\frac{a+b}{2}, \qquad \Var(X)
+=
+\frac{(b-a)^2}{12}.
+\]
+\end{example}
