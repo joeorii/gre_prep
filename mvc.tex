@@ -143,3 +143,39 @@ We recall some useful identities relating these different notions.
         \item $\curl (\curl (F)) = \nabla (\divergence F) - \nabla ^2 F$
     \end{itemize}
 \end{theorem}
+
+\subsection{Partial Derivatives and Jacobians}
+
+\begin{exercise}
+Let $z = e^{xy^2}$, $x = t \cos t$, $y = t \sin t$. Compute $\Dfrac{z}{t}$.
+\end{exercise}
+\begin{solution}
+We use that $\Dfrac{z}{t} = \Dfrac{z}{x} \Dfrac{x}{t} + \Dfrac{z}{y} \Dfrac{y}{t}$.
+\begin{align*}
+\Dfrac{z}{t} &= y^2e^{xy^2}\cdot (\cos t -t\sin t) + 2xye^{xy^2} \cdot (\sin t + t \cos t) \\
+&=t^2 \sin^2 t e^{t^3 \cos t \sin^2t}(\cos t -t\sin t) + 2xye^{t^3 \cos t \sin^2t} \cdot (\sin t + t \cos t)
+\end{align*}
+\end{solution}
+
+\begin{exercise}
+If $x=2r-s$ and $y=r+2s$, find $\frac{\partial^2 U}{\partial y \partial x}$
+in terms of derivatives with respect to $r$ and $s$.
+\end{exercise}
+\begin{solution}
+Use the multivariable chain rule, we should really solve for $r$ and $s$ in terms of $x$ and $y$.
+We have $5r = 2x + y$ and $5s = 2y - x$. Therefore
+\[
+\pfrac{U}{x} = \pfrac{U}{r} \pfrac{r}{x} + \pfrac{U}{s} \pfrac{s}{x}
+= \frac{2}{5} \pfrac{U}{r} - \frac{1}{5} \pfrac{U}{s}.
+\]
+We now differentiate by $y$.
+\begin{align*}
+\frac{\partial^2 U}{\partial y \partial x} &= \pfrac{}{y} \left(\frac{2}{5} \pfrac{U}{r} - \frac{1}{5} \pfrac{U}{s} \right) \\
+&= \pfrac{}{r}\left(\frac{2}{5}\frac{\partial^2 U}{\partial r^2} - \frac{1}{5}\frac{\partial^2 U}{\partial rs}\right) \cdot \pfrac{r}{y}
++ \pfrac{}{s}\left(\frac{2}{5}\frac{\partial^2 U}{\partial sr} - \frac{1}{5}\frac{\partial^2 U}{\partial s^2}\right) \cdot \pfrac{s}{y} \\
+&= \left(\frac{2}{5}\frac{\partial^2 U}{\partial r^2} - \frac{1}{5}\frac{\partial^2 U}{\partial rs}\right) \cdot \frac{1}{5}
++ \left(\frac{2}{5}\frac{\partial^2 U}{\partial sr} - \frac{1}{5}\frac{\partial^2 U}{\partial s^2}\right) \cdot \frac{2}{5} \\
+&= \frac{1}{25} \left(2 \frac{\partial^2 U}{\partial r^2} + 3\frac{\partial^2 U}{\partial rs}
+- 2\frac{\partial^2 U}{\partial s^2}\right)
+\end{align*}
+\end{solution}
