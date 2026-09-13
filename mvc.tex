@@ -179,3 +179,154 @@ We now differentiate by $y$.
 - 2\frac{\partial^2 U}{\partial s^2}\right)
 \end{align*}
 \end{solution}
+
+\subsection{Line and Surface Integrals}
+
+We recall some nice theorems that help computation.
+
+\begin{theorem}[Green's Theorem in the Plane]
+Suppose $R$ is a closed plane region bounded by a simple plane closed convex curve in the $x$-$y$ plane.
+Let $L, M$ be continuous functions of $x, y$ having continuous derivatives throughout $R$. Then:
+\[
+\oint_C (L dx + M dy) = \int_R \left( \frac{\partial M}{\partial x} - \frac{\partial L}{\partial y} \right) dx dy,  
+\]
+where $C$ is the boundary of $R$ described in the counter-clockwise (positive) sense.
+\end{theorem}
+
+\begin{theorem}
+Let $\mathbf{A}$ be a vector field. Then, the following conditions are equivalent:
+\begin{itemize}
+\item $\int_C \mathbf{A} \cdot d\mathbf{r}$ is independent
+of the path.
+\item There xists a scalar function $\theta$ such that $\mathbf{A} = \nabla \mathbf{A}$.
+\item $\nabla \times \mathbf{A} = 0$ ($\curl \mathbf{A}= 0$). Further, if $C$ is a closer path, then the path integral is $0$.
+\end{itemize}
+\end{theorem}
+
+\begin{df}[Differential Element of Surface Area]
+The differential element of surface area is
+\[
+dS =
+\left|
+\frac{\partial \mathbf{r}}{\partial v_1}
+\times
+\frac{\partial \mathbf{r}}{\partial v_2}
+\right|
+\,dv_1\,dv_2.
+\]
+\end{df}
+
+\begin{theorem}[Divergence Theorem]
+If $\tau$ is the volume enclosed by a closed surface $S$ with unit outward normal
+$\mathbf{n}$ and $\mathbf{A}$ is a continuously differentiable vector field throughout $\tau$,
+then 
+\[
+\int_S \mathbf{A} \cdot \mathbf{n} dS = \int_{\tau} \divergence \mathbf{A} d\tau.
+\]
+\end{theorem}
+
+\begin{theorem}[Stokes' Theorem]
+Suppose $S$ is an open surface with a simple closed curve $C$ forming its boundary, and let $\textbf{A}$ be a vector 
+field with continuous partial derivatives. Then:
+\[
+\oint_{C} \mathbf{A} \cdot d \mathbf{r} = \oint_S \curl \mathbf{A} \cdot \hat{\mathbf{n}} dS
+\]
+where the direction of the unit normal to $S$ and the sense of $C$ are related by a right-hand rule. 
+That is, $\hat{\mathbf{n}}$ is in the direction a right-handed screw moves when turned in the direction of $C$.
+\end{theorem}
+
+\begin{exercise}
+Evaluate
+\[
+\int_{(0,1)}^{(1,2)} (x^2-y) dx+(y^2+x) dy
+\]
+along:
+\begin{enumerate}
+\item a straight line from $(0,1)$ to $(1,2)$.
+\item straight lines from $(0,1)$ to $(1,1)$ and then from $(1,1)$ to $(1,2)$.
+\item the parabola $x=t$, $y=t^2+1$.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+1. The line adjoining these is $y = x + 1$. Then, $dy = dx$, and we just plug in:
+\[
+\int_0^1 (x^2 - (x + 1))dx + ((x+1)^2 + x)dx 
+= \int_0^1 2x^2 + 2x 
+= \frac{5}{3}.
+\]
+
+2. We do a similar thing, but split the integral piecewise. The first part is
+\[
+\int_0^1 (x^2 - 1)dx + (1 + x)\cdot 0
+= -\frac{2}{3}.
+\]
+The next part is
+\[
+\int_1^2 (1 - y) \cdot 0 + (y^2 + 1)dy 
+= \frac{10}{3}.
+\]
+Thus, the integral is equal to $\frac{8}{3}$ by linearity. \\
+
+3. For this, we note that $dx = dt$ and $dy = 2t dt$. The time is from $0$ to $1$.
+\[
+\int_0^1 (t^2 - (t^2 + 1))dt + ((t^2+ 1)^2 + t) 2tdt
+= \int_0^1 2t^5 + 4t^2 + 2t^2 + 2t - 1 dt
+= 2.
+\]
+\end{solution}
+
+\begin{exercise}
+Evaluate $\int_C yds$ along the curve $C$ given by $y = 2\sqrt{x}$
+from $x = 3$ to $x = 24$.
+\end{exercise}
+\begin{solution}
+Recall that $ds$ is the arclength element. It is probably easiest to use that
+\[
+ds = \sqrt{(dx)^2 + (dy)^2} = \sqrt{1 + \left(\frac{dx}{dy}\right)^2}dx.
+\]
+We have $\frac{dy}{dx} = \frac{1}{\sqrt{x}}$, so $ds = \sqrt{1 + \frac{1}{x}}dx$.
+Thus, the integral is as follows:
+\[
+\int_3^{24} 2\sqrt{x} \cdot \sqrt{1 + \frac{1}{x}} dx
+= 2\int_3^{24} \sqrt{x + 1} dx
+= \frac{4}{3}(x + 1)^{\frac{3}{2}}\bigg|_3^{24}
+= 156
+\]
+\end{solution}
+
+\begin{exercise}
+Verify Green's theorem in the plane for
+\[
+\oint_C (2xy-x^2) dx+(x+y^2) dy,
+\]
+where $C$ is the closed curve of the region bounded by $y=x^2$ and $y^2=x$.
+\end{exercise}
+\begin{solution}
+Note that this is just from the origin to $(1,1)=:P$ and back. From the origin to $P$, we have:
+\[
+\int_0^1 (2x^3 - x^2)dx + (x + x^4)2xdx
+= \int_0^1 2x^5 + 2x^3 + x^2 dx
+= \frac{7}{6}.
+\]
+From $P$ to the origin, we have as follows:
+\[
+\int_1^0 (2y^3 - y^4) 2ydy + (y^2 + y^2)dy
+= \int_1^0 -2y^5 + 4y^4 + 2y^2 dy
+= -\frac{17}{15}
+\]
+Thus, the original integeral is $\frac{1}{30}$. \\
+
+On the other hand, the statement of Green's theorem gives us that the 
+integral is equal to the following:
+\[
+\int_R (1-2x)dxdy.
+\]
+Now we just need to find the appropriate bounds. We have as follows:
+\[
+\int_{y = 0}^1 \int_{x = y^2}^{\sqrt{y}} (1-2x)dxdy 
+= \int_0^1 \sqrt{y} - y - y^2 + y^4 dy
+= \frac{1}{30}.
+\]
+Thus, true!
+\end{solution}
+
