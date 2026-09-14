@@ -1431,6 +1431,10 @@ INPUT ./groups.tex
 INPUT groups.tex
 INPUT ./groups.tex
 INPUT groups.tex
+INPUT ./obscure_mcq.tex
+INPUT obscure_mcq.tex
+INPUT ./obscure_mcq.tex
+INPUT obscure_mcq.tex
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd

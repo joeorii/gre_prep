@@ -2,29 +2,30 @@
 \contentsline {subsection}{\numberline {1.1}Grad, Div, Curl}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Partial Derivatives and Jacobians}{4}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Line and Surface Integrals}{4}{subsection.1.3}%
-\contentsline {section}{\numberline {2}Linear Algebra}{6}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Dot Products and Cross Products}{6}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Miscellanious}{7}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Probability and Statistics}{10}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Probability via Area}{10}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Basic Probability}{10}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Conditional Probability}{10}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Random Variables}{11}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Expected Values of Random Variables}{12}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Variance}{13}{subsubsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.5}Common Distributions}{14}{subsection.3.5}%
-\contentsline {section}{\numberline {4}ODEs}{15}{section.4}%
-\contentsline {section}{\numberline {5}Complex Analysis}{16}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Basics of Holomorphic Functions}{17}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Cauchy's Integral Formula}{17}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Residue Theory}{18}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Analysis and Point-Set Topology}{18}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Real Analysis}{19}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Topology}{19}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Open and Closed Sets}{19}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}Hausdorff}{20}{subsubsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.3}Miscellanious}{20}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Group Theory}{20}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Group Actions and Orbit-Stabilizers}{20}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Sylow's Theorems}{21}{subsection.7.2}%
-\contentsline {section}{Bibliography}{23}{section*.2}%
+\contentsline {section}{\numberline {2}Linear Algebra}{9}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Dot Products and Cross Products}{9}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Miscellanious}{9}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Probability and Statistics}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Probability via Area}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Basic Probability}{13}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Conditional Probability}{13}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Random Variables}{14}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Expected Values of Random Variables}{14}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Variance}{15}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}Common Distributions}{16}{subsection.3.5}%
+\contentsline {section}{\numberline {4}ODEs}{17}{section.4}%
+\contentsline {section}{\numberline {5}Complex Analysis}{18}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Basics of Holomorphic Functions}{19}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Cauchy's Integral Formula}{19}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Residue Theory}{20}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Analysis and Point-Set Topology}{20}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Real Analysis}{21}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Topology}{21}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Open and Closed Sets}{21}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Hausdorff}{22}{subsubsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.3}Miscellanious}{22}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Group Theory}{22}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Group Actions and Orbit-Stabilizers}{22}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Sylow's Theorems}{23}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Obscure Questions in MVC Format}{24}{section.8}%
+\contentsline {section}{Bibliography}{33}{section*.2}%

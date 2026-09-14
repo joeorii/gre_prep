@@ -1,0 +1,445 @@
+\section{Obscure Questions in MVC Format}
+
+\begin{exercise}
+Let $X=\mathbb{R}^2\setminus\{(0,0)\}$. What is $\pi_1(X)$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $\mathbb{Z}$
+    \item $\mathbb{Z}/2\mathbb{Z}$
+    \item $\mathbb{Z}^2$
+    \item A free group on two generators
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). $\R^2 \setminus \{(0,0)\}$ is homeomorphic to $\S^1$, which has 
+first fundamental group $\Z$.
+\end{solution}
+
+\begin{exercise}
+Let $G$ be a group of order $56$. Which of the following are the possible numbers of Sylow $7$-subgroups?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $1$ only
+    \item $7$ only
+    \item $1$ or $7$
+    \item $1$ or $8$
+    \item $7$ or $8$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). Use Sylow III.
+\end{solution}
+
+\begin{exercise}
+What is $\pi_1(\S^1\vee\S^1)$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $\mathbb{Z}$
+    \item $\mathbb{Z}^2$
+    \item $\mathbb{Z}/2\mathbb{Z}$
+    \item The free group on two generators
+    \item $0$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). This really requires the Seifert Van Kampen, but just remember it.
+\end{solution}
+
+\begin{exercise}
+How many conjugacy classes are there in $S_5$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $5$
+    \item $6$
+    \item $7$
+    \item $8$
+    \item $120$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). This is just partitions of $5$ elements. There is:
+\[
+e, (12), (123), (1234), (12345), (12)(34), (123)(45)
+\]
+\end{solution}
+
+\begin{exercise}
+How many idempotent elements are there in $\mathbb{Z}/12\mathbb{Z}$? That is, how many $x$ satisfy $x^2=x$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $1$
+    \item $2$
+    \item $3$
+    \item $4$
+    \item $6$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). $0,1,4,9$. More generally, this follows by the CRT. $\Z/3\Z$ and $\Z/4\Z$ have two 
+idempotents each.
+\end{solution}
+
+\begin{exercise}
+Let $X=\mathbb{RP}^2$. Then $\pi_1(X)$ is isomorphic to
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $\mathbb{Z}$
+    \item $\mathbb{Z}/2\mathbb{Z}$
+    \item $\mathbb{Z}^2$
+    \item $S_2$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Just remember it.
+\end{solution}
+
+\begin{exercise}
+Suppose $G$ has order $21$. Which statement must be true?
+\begin{enumerate}[label=(\Alph*)]
+    \item Every subgroup is normal.
+    \item $G$ has a unique Sylow $7$-subgroup.
+    \item $G$ has a unique Sylow $3$-subgroup.
+    \item $G$ is abelian.
+    \item $G$ is cyclic.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Sylow I says that there are $3$-subgroups and $7$-subgroups.
+Sylow III for $p = 7$ says that there is a unique Sylow $7$-subgroup.
+\end{solution}
+
+\begin{exercise}
+Which space has fundamental group $\mathbb{Z}^2$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $S^2$
+    \item $S^1$
+    \item $S^1\times S^1$
+    \item $S^1\vee S^1$
+    \item $D^2$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Products of spaces and first fundamental group commute.
+\end{solution}
+
+\begin{exercise}
+How many units does $\mathbb{Z}/20\mathbb{Z}$ have?
+\begin{enumerate}[label=(\Alph*)]
+    \item $4$
+    \item $6$
+    \item $8$
+    \item $10$
+    \item $12$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Units of $\Z/20\Z$ are the integers coprime to $20$. Then, use Euler's $\phi$-function.
+\end{solution}
+
+\begin{exercise}
+Suppose $X$ is compact, $Y$ is Hausdorff, and $f:X\to Y$ is a continuous bijection. Which must be true?
+\begin{enumerate}[label=(\Alph*)]
+    \item $f^{-1}$ need not be continuous.
+    \item $f$ is a homeomorphism.
+    \item $Y$ must be compact but $f^{-1}$ can be discontinuous.
+    \item $X$ must be connected.
+    \item $Y$ must be metric.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). This is a result; a continuous bijection from a compact to Hausdorff has a continuous inverse.
+The proof isn't bad, so we'll do this here. Note that the image is compact by continuity,
+and surjectivity implies $Y$ is compact. Now, $f$ is a closed map because if you take
+some closed $Z \subseteq X$, then it is compact (closed subset of compact is compact), so its image 
+is compact, so closed in $Y$. Now, a closed bijeciton is equivalent to an open bijection,
+so the inverse is continuous.
+\end{solution}
+
+\begin{exercise}
+Let $G$ have order $12$. The number $n_3$ of Sylow $3$-subgroups can be
+\begin{enumerate}[label=(\Alph*)]
+    \item only $1$
+    \item only $4$
+    \item $1$ or $3$
+    \item $1$ or $4$
+    \item $3$ or $4$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). Use Sylow III.
+\end{solution}
+
+\begin{exercise}
+What is the Euler characteristic of the torus $\T^2$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $-2$
+    \item $-1$
+    \item $0$
+    \item $1$
+    \item $2$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). The genus of the $2$-torus (usual torus with one hole) is $1$. This is $0$.
+\end{solution}
+
+\begin{remark}
+Note that the Euler characteristic is multiplicative across products.
+\end{remark}
+
+\begin{exercise}
+Over the field $\mathbb{F}_p$, how many roots does $x^p-x$ have?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $1$
+    \item $p-1$
+    \item $p$
+    \item $p+1$
+    \item It depends on $p$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Use FLT.
+\end{solution}
+
+\begin{exercise}
+The cylinder $\S^1\times[0,1]$ has fundamental group isomorphic to
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $\mathbb{Z}$
+    \item $\mathbb{Z}^2$
+    \item $\mathbb{Z}/2\mathbb{Z}$
+    \item $F_2$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). $[0,1]$ is contractible, so has trivial fundamental group.
+$\S^1$ has fundamental group $\Z$.
+\end{solution}
+
+\begin{exercise}
+Which quotient ring is isomorphic to $\mathbb{C}$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\mathbb{R}[x]/(x)$
+    \item $\mathbb{R}[x]/(x^2-1)$
+    \item $\mathbb{R}[x]/(x^2+1)$
+    \item $\mathbb{Z}[x]/(x^2+1)$
+    \item $\mathbb{C}[x]/(x^2+1)$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C).
+\end{solution}
+
+\begin{exercise}
+What is the closure of $\mathbb{Q}$ in $\mathbb{R}$ with its usual topology?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\mathbb{Q}$
+    \item $\mathbb{R}\setminus\mathbb{Q}$
+    \item $\mathbb{R}$
+    \item $\varnothing$
+    \item $\mathbb{Q}\cup\{0\}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). $\Q$ is dense in $\R$ with respect to the usual Euclidean topology 
+$d(x,y) = |x - y|$.
+\end{solution}
+
+\begin{exercise}
+Which of the following spaces is contractible?
+\begin{enumerate}[label=(\Alph*)]
+    \item $S^1$
+    \item $S^2$
+    \item $T^2$
+    \item $D^2$
+    \item $\mathbb{R}^2\setminus\{0\}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D).
+\end{solution}
+
+\begin{exercise}
+If $G$ acts transitively on a set $X$, and for $x\in X$,
+\[
+|G|=24,
+\qquad
+|\operatorname{Stab}(x)|=6,
+\]
+then $|X|$ is
+\begin{enumerate}[label=(\Alph*)]
+    \item $3$
+    \item $4$
+    \item $6$
+    \item $18$
+    \item $144$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). We use the orbit-stabilizer theorem. The orbit of $x \in X$ has 
+cardinality $4$, but transitivity implies that there is only one orbit.
+Thus, $|X| = 4$.
+\end{solution}
+
+\begin{exercise}
+Which statement is true?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item Every connected space is path connected.
+    \item Every compact space is Hausdorff.
+    \item Every path-connected space is connected.
+    \item Every bounded subset of a metric space is compact.
+    \item Every continuous bijection is a homeomorphism.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+    
+\end{solution}
+
+\begin{exercise}
+Let
+\[
+f(z)=\frac{e^z}{z^2(z-1)}.
+\]
+What is the order of the pole at $z=0$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item Removable
+    \item $1$
+    \item $2$
+    \item $3$
+    \item Essential
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Newton's method for approximating a root of $f(x)=0$ is
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $x_{n+1}=x_n-f'(x_n)$
+    \item $x_{n+1}=\dfrac{f(x_n)}{f'(x_n)}$
+    \item $x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)}$
+    \item $x_{n+1}=x_n+\dfrac{f'(x_n)}{f(x_n)}$
+    \item $x_{n+1}=f(x_n)$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $G$ be a finite group and let $H\leq G$ have index $2$. Which must be true?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $H$ is cyclic.
+    \item $H$ is abelian.
+    \item $H$ is normal.
+    \item $G/H$ has four elements.
+    \item $G$ is abelian.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Which of the following spaces is simply connected?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $S^1$
+    \item $\mathbb{R}^2\setminus\{0\}$
+    \item $S^2$
+    \item $T^2$
+    \item An annulus
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+A tree has $17$ vertices. How many edges does it have?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $15$
+    \item $16$
+    \item $17$
+    \item $18$
+    \item Cannot be determined
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Suppose $R$ is an integral domain. Which condition is guaranteed?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item Every nonzero element is invertible.
+    \item $R$ has no nonzero zero divisors.
+    \item Every ideal is principal.
+    \item $R$ is finite.
+    \item $R$ is a field.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $\varphi:G\to H$ be a group homomorphism. Which is always a normal subgroup of $G$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\operatorname{im}\varphi$
+    \item $\ker\varphi$
+    \item Every subgroup of $\operatorname{im}\varphi$
+    \item Every cyclic subgroup
+    \item The center of $H$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+How many homomorphisms
+\[
+\mathbb{Z}/6\mathbb{Z}\longrightarrow\mathbb{Z}/4\mathbb{Z}
+\]
+are there?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $1$
+    \item $2$
+    \item $3$
+    \item $4$
+    \item $6$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Suppose $f:S^1\to S^1$ is given by $f(z)=z^5$. Under the usual identification $\pi_1(S^1)\cong\mathbb{Z}$, the induced map
+\[
+f_*:\pi_1(S^1)\to\pi_1(S^1)
+\]
+is
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $n\mapsto 0$
+    \item $n\mapsto n$
+    \item $n\mapsto 5n$
+    \item $n\mapsto n+5$
+    \item $n\mapsto n^5$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+If $F$ is a field, which ideals does $F$ have?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item Only $(0)$
+    \item Only $F$
+    \item Exactly $(0)$ and $F$
+    \item Every subset is an ideal
+    \item Infinitely many proper ideals
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Which group is necessarily cyclic?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item Every group of order $4$
+    \item Every group of order $6$
+    \item Every group of prime order
+    \item Every abelian group
+    \item Every finite group
+\end{enumerate}
+\end{exercise}
