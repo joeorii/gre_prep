@@ -1,4 +1,4 @@
-\section{Multivariable Calculus}
+\section{Calculus/ Multivariable Calculus}
 
 Here, we include no proofs.
 
@@ -77,6 +77,34 @@ Now,
 |\lim \limits_{r \rightarrow 0} r | = 0,
 \]
 so the limit is $0$ via squeeze.
+\end{solution}
+
+\subsection{Fourier Transformation}
+
+\begin{exercise}
+What is the Fourier series corresponds to the sawtooth wave $s(x)$:
+\[
+s(x)=
+\begin{cases}
+x, & x\in[-\pi,\pi),\\
+s(x\pm2\pi), & \forall x\in\mathbb{R}.
+\end{cases}
+\]
+\end{exercise}
+\begin{solution}
+Note that $s(-x) = -x = -s(x)$, so is odd. Thus, $a_0 = 0$ and $a_n = 0$,
+so $s(x) = \sum_{n=1}^{\infty} b_n\sin(nx)$. Recall that:
+\[
+b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} x\sin(nx)dx.
+\]
+The integrand is even, so 
+\[
+b_n = \frac{2}{\pi}\int_{0}^{\pi} x\sin(nx)dx,
+\]
+and integration by parts gives
+\[
+b_n = \frac{2(-1)^{n + 1}}{n}.
+\]
 \end{solution}
 
 \subsection{Grad, Div, Curl}
