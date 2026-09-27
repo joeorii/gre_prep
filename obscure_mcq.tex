@@ -470,3 +470,1885 @@ Which group is necessarily cyclic?
 \begin{solution}
 (C).
 \end{solution}
+
+\begin{exercise}
+We call a group $G$ ``pleasant'' if it is abelian and every non-identity
+element $g$ in $G$ has prime order. Up to isomorphism, how many pleasant
+groups are there of order at most $25$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $9$
+    \item $15$
+    \item $25$
+    \item $31$
+    \item Infinitely many
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). By the structure theorem for finitely generated abelian groups, 
+$G$ is a finite product of finite cyclic groups. If two primes are present,
+say $C_p$ and $C_q$, then there is an element of $C_{pq}$, which is not good.
+Thus, $G$ is of the form $(C_p)^k$. There are nine primes total, but for 
+$p = 2,3,5$, we can have powers. For $2$, we can have $k \leq 4$, For $3$ and $5$, 
+$k \leq 2$. This gives $15$ possibilities.
+\end{solution}
+
+\begin{exercise}
+Given a set $S$, let $\mathcal{F}(S)$ denote the collection of all finite
+subsets of $S$, and $\mathcal{I}(S)$ denote the collection of all infinite
+subsets of $S$. Which of the following are true?
+\begin{enumerate}
+    \item $\mathcal{F}(\mathbb{N})$ is a topology on the natural numbers.
+    \item $\mathcal{I}(\mathbb{N})$ is a topology on the natural numbers.
+    \item The union $\mathcal{F}(\mathbb{N})\cup\mathcal{I}(\mathbb{N})$
+    is a topology on the natural numbers.
+\end{enumerate}
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only.
+    \item 2 only.
+    \item 3 only.
+    \item 2 and 3 only.
+    \item 1, 2, and 3 only.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Note that 1 doesn't contain the whole space, and 2 doesn't contain 
+the emptyset. 3 is a topology because it contains both and contains 
+arbitrary unions and finite intersections.
+\end{solution}
+
+\begin{exercise}
+Find the limit as $x$ goes to $0$ of the following fraction:
+\[
+\frac{6\sin(x)-6x+x^3}{x^5}.
+\]
+\begin{enumerate}[label=(\alph*)]
+    \item $0$
+    \item $1$
+    \item $\frac{1}{20}$
+    \item $\frac{6}{20}$
+    \item $-\frac{1}{120}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). The polynomial terms in the numereator are irrelevant.
+Then, use the Taylo expansion of $\sin(x)$, where the degree $5$ is 
+the only one which matters. Its coefficient is $\frac{6}{5!}$, so by 
+l'H\^{o}pital.
+\end{solution}
+
+\begin{exercise}
+Suppose that $A$, $B$, $C$ are three pairwise independent events. 
+Which of the following is not necessarily true?
+\begin{enumerate}[label=(\Alph*)]
+    \item $P(A)=P(A\mid B)$.
+    \item $P(A)\cdot P(B)\cdot P(C)=P(A\cap B\cap C)$.
+    \item $P(A)=\frac{P(A\cap C)}{P(C)}$.
+    \item $\bigl(P(A)\cdot P(B)\cdot P(C)\bigr)^2
+    =P(A\cap B)\cdot P(A\cap C)\cdot P(B\cap C)$.
+    \item $P(B\cap C)=P(B)\cdot P(C)$.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Pairwise independence doesn't tell you that $A \cap B$ and $C$ 
+(or any other permutation) are independent events.
+\end{solution}
+
+\begin{exercise}
+Determine the radius of convergence of the following power series:
+\[
+\sum_{n=1}^{\infty}\frac{\cos(\pi n)x^n}{n}.
+\]
+\begin{enumerate}[label=(\alph*)]
+    \item $\infty$
+    \item $0$
+    \item $1$
+    \item $\pi$
+    \item $n$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). The ratio test gives the term $|x| \frac{n}{n + 1}$. Sending 
+$n \rightarrow \infty$, the limit is $|x|$, which we want to be less 
+than $1$, so $|x| < 1$.
+\end{solution}
+
+\begin{exercise}
+Let $f$ and $g$ be twice-differentiable real-valued functions defined on
+$\R$. If $f'(x)>g'(x)$ for all $x>0$, which of the following
+inequalities must be true for all $x>0$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $f(x)>g(x)$
+    \item $f''(x)>g''(x)$
+    \item $f(x)-f(0)>g(x)-g(0)$
+    \item $f'(x)-f'(0)>g'(x)-g'(0)$
+    \item $f''(x)-f''(0)>g''(x)-g''(0)$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Consider $h(x) = f(x) - g(x)$. Note that $h'(x) > 0$ and is twice differentiable.
+$h$ is strictly increasing for all $x > 0$, so continuity (and thus the mean 
+value theorem) implies that $h(x) > h(0)$, for all $x > 0$. 
+\end{solution}
+
+\begin{exercise}
+Let $f(x,y)=x^2-2xy+y^3$ for all real $x$ and $y$. Which of the following is true?
+\begin{enumerate}[label=(\Alph*)]
+    \item $f$ has all of its relative extrema on the line $x=y$.
+    \item $f$ has all of its relative extrema on the parabola $x=y^2$.
+    \item $f$ has a relative minimum at $(0,0)$.
+    \item $f$ has an absolute minimum at $\left(\frac{2}{3},\frac{2}{3}\right)$.
+    \item $f$ has an absolute minimum at $(1,1)$.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). $f_x = 2x - 2y$ and $f_y = -2x + 3y^2$. Thus, critical points are 
+$P:=(0,0)$ and $Q:=\left( \frac{2}{3}, \frac{2}{3}\right)$. We now check the Hessian.
+The Hessian has determinant $12y - 4$. At $P$, we have a saddle. At $Q$, the 
+determinant is positive and $f_{xx}$ is positive, so we have a relative minima.
+\end{solution}
+
+\begin{exercise}
+For all positive functions $f$ and $g$ of the real variable $x$, let $\sim$
+be a relation defined by
+\[
+f\sim g
+\quad\Longleftrightarrow\quad
+\lim_{x\to\infty}\frac{f(x)}{g(x)}=1.
+\]
+Which of the following is not a consequence of $f\sim g$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $f^2\sim g^2$
+    \item $\sqrt{f}\sim\sqrt{g}$
+    \item $e^f\sim e^g$
+    \item $f+g\sim 2g$
+    \item $g\sim f$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). This requires $\lim_{x \rightarrow \infty} f(x) - g(x) = 0$, which is not guaranteed.
+In particular, this limit of $\frac{f}{g}$ doesn't ensure that limit of $f$ is equal to limit of $g$.
+The one fishy one is (B), but the square root is continuous for positive $x$, so the limit commutes.
+\end{solution}
+
+\begin{exercise}
+At a banquet, $9$ women and $6$ men are to be seated in a row of $15$ chairs. 
+If the entire seating arrangement is to be chosen at random, what is the probability that all of the men 
+will be seated next to each other in $6$ consecutive positions?
+\begin{enumerate}[label=(\Alph*)]
+    \item $\displaystyle \frac{1}{\binom{15}{6}}$
+    \item $\displaystyle \frac{6!}{\binom{15}{6}}$
+    \item $\displaystyle \frac{10!}{15!}$
+    \item $\displaystyle \frac{6!\,9!}{14!}$
+    \item $\displaystyle \frac{6!\,10!}{15!}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). There are $\binom{15}{6}$ ways to assort M and W, and there are ten positions where we 
+can place the six. Thus, it's $\frac{10}{\binom{15}{6}}$.
+\end{solution}
+
+\begin{exercise}
+In the complex $z$-plane, the set of points satisfying the equation
+\[
+z^2=|z|^2
+\]
+is a
+\begin{enumerate}[label=(\Alph*)]
+    \item pair of points
+    \item circle
+    \item half-line
+    \item line
+    \item union of infinitely many different lines
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). We get $e^{2i\theta} = 1$, after cancelling the radius. 
+Then, the valid points are just on the real line ($0$ works too!).
+\end{solution}
+
+\begin{exercise}
+Say we have a triangle with sides $1,r,s$, with the angle between sides with 
+lengths $1$ and $r$ being $110^{\circ}$. Here, as $r$ and $s$ increase, 
+the length of the third side of the triangle remains $1$ and the measure 
+of the obtuse angle remains $110^\circ$. What is
+of the triangle remains $1$ and the measure of the obtuse angle remains
+$110^\circ$. What is
+\[
+\lim_{\substack{s\to\infty\\r\to\infty}}(s-r)?
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item A positive number less than $1$
+    \item $1$
+    \item A finite number greater than $1$
+    \item $\infty$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Use law of cosines to get
+\[
+s^2 = 1 + r^2 - 2r \cos (110^{\circ}).
+\]
+From this, we can deduce that 
+\[
+s - r = \frac{\frac{1}{r} - 2 \cos(110^{\circ})}{\frac{s}{r} + 1}.
+\]
+Now, we just need to determine the limit of $\frac{s}{r}$, but this is $1$, because
+the law of cosines tell us that the limit of $\frac{s^2}{r^2}$ is $1$ (and the square 
+root is continuous on positive reals). Precisely, the limits is $\cos(110^{\circ})$ then.
+\end{solution}
+
+\begin{exercise}
+A fair coin is to be tossed $100$ times, with each toss resulting in a head or a tail. 
+If $H$ is the total number of heads and $T$ is the total number of tails, which of the following events has the greatest probability?
+\begin{enumerate}[label=(\Alph*)]
+    \item $H=50$
+    \item $T\geq 60$
+    \item $51\leq H\leq 55$
+    \item $H\geq 48$ and $T\geq 48$
+    \item $H\leq 5$ or $H\geq 95$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). This contains events around the center, which are greatest probability.
+\end{solution}
+
+\begin{exercise}
+Let $\mathbf{F}$ be a constant unit force that is parallel to the vector
+$(-1,0,1)$ in $xyz$-space. What is the work done by $\mathbf{F}$ on a
+particle that moves along the path given by
+$(t,t^2,t^3)$ between time $t=0$ and time $t=1$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\displaystyle -\frac{1}{4}$
+    \item $\displaystyle -\frac{1}{4\sqrt{2}}$
+    \item $0$
+    \item $\sqrt{2}$
+    \item $3\sqrt{2}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Note that work is $\int \mathbf{F} \cdot d \mathbf{r}$.
+We use a parametrization, so this is actually 
+$\int \mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t) dt$.
+We get
+\[
+\int_0^1 \frac{1}{\sqrt{2}} (-1,0,1) \cdot (1, 2t, 3t^2) dt 
+= \int_0^1 \frac{3t^2 - 1}{\sqrt{2}} dt
+= 0.
+\]
+Note that in the case of constant force (which is our case), we can 
+just do $\mathbf{F} \cdot \nabla \mathbf{r}$.
+\end{solution}
+
+\begin{exercise}
+Consider the theorem: If $f$ and $f'$ are both strictly increasing real-valued
+functions on the interval $(0,\infty)$, then
+\[
+\lim_{x\to\infty} f(x)=\infty.
+\]
+The following argument is suggested as a proof of this theorem.
+
+\begin{enumerate}
+    \item By the Mean Value Theorem, there is a $c_1$ in the interval
+    $(1,2)$ such that
+    \[
+    f'(c_1)
+    =
+    \frac{f(2)-f(1)}{2-1}
+    =
+    f(2)-f(1)>0.
+    \]
+
+    \item For each $x>2$, there is a $c_x$ in $(2,x)$ such that
+    \[
+    \frac{f(x)-f(2)}{x-2}=f'(c_x).
+    \]
+
+    \item For each $x>2$,
+    \[
+    \frac{f(x)-f(2)}{x-2}
+    =
+    f'(c_x)>f'(c_1)
+    \]
+    since $f'$ is strictly increasing.
+
+    \item For each $x>2$,
+    \[
+    f(x)>f(2)+(x-2)f'(c_1).
+    \]
+
+    \item
+    \[
+    \lim_{x\to\infty}f(x)=\infty.
+    \]
+\end{enumerate}
+Which of the following statements is true?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item The argument is valid.
+    \item The argument is not valid since the hypotheses of the Mean Value
+    Theorem are not satisfied in (1) and (2).
+    \item The argument is not valid since (3) is not valid.
+    \item The argument is not valid since (4) cannot be deduced from the
+    previous steps.
+    \item The argument is not valid since (4) does not imply (5).
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). Note that the only cautious step may be the usage of the MVT, but 
+it is implicit in the problem that $f'(x)$ exists on $(0, \infty)$, so continuity 
+and differentiability is assumed to be true on the intervals used.
+\end{solution}
+
+\begin{exercise}
+Let $A$ be a real $2\times2$ matrix. Which of the following statements
+must be true?
+\begin{enumerate}
+    \item All of the entries of $A^2$ are nonnegative.
+    \item The determinant of $A^2$ is nonnegative.
+    \item If $A$ has two distinct eigenvalues, then $A^2$ has two distinct eigenvalues.
+\end{enumerate}
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 2 only
+    \item 3 only
+    \item 2 and 3 only
+    \item 1, 2, and 3
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Counter example for 1 is easy and 2 is clearly true. For 3, 
+the counter example $\begin{psmallmatrix}
+1 & 0 \\ 0 & -1
+\end{psmallmatrix}$ is good.
+\end{solution}
+
+
+\begin{exercise}
+For how many positive integers $k$ does the ordinary decimal representation of
+the integer $k!$ end in exactly $99$ zeros?
+\begin{enumerate}[label=(\Alph*)]
+    \item None
+    \item One
+    \item Four
+    \item Five
+    \item Twenty-four
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). $5$ is the limiting factor here.
+The power of $5$ dividing $k!$ is the sum 
+\[
+\sum_{n \geq 1} \left \lfloor \frac{k}{5^n} \right\rfloor.
+\]
+It is obvious that this sum is the same for five consecutive numbers $k$.
+\end{solution}
+
+\begin{exercise}
+Let $K$ be a nonempty subset of $\R^n$, where $n>1$. Which of the
+following statements must be true?
+\begin{enumerate}
+    \item If $K$ is compact, then every continuous real-valued function
+    defined on $K$ is bounded.
+    \item If every continuous real-valued function defined on $K$ is
+    bounded, then $K$ is compact.
+    \item If $K$ is compact, then $K$ is connected.
+\end{enumerate}
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 2 only
+    \item 3 only
+    \item 1 and 2 only
+    \item 1, 2, and 3
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). 1 is clearly true. 2 requires more justification. It is true by Heine-Borel. 
+$K$ is bounded by  considering the norm function, which is continuous. It is also closed: 
+if not, take $a \in \overline{K}\setminus K$. Then, $\frac{1}{||x - a||}$ 
+is continuous on $K$ because $a \notin K$. However, because $a$ is a limit 
+point, $||x - a|| \rightarrow 0$, so the whole expression becomes unbounded, which 
+is a contradiction.
+\end{solution}
+
+
+\begin{exercise}
+If $f$ is the function defined by
+\[
+f(x)=
+\begin{cases}
+xe^{-x^2-x^{-2}}, & x\neq0,\\
+0, & x=0,
+\end{cases}
+\]
+at how many values of $x$ does the graph of $f$ have a horizontal tangent line?
+\begin{enumerate}[label=(\Alph*)]
+    \item None
+    \item One
+    \item Two
+    \item Three
+    \item Four
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). Away from zero, we can differentiate $f(x)$ to find two zeroes
+of $f'(x)$. We consider the behavior at $0$ now. We use the standard limit:
+\[
+\lim_{h \rightarrow 0} \frac{f(h) - f(0)}{h - 0} 
+= \lim_{h \rightarrow 0} e^{-h^2 - h^{-2}}
+= 0.
+\]
+\end{solution}
+
+\begin{exercise}
+For each positive integer $n$, let $f_n$ be the function defined on the
+interval $[0,1]$ by
+\[
+f_n(x)=\frac{x^n}{1+x^n}.
+\]
+Which of the following statements are true?
+
+\begin{enumerate}
+    \item The sequence $\{f_n\}$ converges pointwise on $[0,1]$ to a limit
+    function $f$.
+    
+    \item The sequence $\{f_n\}$ converges uniformly on $[0,1]$ to a limit
+    function $f$.
+    
+    \item
+    \[
+    \lim_{n\to\infty}\int_0^1 f_n(x)\,dx
+    =
+    \int_0^1\left(\lim_{n\to\infty}f_n(x)\right)\,dx.
+    \]
+\end{enumerate}
+
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 3 only
+    \item 1 and 2 only
+    \item 1 and 3 only
+    \item 1, 2, and 3
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). The pointwise limit is 
+\[
+f(x) = \begin{cases}
+0 & x \in [0,1) \\
+\frac{1}{2} & x = 1
+\end{cases}.
+\]
+3 is true by dominated convergence, using $f$ as its point-wise limit.
+As for the counter example for 2, take some sequence approaching $1$, 
+say $x_n = 1 - \frac{1}{n}$. Then, $(x_n)^n \rightarrow e^{-1}$ and so 
+$f_n(x_n) \rightarrow \frac{1}{1 + e} > 0$, while $f(x_n)=0$.
+\end{solution}
+
+
+\begin{exercise}
+Let $R$ be a ring with a multiplicative identity. If $U$ is an additive
+subgroup of $R$ such that $ur\in U$ for all $u\in U$ and for all $r\in R$,
+then $U$ is said to be a right ideal of $R$. If $R$ has exactly two right
+ideals, which of the following must be true?
+\begin{enumerate}
+    \item $R$ is commutative.
+    \item $R$ is a division ring (that is, all elements except the additive
+    identity have multiplicative inverses).
+    \item $R$ is infinite.
+\end{enumerate}
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 2 only
+    \item 3 only
+    \item 1 and 2 only
+    \item 1, 2, and 3
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). $0$ and $R$ are always ideal and are the only ones. Then, every element 
+has an inverse (which is unique), so is a division ring. Note that the ring 
+need not be commutative at all, with the quaternions (which is a central simple 
+algebra over $\R$) being a good example.
+\end{solution}
+
+\begin{exercise}
+Suppose that $X$ and $Y$ are independent random variables with standard
+deviations $\sigma_X$ and $\sigma_Y$, respectively. If $Z=X+Y$, then
+$\sigma_Z=$
+\begin{enumerate}[label=(\Alph*)]
+    \item $\sigma_X+\sigma_Y$
+    \item $\sigma_X^2+\sigma_Y^2$
+    \item $\left(\sigma_X^2+\sigma_Y^2\right)^{1/2}$
+    \item $2\sigma_X+2\sigma_Y$
+    \item $\sigma_X\sigma_Y$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Note that
+\[
+\sigma_Z^2 = \Var(Z) = \Var(X+Y) = \Var(X) + \Var(Y) = \sigma_X^2 + \sigma_Y^2,
+\]
+since variance is linear.
+\end{solution}
+
+\begin{exercise}
+Let $S=\{a,b,c,d\}$ and $X=\{f:S\to S\mid f\text{ is bijective and }f(x)\neq x
+\text{ for each }x\in S\}$. Then $|X| = $
+\begin{enumerate}[label=(\Alph*)]
+    \item $8$
+    \item $9$
+    \item $12$
+    \item $18$
+    \item $20$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Count the number of conjugacy classes of type 2-2 and 4.
+\end{solution}
+
+\begin{exercise}
+Which of the following graphs has two connected components?
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac{x^2}{5}+y^2-\dfrac{z^2}{2}=1$
+    \item $\dfrac{x^2}{5}-\dfrac{y^2}{5}-\dfrac{z^2}{5}=1$
+    \item $x^2-2x+y^2+z^2=1$
+    \item $x=y^2-z^2$
+    \item $z=x-y+2$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). (A) has two positive squares and one negative square, which is one-sheeted 
+hyperboloid. (B) has one positive square and two negative squares, which is a 
+two-sheeted hyperboloid. (C) is a sphere. (D) is a hyperbolic paraboloid. 
+(E) is a plane.
+\end{solution}
+
+\begin{exercise}
+The function
+\[
+f(x,y)=
+\begin{cases}
+\dfrac{x^2y}{x^4+y^2}, & (x,y)\neq(0,0),\\[6pt]
+0, & (x,y)=(0,0),
+\end{cases}
+\]
+Which of the following is true?
+
+\begin{enumerate}
+    \item $f$ is not continuous at $(0,0)$.
+    \item $f$ is differentiable everywhere.
+    \item $f$ has well-defined partial derivatives everywhere
+    (i.e. $\dfrac{\partial f}{\partial x},\dfrac{\partial f}{\partial y}$
+    are both defined).
+    \item $f$ is continuous at $(0,0)$ but not differentiable at $(0,0)$.
+\end{enumerate}
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 2 only
+    \item 3 only
+    \item 4 only
+    \item 1 and 3 only
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(E). 1 is false because if we use the contour $y = x^2$, then $f(x,x^2) = \frac{1}{2}$.
+3 is true because the limits
+\[
+\lim_{h \rightarrow 0} \frac{f(h,0) - f(0,0)}{h} \qquad 
+\lim_{h \rightarrow 0} \frac{f(0,h) - f(0,0)}{h} 
+\]
+exist (they are both zero). Away from zero, of course the derivative exists.
+We've basically shown that 2 and 4 are false here too.
+\end{solution}
+
+\begin{exercise}
+Evaluate the limit $\lim_{n\to\infty}\left(3^n+5^n\right)^{\frac{2}{n}}$.
+\begin{enumerate}[label=(\alph*)]
+    \item $0$
+    \item $1$
+    \item $9$
+    \item $16$
+    \item $25$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(E). Use sandwich on the following:
+\[
+5^2 \leq \left(3^n+5^n\right)^{\frac{2}{n}} \leq (2 \cdot 5^n)^{\frac{2}{n}}.
+\]
+The limit of the RHS is $25$.
+\end{solution}
+
+\begin{exercise}
+Evaluate: 
+\[
+\int_0^{\pi/2}\frac{1}{1+\tan x} dx.
+\]
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac{\pi}{2}$
+    \item $\dfrac{\pi}{3}$
+    \item $\dfrac{\pi}{4}$
+    \item $\dfrac{\pi^2}{2}$
+    \item $\dfrac{\pi^2}{4}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Write the integral as
+\[
+\int_0^{\pi/2}\frac{\cos x}{\cos x+ \sin x} dx
+\]
+If we consider 
+\[
+\int_0^{\pi/2}\frac{\sin x}{\cos x+ \sin x} dx
+\]
+as well, then the sum of these two integrals is $\frac{\pi}{2}$, while the 
+difference (second minus first) is equal to $\ln |\cos x + \sin x|$ evaluated
+from the bound. This is zero. Therefore, the integral is $\frac{\pi}{4}$.
+\end{solution}
+
+\begin{exercise}
+The series
+\[
+1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\frac{1}{9}-\frac{1}{11}+\cdots
+=
+\]
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac{\pi}{6}$
+    \item $\dfrac{\pi}{5}$
+    \item $\dfrac{\pi}{4}$
+    \item $\dfrac{\pi^2}{2}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Recall that 
+\[
+\arctan (x) = \sum_{n \geq 0} \frac{(-1)^nx^{2n + 1}}{2n + 1}.
+\]
+Thus, this is just $\arctan(1) = \frac{\pi}{4}$.
+\end{solution}
+
+\begin{exercise}
+Which of the following are true of a continuous function
+$f:\mathbb{R}\to\mathbb{R}$ such that $f(x+1)=f(x)$ for all $x$?
+\begin{enumerate}
+    \item $f$ achieves its maximum and minimum.
+    \item $f$ is uniformly continuous.
+    \item There is a $x_0$ such that
+    \[
+    f(x_0+\pi)=f(x_0).
+    \]
+    \item There is a $x_1$ such that
+    \[
+    f\left(x_1+\frac{1}{2}\right)=f(x_1).
+    \]
+\end{enumerate}
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 1, 2 only
+    \item 1, 2, and 3 only
+    \item 1, 2, 3, 4
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). For 1, 2, we can restrict $f$ to $[0,1]$, which is compact, so it achieves 
+a maximum and minimum (by EVT) and is uniformly continuous. For 3 and 4, we consider
+$g(x) := f(x + \pi) - f(x)$. The integral over $[0,1]$ is zero, so the function 
+$g(x) = 0$ for some $x \in [0,1]$ (by IVT).
+\end{solution}
+
+\begin{exercise}
+Let $S$ be a set with $|S| \geq 3$. How many non-surjective functions from
+$S \to \{1,2,3\}$ are there?
+\begin{enumerate}[label=(\Alph*)]
+    \item $3\cdot 2^{|S|}$
+    \item $3\cdot 2^{|S|}-3$
+    \item $3^{|S|}-3$
+    \item $|S|^3$
+    \item $2|S|^2-3$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). We choose the two elements of the target which are hit. 
+There are three possible elements we don't choose. However, we overcount by three 
+possible maps (which are those sending everything to a single element), so we subtract off 
+$3$.
+\end{solution}
+
+
+\begin{exercise}
+A tank contains 50 gal of pure water. Starting at time zero, a salt-water solution containing
+$0.4$ lb/gal of salt enters the tank at a rate of $2$ gal/min. At the same time a drain is
+opened at the bottom of the tank allowing the salt solution to leave at a rate of $2$ gal/min.
+Assume that the solution is kept perfectly mixed at all times. How long will it take for the amount
+of salt (in lbs) in the tank to reach 10 lbs? Leave your answer in exact form (in terms of logarithms).
+\begin{enumerate}[label=(\Alph*)]
+    \item $2\ln 25$
+    \item $-2\ln\left(\frac{1}{2}\right)$
+    \item $25\ln\left(\frac{1}{2}\right)$
+    \item $25\ln 2$
+    \item $25\ln 10$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). If $S$ denotes the gal of salt, then 
+\[
+\frac{dS}{dt} = 2 \cdot 0.4 - 2 \cdot \frac{S}{50}.
+\]
+We can solve this ODE using an integrating factor of $e^{\frac{1}{25}t}$.
+This gives $S(t) = 20 + Ce^{-\frac{1}{25}t}$. Since $S(0) = 0$, we have $C = -20$.
+We then solve 
+\[
+10 = 20 -20e^{-\frac{1}{25}t} \implies t = 25 \ln(2).
+\]
+\end{solution}
+
+\begin{exercise}
+Evaluate
+\[
+\int_0^{2\pi} e^{e^{i\theta}} d\theta.
+\]
+\begin{enumerate}[label=(\Alph*)]
+    \item $2\pi i$
+    \item $2\pi$
+    \item $4\pi i$
+    \item $4\pi e$
+    \item $-2\pi i$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). We use the infinite series form of $e^x$.
+\[
+\int_0^{2\pi} e^{e^{i\theta}} d\theta 
+= \sum_{n \geq 0} \int_0^{2\pi} \frac{e^{i\theta n}}{n!} d\theta.
+\]
+For $n > 0$, we have $\int_0^{2\pi} \frac{e^{i\theta n}}{n!} d\theta = 0$, so the $n = 0$
+remains. That is, $\int_0^{2\pi} d\theta = 2\pi$.
+\end{solution}
+
+\begin{exercise}
+Let $F:\mathbb{R}_{>0}\to\mathbb{R}$ be given by
+\[
+F(t)=\int_{-\infty}^{\infty}e^{-tx^2} dx.
+\]
+Given
+\[
+\int_{-\infty}^{\infty}e^{-x^2} dx=\sqrt{\pi},
+\]
+then $F'(t)=$
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac{\sqrt{\pi}}{2t^{3/2}}$
+    \item $-\dfrac{\sqrt{\pi}}{t^{3/2}}$
+    \item $-\dfrac{\sqrt{\pi}}{t^{1/2}}$
+    \item $-\dfrac{\sqrt{\pi}}{2t^{3/2}}$
+    \item $\dfrac{\sqrt{\pi}}{t^{1/2}}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). Consider the substitution $u = x\sqrt{t}$, so $dx = \frac{du}{\sqrt{t}}$.
+The integral is now
+\[
+\frac{1}{\sqrt{t}} \int_{-\infty}^{\infty}e^{-u^2} du,
+\]
+so $F(t) = \frac{1}{\sqrt{t}} \sqrt{\pi}$. Therefore, 
+$F'(t) = -\frac{\sqrt{\pi}}{2t^{\frac{3}{2}}}$.
+\end{solution}
+
+\begin{exercise}
+Let $f:\mathbb{R}\to\mathbb{R}$ be differentiable. Then
+\[
+\lim_{\epsilon\to0}
+\frac{3}{\epsilon^3}
+\int_{-\epsilon}^{\epsilon} t f(x+t)\,dt
+=
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac{1}{3}f(x)$
+    \item $\dfrac{1}{2}f'(x)$
+    \item $\dfrac{1}{2}f''(x)$
+    \item $2f'(x)$
+    \item $3f''(x)$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). Use the Taylor expansion of $f(x + t)$ around $x$, so
+\[
+tf(x + t) =tf(x) + t^2f'(x) + \frac{t^3}{2}f''(x) + \dots
+\]
+The integral of $tf(x)$ over the interval $[-\epsilon, \epsilon]$ is zero 
+because $tf(x)$ is odd (with resepect to $t$!). Similarly, all odd-powered
+parts vanish. Thus,
+\[
+\lim_{\epsilon\to0} \frac{3}{\epsilon^3}\int_{-\epsilon}^{\epsilon} t f(x+t) dt
+= \lim_{\epsilon\to0} \frac{3}{\epsilon^3}\int_{-\epsilon}^{\epsilon}t^2f'(x) + \text{h.o.t.} \, dt
+\]
+The expression is
+\[
+\lim_{\epsilon\to0} \frac{3}{\epsilon^3} (\frac{2\epsilon^3}{3}f'(x)+ \text{h.o.t. in $\epsilon$}) = 2f'(x)
+\]
+\end{solution}
+
+\begin{exercise}
+Which set does not have the same cardinality as the others?
+\begin{enumerate}[label=(\Alph*)]
+    \item $\{f:\mathbb{N}\to\mathbb{N}\}$
+    \item $\mathbb{R}$
+    \item $\{f:\{0,1,\ldots,100\}\to\mathbb{R}\}$
+    \item $\{\text{solutions to polynomial equations with coefficients in }\mathbb{Z}\}$
+    \item $\{f:\mathbb{Z}\to\{0,1\}\}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). (D) are algebraic numbers; there are only countably many polynomials with integer coefficients, 
+and each polynomial has finitely many roots. Hence, this set is countable. 
+(A) is $\N^{\N}$, which has cardinality $2^{\N}$. (B) is $\R$, which has cardinality $2^{\N}$.
+(C) is just $\R^{101}$, which has same cardinality as $\R$. (E) is $2^{\Z}$, having same cardinality as
+$2^{\N}$ or $\R$.
+\end{solution}
+
+\begin{exercise}
+Let $S=\{1,2,3,4\}$ and
+\[
+X=\{f:S\to S\mid x<y\Rightarrow f(x)\leq f(y)\}.
+\]
+Then $|X|=$
+\begin{enumerate}[label=(\Alph*)]
+    \item $18$
+    \item $20$
+    \item $24$
+    \item $35$
+    \item $40$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). Each function corresponds to selecting a multiset of $4$ elements from $S$.
+The way we do this is via stars and bars. This is just $\binom{7}{4}$.
+\end{solution}
+
+\begin{remark}
+For the above, suppose we want to select a multiset of $n$ element from a set $S$, with $k$
+elements. This is done by solving for nonnegative solutions to $n_1 + \dots + n_k = n$.
+The $n_i$ represent the number of elements from each element in $S$. Of course, this is set to 
+be $n$ because we want $n$ elements in total.
+\end{remark}
+
+\begin{exercise}
+Suppose $y_n$ and $x_n$ satisfy
+\[
+\begin{pmatrix}
+x_n\\
+y_n
+\end{pmatrix}
+=
+\begin{pmatrix}
+2 & 1\\
+1 & 1
+\end{pmatrix}
+\begin{pmatrix}
+x_{n-1}\\
+y_{n-1}
+\end{pmatrix}
+\]
+with $x_0=y_0=1$. What is
+\[
+\lim_{n\to\infty}\frac{x_n}{y_n}
+\]
+assuming this limit exists?
+\begin{enumerate}[label=(\Alph*)]
+    \item $\infty$
+    \item $1-\sqrt{2}$
+    \item $1+\sqrt{2}$
+    \item $\dfrac{1+\sqrt{5}}{2}$
+    \item $\dfrac{1-\sqrt{5}}{2}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). Using the recurrence relation, we have
+\[
+\frac{x_n}{y_n} = \frac{2x_{n - 1} + y_{n - 1}}{x_{n - 1} + y_{n - 1}}.
+\]
+Assuming the limit exists, we find that
+\[
+L = \frac{2L + 1}{L + 1},
+\]
+so $L = \frac{1 \pm \sqrt{5}}{2}$. Since $x_0, y_0 = 1$, all terms are positive, so 
+$L = \frac{1 + \sqrt{5}}{2}$.
+\end{solution}
+
+\begin{exercise}
+Let
+\[
+A=
+\begin{pmatrix}
+1 & 1\\
+0 & 1
+\end{pmatrix}
+\]
+and define
+\[
+\|A\|_{\mathrm{op}}
+:=
+\sup_{\|v\|_{\mathbb{R}^2}=1}\{\|Av\|_{\mathbb{R}^2}\}.
+\]
+There is a vector $v$ such that
+\[
+\|A\|_{\mathrm{op}}=\|Av\|_{\mathbb{R}^2}.
+\]
+Also, note that once we find one $v$ that maximizes the norm $\|\cdot\|_{\mathrm{op}}$, $-v$ also does. Find the angle $v$ makes with the positive $x$-axis assuming $v$ is to the right of the $y$-axis:
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\arctan 2$
+    \item $\dfrac{\pi}{2} - \dfrac{\arctan 2}{2}$
+    \item $\dfrac{3\pi}{4}$
+    \item $\dfrac{\pi}{4}$
+    \item $-\dfrac{\pi}{4}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Our vector $v = \begin{pmatrix} \cos \theta & \sin \theta \end{pmatrix}^T$.
+Our condition is asking when is the $f(\theta) = \cos^2\theta + 2\sin \theta \cos \theta + 
+2\sin^2\theta$ maximized? We take the derivative:
+\[
+f'(\theta) = 2\cos 2\theta + \sin 2\theta,
+\]
+so this is zero when $\tan (2\theta) = -2$. $2\theta$ is in the second quadrant then, 
+so we have that $2\theta = \pi - \arctan(2)$.
+\end{solution}
+
+\begin{exercise}
+Which of the following is the largest:
+\begin{enumerate}[label=(\Alph*)]
+    \item $e^\pi$
+    \item $\pi^e$
+    \item $3^\pi$
+    \item Not enough information.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). (C) is bigger than (A), clearly. We note however that (A) is bigger than (B).
+This can be seen by using logs and the function $\frac{\ln(x)}{x}$. Taking the derivative, 
+its maximum is at $e$ and decreases for $x > e$. Therefore, $\frac{\ln(\pi)}{\pi} < \frac{\ln(e)}{e}$.
+\end{solution}
+
+\begin{exercise}
+Let
+\[
+F(x)=\int_{\sin x}^{\cos x} e^{t^2+xt}\,dt.
+\]
+Then $F'(0)=$
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $e\cos 1-2$
+    \item $-2+e$
+    \item $\dfrac{e}{2}-\dfrac{3}{2}$
+    \item $\dfrac{e}{2}+\dfrac{1}{2}$
+    \item $\dfrac{e}{2}-\dfrac{1}{2}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). We use Leibniz; $F'(x)$ is:
+\[
+F'(x) = e^{\cos^2x + \cos x t}\cdot (-\sin x) - e^{\sin^2x + \sin x t} \cdot ( \cos x) + 
+\int_{\sin x}^{\cos x} te^{t^2+xt} dt
+\]
+Setting $x = 0$, we have that
+\[
+F'(0) = 0 - 1 + \int_0^1 te^{t^2} dt 
+= \frac{1}{2}(e - 1) - 1.
+\]
+\end{solution}
+
+\begin{exercise}
+Which functions are entire:
+\begin{enumerate}
+    \item $f(z)=2^{z^2}$
+    \item $g(z)=z^{2z}\sin z$
+    \item $h(z)=\displaystyle\sum_{i=0}^{\infty}z^i$
+\end{enumerate}
+\begin{enumerate}[label=(\Alph*)]
+    \item 1, 2 only
+    \item 1 only
+    \item 1 and 3 only
+    \item 2 only
+    \item 2 and 3 only
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). For 1, $2^{z^2} = e^{z^2 \cdot \ln 2}$. This is a composition of entire functions, so 
+is entire. Next, $z^{2z} = e^{2z \ln z}$ is not entire because $\ln z$ is not entire (it requires 
+a branch cut. This is conventionally taken as $(-\infty, 0]$). Finally, 3 is a geometric series 
+for $|z| < 1$, so is holomorphic only there. 
+\end{solution}
+
+\begin{exercise}
+Which of the following holomorphic functions must be constant functions:
+
+\begin{enumerate}
+    \item An entire function with positive real part.
+    
+    \item An entire function whose image does not intersect a line $L \subset \mathbb{C}$.
+    
+    \item An entire function such that $f(0)=0$ and
+    \[
+    \frac{f(z)}{z}\to 0
+    \qquad\text{as } |z|\to\infty.
+    \]
+    \textit{(Hint: $f(z)/z$ has a removable singularity at $0$, so can be extended to an entire function.)}
+    
+    \item A holomorphic function whose range misses two points.
+\end{enumerate}
+
+\begin{enumerate}[label=(\Alph*)]
+    \item 1, 2, 3, 4
+    \item 2, 3, 4 only
+    \item 1, 2 only
+    \item 3 only
+    \item 1, 2, 3 only
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(E). 1 is classic; take $g(z) = e^{f(z)}$, which is bounded and entire. By Liouville, it's constant. 
+2 is true because we can apply an affine transformation to make this into the statemenet of 1. 
+$g(z) := \frac{f(z)}{z}$ has a removable singularity, so can be extended to an entire function.
+Now $g$ is bounded outside a large disk, and is also bounded inside it by maximum modulus principle 
+(or EVT more simply). Thus, Liouville says that $g$ is constant, but then this constant must be zero. Thus, $f = 0$.
+4 is not true because we don't assume entire. If it was entire, we can use Picard's theorem.
+\end{solution}
+
+\begin{exercise}
+Let $R$ be a ring. Which of the following are always true?
+\begin{enumerate}
+    \item The set of idempotents
+    \[
+    \{x\in R\mid x^2=x\}
+    \]
+    is a subring.
+
+    \item If $x^2=x$ for all $x\in R$, then $R$ is commutative.
+
+    \item The only idempotents of an integral domain $R$ are $0$ and $1$.
+\end{enumerate}
+\begin{enumerate}[label=\alph*)]
+    \item 1 only
+    \item 2 only
+    \item 3 only
+    \item 2 and 3 only
+    \item None are true.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). 1 is not true if we take $\Z$. 3 is clearly true. 2 is also true:
+\[
+2a = (a + a)^2 = 4a^2 = 4a \implies 2a = 0.
+\]
+Next,
+\[
+a + b = (a + b)^2 = a^2 + ab + ba + b^2 = a + ab + ba + b \implies ab = ba.
+\]
+In the second line, we really get $ab = -ba$, but $b = -b$, so we get commutativity.
+\end{solution}
+
+\begin{exercise}
+What is the characteristic polynomial of an $n\times n$ matrix all of whose entries are $1$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $x(x-1)(x-2)\cdots(x-n)$
+    \item $x^{n-1}(x-n)$
+    \item $x^{n-1}(x-1)$
+    \item $x(x+1)(x+2)\cdots(x+n)$
+    \item $x^{n-2}(x-1)(x+1)$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). The eigenspaces are given by one with eigenvalue $n$ and all entries one. The other 
+has eigenvalue $0$, but $x_1 + \dots + x_n = 0$, which has dimension $n - 1$. We've found them all, so 
+the characteristic polynomial is (B).
+\end{solution}
+
+\begin{exercise}
+Evaluate
+\[
+\lim_{n\to\infty}
+\left(
+\frac{1}{n+1}
++\cdots+
+\frac{1}{2n}
+\right).
+\]
+\begin{enumerate}[label=(\Alph*)]
+    \item $1$
+    \item $\frac{3}{4}$
+    \item $\frac{1}{2}$
+    \item $\ln 2$
+    \item $\ln 3$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). We can write the sum as 
+\[
+\frac{1}{n} \sum_{k = n + 1}^{2n} \frac{1}{\frac{k}{n}},
+\]
+which we can now see as a Riemann sum. This is then 
+\[
+\int_1^2 \frac{1}{x} dx = \ln (2) - \ln (1) = \ln 2.
+\]
+\end{solution}
+
+
+\begin{exercise}
+How many times do the hands of an analog clock (i.e. one with 
+a hour and minute hand) form perpendicular angles in a $24$ hour time cycle?
+\begin{enumerate}[label=(\Alph*)]
+    \item $48$
+    \item $47$
+    \item $46$
+    \item $45$
+    \item $44$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(E). In 12 hours, the minute hand rotates (fully) 12 times, while the hour hand does once. 
+Thus, the relative difference in (full) revolutions is 11, so in 12 hours, there are 
+22 times they make a perpendicular angle. 
+\end{solution}
+
+\begin{exercise}
+Determine which of the following statements are true:
+
+\begin{enumerate}
+    \item There is a function $f:\mathbb{R}^3\to\mathbb{R}$ such that
+    \[
+    \operatorname{grad} f
+    =
+    \langle y,x+z\cos y,\sin y\rangle.
+    \]
+
+    \item There is a vector field $\vec{F}:\mathbb{R}^3\to\mathbb{R}^3$ such that
+    \[
+    \operatorname{curl}F
+    =
+    \langle z,y,x\rangle.
+    \]
+
+    \item If $u,v:\mathbb{R}\to\mathbb{R}^3$ satisfy
+    \[
+    u'=v-u,
+    \qquad
+    v'=v+u,
+    \]
+    then $u\times v$ is constant.
+\end{enumerate}
+
+\begin{enumerate}[label=(\Alph*)]
+    \item 1, 2, and 3
+    \item 2 and 3 only
+    \item 1 and 3 only
+    \item 2 and 3 only
+    \item 1 only
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). 1 is true because $\curl \grad f = 0$. 2 is true because 
+$\divergence \curl F = 0$. FOr 3, we use Leibniz:
+\[
+\frac{d}{dt}(u \times v) = u \times v' + u' \times v
+= u \times (v + u) + (v - u) \times v 
+= 0.
+\]
+Thus, $u \times v$ is constant.
+\end{solution}
+
+\begin{exercise}
+Suppose that $A$ and $B$ are $3\times 3$ invertible matrices. Which of the following are always true?
+
+\begin{enumerate}[label=(\Roman*)]
+    \item The eigenvalues of $AB$ are the same as $BA$.
+
+    \item The eigenvectors of $AB$ are the same as $BA$.
+
+    \item If $A$ and $B$ both only have $3$ as an eigenvalue, then they are similar.
+\end{enumerate}
+
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 2 only
+    \item 3 only
+    \item 1 and 3 only
+    \item None of them are true
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). $A^{-1}ABA = BA$, so true. 2 is just not true; if $ABv = \lambda v$, then there 
+is no reason why $v$ should be an eigenvecotr for $BA$. 
+3 is not true; consider Jordan decomposition.
+\end{solution}
+
+\begin{exercise}
+100 people have bought tickets for the sold-out showing of \textit{Casablanca} playing at the NuArt. 
+The theater has precisely the right amount of seats for this size audience, and so to prevent any confusion, 
+has assigned each person a seat. The people arrive one by one and respectfully sit in the seat they have been assigned. 
+One complication: the first person to arrive is a drunkard who has lost his ticket and does not know his assigned seat. 
+He randomly chooses one. As the 99 other people arrive, they may face the uncomfortable fact that their assigned seat is already filled. 
+If it is, they avoid confrontation and randomly select an open seat. Finally the last person arrives. 
+What is the probability he sits in his assigned seat?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\frac{1}{100}$
+    \item $\frac{2}{77}$
+    \item $\frac{1}{2}$
+    \item $\frac{99}{100}$
+    \item $\frac{3}{4}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Note that this chain of incorrectly chosen seats terminates at the 100th guy or before.
+Therefore, when the 100th guy walks in, he is either sitting in his seat, or the drunkard's seat.
+\end{solution}
+
+\begin{exercise}
+Let $f$ be the function defined by
+\[
+f(x)=
+\begin{cases}
+\sin\frac{1}{x}, & x\neq 0,\\
+0, & x=0.
+\end{cases}
+\]
+
+Let
+\[
+I=\{(x,f(x))\in\mathbb{R}^2:-1\leq x\leq 1\}.
+\]
+
+Which of the following are TRUE?
+
+\begin{enumerate}
+    \item The set $I$ is connected.
+    \item The set $I$ is path connected.
+    \item The set $I$ is compact.
+\end{enumerate}
+
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 3 only
+    \item 1 and 2 only
+    \item 1 and 3 only
+    \item 1, 2, and 3
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). This is basically the topologist's sine curve, so we have 1 is true and 2 is false. 
+3 is not true because $(0,1)$ is a limit point, for instance, but is not contained. Thus, not 
+closed, and by Heine Borel.
+\end{solution}
+
+\begin{exercise}
+Let
+\[
+f(x)=\int_0^{x^2}\sqrt{t}\sin\frac{1}{t}\,dt,
+\]
+and let $I=[-1,0)\cup(0,1]$. Which of the following are TRUE?
+\begin{enumerate}
+    \item $f$ is bounded on the set $I$.
+    \item $f'$ is bounded on the set $I$.
+    \item $f''$ is bounded on the set $I$.
+\end{enumerate}
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 2 only
+    \item 1 and 2 only
+    \item 1 and 3 only
+    \item 1, 2, and 3
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). The integral is bounded by the same bounds with integrand $\sqrt{t}$, so is bounded.
+The FTC says that the derivative is $2x|x| \sin \frac{1}{x^2}$, which is bounded.
+Taking the derivative gives a term with $x$ at the denominator, so is unbounded.
+\end{solution}
+
+\begin{exercise}
+Suppose
+\[
+\text{for all }\varepsilon>0\text{ there exists a }\delta>0
+\text{ such that for all }x\text{ and }y\text{ in }D,
+\]
+\[
+|x-y|<\delta
+\quad\Longrightarrow\quad
+|f(x)-f(y)|<\varepsilon.
+\]
+
+Consider the following statements:
+
+\begin{enumerate}
+    \item For all $\varepsilon>0$ there is a $\delta>0$.
+    \item For all $x$ and $y$ in $D$.
+    \item $|x-y|<\delta$.
+    \item $|f(x)-f(y)|\geq\varepsilon$.
+\end{enumerate}
+Using the numbers listed above, the proposition originally stated is which of the following?
+Denote ``not'' by $\neg$.
+\begin{enumerate}[label=(\Alph*)]
+    \item $A\bigl(B(C\text{ or }D)\bigr)$
+    \item $A\bigl(B(\neg C\text{ and }D)\bigr)$
+    \item $\neg A\bigl(B(\neg C\text{ or }D)\bigr)$
+    \item $A\bigl(\neg B(\neg C\text{ or }D)\bigr)$
+    \item $A\bigl(B(\neg C\text{ or }\neg D)\bigr)$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(E). The statement is $A(B(C \implies \neg D))$. We note that $P \implies Q$ is equivalent 
+to $\neg P \text{ or } Q$, so we have (E).
+\end{solution}
+
+\begin{exercise}
+Suppose $V$ is a real vector space of finite dimension $n$. Let $\mathcal{M}(V)$ denote the set of matrices from $V$ into itself. Let $T\in\mathcal{M}(V)$. Consider the two subspaces
+\[
+\mathcal{U}=\{X\in\mathcal{M}(V):TX=XT\}
+\]
+and
+\[
+\mathcal{W}=\{TX-XT:X\in\mathcal{M}(V)\}.
+\]
+
+Which of the following must be TRUE?
+\begin{enumerate}
+    \item If $V$ has a basis containing only eigenvectors of $T$, then $\mathcal{U}=\mathcal{M}(V)$.
+    \item $\dim(\mathcal{U})+\dim(\mathcal{W})=n^2$.
+    \item $\dim(\mathcal{U})<n$.
+\end{enumerate}
+
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 2 only
+    \item 3 only
+    \item 1 and 2 only
+    \item 1, 2, and 3
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). 2 is true by rank nullity under the map $L(X) = TX - XT$. For 3, let $T = I$. For 1, 
+there is really no reason why this should be true.
+\end{solution}
+
+\begin{exercise}
+Suppose today is Wednesday. What day of the week will it be $10^{10}$ days from now?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item Sunday
+    \item Monday
+    \item Tuesday
+    \item Wednesday
+    \item Thursday
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). $10 \equiv 3 \pmod{7}$. Also, $10^10 \equiv 4 \pmod{6}$, so we just need to calculate
+$3^4 \pmod{7}$, which is $4$. We move four days forward.
+\end{solution}
+
+
+\begin{exercise}
+In the complex plane, let $C$ be the circle
+\[
+|z+2|=3
+\]
+with positive (counterclockwise) orientation. Then
+\[
+\oint_C \frac{dz}{z^3(z-2)}
+=
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $-\dfrac{\pi i}{4}$
+    \item $0$
+    \item $\dfrac{3\pi i}{8}$
+    \item $\dfrac{7\pi i}{8}$
+    \item $2\pi i$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). Only the pole $z = 0$ is worth considering. By Cauchy's theorem,
+\[
+\Dfrac{}{z}\left(\frac{1}{z-2}\right) \cdot \frac{2\pi i}{2!} = -\frac{\pi i }{4}
+\]
+is what we want.
+\end{solution}
+
+\begin{exercise}
+In the complex plane, let $C$ be the circle
+\[
+|z|=3
+\]
+with positive (counterclockwise) orientation. Calculate
+\[
+\oint_C \frac{dz}{z^2(z-1)^2}.
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $-\pi i$
+    \item $0$
+    \item $\pi i$
+    \item $2\pi i$
+    \item $4\pi i$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). The residue at the pole $0$ is $2$ and the residue at the pole $1$ is $-2$.
+\end{solution}
+
+\begin{exercise}
+Suppose the real-valued function $f$ has a continuous derivative for all values of $x$ in $\mathbb{R}$. Which of the following must be FALSE?
+\begin{enumerate}
+    \item For some closed interval $[a,b]$ and every natural number $N$ there exists an $x$ in the interval $[a,b]$ such that $|f(x)|>N$.
+    
+    \item For each real number $c$ there are exactly two solutions of $f(x)=c$.
+    
+    \item The limit
+    \[
+    \lim_{x\to\infty}\frac{f(x)}{x}=\infty
+    \]
+    if and only if
+    \[
+    \lim_{x\to\infty}f'(x)=\infty.
+    \]
+\end{enumerate}
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 2 only
+    \item 3 only
+    \item 1 and 2 only
+    \item 1, 2, and 3
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). $f$ is continuous, so bounded on the compact set $[a,b]$. 2 is clearly false, by MVT (or Rolle's theorem).
+3 can be true. Take $f(x) = x^2$.
+\end{solution}
+
+\begin{exercise}
+Suppose $A$ and $B$ are $n\times n$ matrices with real entries. Which of the following are TRUE?
+
+\begin{enumerate}
+    \item The trace of $A^2$ is nonnegative.
+    
+    \item If $A^2=A$, then the trace of $A$ is nonnegative.
+    
+    \item The trace of $AB$ is the product of the traces of $A$ and $B$.
+\end{enumerate}
+
+\begin{enumerate}[label=(\Alph*)]
+    \item 2 only
+    \item 3 only
+    \item 1 and 2 only
+    \item 2 and 3 only
+    \item 1, 2, and 3
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). 1 and 3 are clearly wrong. For 2, this is true. Just write out the entries of $A$.
+Alternatively, look at eigenvalues of $A$. We have $\lambda^2 = \lambda$, so $\lambda = 0$ or $1$.
+\end{solution}
+
+\begin{exercise}
+Consider the independent random variables $X_i$ such that either $X_i=0$ or $X_i=1$ and each event is equally as likely. Let
+\[
+X=X_1+X_2+\cdots+X_{100}.
+\]
+Which of the following values is largest?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\operatorname{Var}(X)$
+    \item $100P(|X-50|>25)$
+    \item $\displaystyle\sum_{k=0}^{100} k\binom{100}{k}\left(\frac12\right)^k$
+    \item $100P(X\geq 60)$
+    \item $30$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). This is a binomial distribution. Thus, $\Var(X) = np(1-p)$, which is 
+$25$. (C) is clearly bigger than B and D because these are probabilities (so include a $2^{-100}$ term).
+Thus, it's really between (C) and (E). However, the $k = 50$ terms is already humongous.
+If we wanted to be rigorous, we could eliminate (B) and (D) via Chebyshev.
+\end{solution}
+
+\begin{exercise}
+Evaluate the following limit:
+\[
+\lim_{n\to\infty}
+\left(
+\frac{1}{n}
++\frac{1}{n+2}
++\frac{1}{n+4}
++\cdots
++\frac{1}{3n}
+\right).
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac{1}{2}\log 2$
+    \item $\dfrac{3}{4}$
+    \item $\log\sqrt{3}$
+    \item $1$
+    \item $2$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Write as a sum and divide top/ bottom by $n$. Then, we see this is 
+\[
+\int_0^1 \frac{1}{1 + 2x} dx.
+\]
+\end{solution}
+
+\begin{exercise}
+Suppose $A$ and $A_k$ are subsets of $\mathbb{R}$ where $k$ is any positive integer. Which of the following must be TRUE?
+
+\begin{enumerate}
+    \item If $A$ is closed, then $A$ is compact.
+    
+    \item If for each sequence $\{a_k\}$ with terms in $A$ there is a strictly increasing function $\alpha:\mathbb{Z}\to\mathbb{Z}$ such that
+    \[
+    \lim_{k\to\infty} a_{\alpha(k)}
+    \]
+    is in $A$, then $A$ is compact.
+    
+    \item If
+    \[
+    B=\bigcup_{k=1}^{\infty}A_k,
+    \]
+    then
+    \[
+    \overline{B}=\bigcup_{k=1}^{\infty}\overline{A_k}.
+    \]
+\end{enumerate}
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 2 only
+    \item 3 only
+    \item 2 and 3 only
+    \item 1, 2, and 3
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). 1 is false and 2 is true (clear). 3 is false, and we only usually have 
+\[
+\bigcup_{k=1}^{\infty}\overline{A_k} \subseteq \overline{B}.
+\]
+For instance, take $A_k = \left\{\frac{1}{k}\right\}$.
+\end{solution}
+
+\begin{remark}
+Note that for a finite union, we have $\overline{A \cup B} = \overline{A} \cup \overline{B}$.
+\end{remark}
+
+\begin{exercise}
+For each positive integer $n$, let $f_n$ be the function defined on the interval $[0,1]$ by
+\[
+f_n(x)=\frac{nx}{1+nx^2}.
+\]
+Which of the following statements are TRUE?
+
+\begin{enumerate}
+    \item The sequence $\{f_n\}$ converges point-wise on $[0,1]$ to a limit function $f$.
+    
+    \item The sequence $\{f_n\}$ converges uniformly on $[0,1]$ to a limit function $f$.
+    
+    \item
+    \[
+    \left|
+    \int_0^1 f_n(x) dx
+    -
+    \int_{1/n}^1 \lim_{k\to\infty} f_k(x)\,dx
+    \right|
+    \to 0
+    \qquad\text{as }n\to\infty.
+    \]
+\end{enumerate}
+
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 3 only
+    \item 1 and 2 only
+    \item 1 and 3 only
+    \item 1, 2, and 3
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). The pointwise limit is the function $0$ at $x = 0$ and $\frac{1}{x}$ for $x > 0$.
+This is not continuous, so definitely not uniformly convergent. 3 is not true by calculation.
+\end{solution}
+
+\begin{exercise}
+Suppose $A$, $B$, and $C$ are statements such that $C$ is true if exactly one of $A$ and $B$ is true. If $C$ is false, which of the following statements must be true?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item If $A$ is true, then $B$ is false.
+    \item If $A$ is false, then $B$ is false.
+    \item If $A$ is false, then $B$ is true.
+    \item Both $A$ and $B$ are true.
+    \item Both $A$ and $B$ are false.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). By contrapositive, this means that $A$ and $B$ are both false or both true. Thus, (B) is 
+certainly true. (D) and (E) are not right because we don't know if they're both true or false.
+\end{solution}
+
+\begin{exercise}
+What is the value of
+\[
+\int_{-\pi/4}^{\pi/4}
+\left(
+\cos t+\sqrt{1+t^2}\sin^3 t\cos^3 t
+\right) dt?
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $\sqrt{2}$
+    \item $\sqrt{2}-1$
+    \item $\dfrac{\sqrt{2}}{2}$
+    \item $\dfrac{\sqrt{2}-1}{2}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). The sophisticated part is zero because it is an odd function.
+Thus, we just calculate the cosine part. Remember, odd $\times$ even is odd.
+\end{solution}
+
+\begin{exercise}
+Let $V$ be a finite-dimensional real vector space and let $P$ be a linear transformation of $V$ such that $P^2=P$. Which of the following must be true?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $P$ is invertible.
+    \item $P$ is diagonalizable.
+    \item $P$ is either the identity transformation or the zero transformation.
+\end{enumerate}
+\begin{enumerate}[label=(\Alph*)]
+    \item None
+    \item I only
+    \item II only
+    \item III only
+    \item II and III
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). 1 and 3 are clearly false. For 2, possible eigenvalues are $0$ or $1$. The minimal
+polynomial of $P$ divides $x(x-1)$, so is a product of linear factors with no repetition. Thus, 
+$P$ is diagonalizable.
+\end{solution}
+
+\begin{exercise}
+Let $\ell$ be the line that is the intersection of the planes
+\[
+x+y+z=3
+\]
+and
+\[
+x-y+z=5
+\]
+in $\mathbb{R}^3$. An equation of the plane that contains $(0,0,0)$ and is perpendicular to $\ell$ is
+\begin{enumerate}[label=(\Alph*)]
+    \item $x-z=0$
+    \item $x+y+z=0$
+    \item $x-y-z=0$
+    \item $x+z=0$
+    \item $x+y-z=0$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). All we really need is the cross product of $(1,1,1)$ and $(1,-1,1)$.
+This gives $(2,0,-2)$, so (A) is really the only one that works.
+\end{solution}
+
+\begin{exercise}
+A curve in the $xy$-plane is given parametrically by
+\[
+x=t^2+2t,
+\qquad
+y=3t^4+4t^3,
+\]
+for all $t>0$. The value of $\dfrac{d^2y}{dx^2}$ at the point $(8,80)$ is
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $4$
+    \item $24$
+    \item $32$
+    \item $96$
+    \item $192$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). We note that 
+\[
+\Dfrac{y}{x} = \frac{\Dfrac{y}{t}}{\Dfrac{x}{t}} = 6t^2.
+\]
+Next, we note that 
+\[
+\frac{d^2y}{dx^2} = \Dfrac{}{t}\left(\Dfrac{y}{x}\right) \cdot \Dfrac{t}{x}
+= \Dfrac{}{t}\left(\Dfrac{y}{x}\right) \cdot \frac{1}{\Dfrac{x}{t}}.
+\]
+Thus, $\frac{d^2y}{dx^2} = \frac{12t}{2t + 2}$. At $t = 2$, this yields $4$.
+\end{solution}
+
+\begin{exercise}
+Let $f$ and $g$ be functions of a real variable such that
+\[
+g(x)=\int_0^x f(y)(y-x)\,dy
+\]
+for all $x$. If $g$ is three times continuously differentiable, what is the greatest integer $n$ for which $f$ must be $n$ times continuously differentiable?
+\begin{enumerate}[label=(\Alph*)]
+    \item $1$
+    \item $2$
+    \item $3$
+    \item $4$
+    \item $5$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). By Lebniz rule, we have
+\[
+g'(x) = f(x)(x-x)\cdot 1 - f(0)(0-x)\cdot 0 + \int_0^x -f(y) dx.
+\]
+Thus, 
+\[
+g''(x) = -f(x).
+\]
+$g$ is three time differentiable, so we need $f'$ to exist at the minimum.
+\end{solution}
+
+\begin{exercise}
+If $a$ and $b$ are positive numbers, what is the value of
+\[
+\int_0^\infty
+\frac{e^{ax}-e^{bx}}
+{(1+e^{ax})(1+e^{bx})}\,dx?
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $1$
+    \item $a-b$
+    \item $(a-b)\log 2$
+    \item $\displaystyle \frac{a-b}{ab}\log 2$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(E). Note that the integrand is a difference of $\frac{1}{1 + e^{bx}}$ and same but 
+$b$ replaced with $a$. Now,
+\[
+\int_0^{\infty} \frac{1}{1 + e^{bx}} dx 
+= \int_0^{\infty} \frac{e^{-bx}}{1 + e^{-bx}} dx 
+= -\frac{1}{b}\ln|1 + e^{-bx}| \Bigg|_0^{\infty}
+= \frac{1}{b} \ln (2).
+\]
+Thus, it is (E).
+\end{solution}
+
+\begin{exercise}
+For each positive integer $n$, let $x_n$ be a real number in the open interval
+$\left(0,\frac{1}{n}\right)$. Which of the following statements must be true?
+
+\begin{enumerate}
+    \item $\lim_{n\to\infty} x_n=0$.
+    \item If $f$ is a continuous real-valued function defined on $(0,1)$, then
+    $\{f(x_n)\}_{n=1}^{\infty}$ is a Cauchy sequence.
+    \item If $g$ is a uniformly continuous real-valued function defined on $(0,1)$, then 
+    $\lim_{n\to\infty}g(x_n)$ exists.
+\end{enumerate}
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 1 and 2 only
+    \item 1 and 3 only
+    \item 2 and 3 only
+    \item 1, 2, and 3
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). 1 is true by squeeze theorem, since $\frac{1}{n} \rightarrow 0$. 2 is false. 
+Consider $f(x) = \frac{1}{x}$. Then, $f(x_n) > n$, so the given set can't be Cauchy.
+3 is true. Uniform continuity and 1 tell us that $|g(x_n) - g(x_m)|$ tend to zero, thus Cauchy.
+By completeness, Cauchy implies convergence.
+\end{solution}
+
+\begin{exercise}
+A real-valued function $f$ defined on $\mathbb{R}$ has the following property: For 
+every positive number $\varepsilon$, there exists a positive number $\delta$ such that
+\[
+|f(x)-f(1)|\geq\varepsilon
+\qquad\text{whenever}\qquad
+|x-1|\geq\delta.
+\]
+
+This property is equivalent to which of the following statements about $f$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $f$ is continuous at $x=1$.
+    \item $f$ is discontinuous at $x=1$.
+    \item $f$ is unbounded.
+    \item $\displaystyle \lim_{|x|\to\infty}|f(x)|=\infty$.
+    \item $\displaystyle \int_0^\infty |f(x)|\,dx=\infty$.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D).  This is precisely the definition of (D). Vaguely, we get this because this says that 
+if the input is really far from $1$, then the output is really from $f(1)$.
+\end{solution}
+
+\begin{exercise}
+A tank initially contains a salt solution of $3$ grams of salt dissolved in $100$ liters of water.
+A salt solution containing $0.02$ grams of salt per liter of water is sprayed into the tank at a rate 
+of $4$ liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, 
+and the mixture flows out of the tank at a rate of $4$ liters per minute. If the mixing is instantaneous, 
+how many grams of salt are in the tank after $100$ minutes have elapsed?
+\begin{enumerate}[label=(\Alph*)]
+    \item $2$
+    \item $2-e^{-2}$
+    \item $2+e^{-2}$
+    \item $2-e^{-4}$
+    \item $2+e^{-4}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(E). If $S(t)$ denotes the salt in the tank at time $t$, then we have
+\[
+S' = 4(0.02) - 4\left(\frac{S}{100}\right).
+\]
+This gives $S(t) = 2 + e^{-\frac{t}{25}}$, using the initial conditions.
+\end{solution}
+
+\begin{exercise}
+What is the value of the flux of the vector field $\mathbf F$, defined on
+$\mathbb{R}^3$ by
+\[
+\mathbf F(x,y,z)=x\mathbf i+y\mathbf j+z\mathbf k,
+\]
+through the surface
+\[
+z=\sqrt{1-x^2-y^2}
+\]
+oriented with an upward-pointing normal vector field?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $\dfrac{2\pi}{3}$
+    \item $\pi$
+    \item $\dfrac{4\pi}{3}$
+    \item $2\pi$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(E). Use the divergence theorem. The integral is equal to 
+\[
+\int_V \nabla \cdot \mathbf{F} dV
+= \int_V 3 dV.
+\]
+Now, the volume is half a sphere of radius $1$, so it is $\frac{2}{3} \pi$.
+Thus, (E).
+\end{solution}
+

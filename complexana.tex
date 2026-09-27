@@ -43,7 +43,7 @@ Suppose that $f(x + iy) = u(x, y) + iv(x, y)$. If $u(x, y) = x^2 - y^2$ and $v(1
 \begin{solution}
 The key is the FTC and the Cuachy-Riemann equations, because $f$ is clearly holomorphic.
 \[
-v(4,1) - v(1,1) = \int_1^4 v_x'(x,1) dx = \int_1^4 - u_y'(x,1) dy = \int_1^4 2dy = 6.
+v(4,1) - v(1,1) = \int_1^4 v_x'(x,1) dx = \int_1^4 - u_y'(x,1) dx = \int_1^4 2dx = 6.
 \]
 Therefore, $v(4,1) = 8$. Note the use of the Cauchy Riemann equations.
 \end{solution}
@@ -82,6 +82,14 @@ Let $C = \{z = 1 + e^{i \theta} \colon \theta \in [0,2\pi]\}$. Calculate
 Use Cauchy's integral formula with $n = 1$. We want the first derivative of $\sin^2(z)$,
 and plug in $1$ into it. We have $2 \sin(1)\cos(1) = \sin(2)$.
 \end{solution}
+
+\begin{corollary}[Cauchy-Goursat for a Disc]
+If $f$ is holomorphic in a disc,
+\[
+\oint_{\gamma} f(z) dz = 0
+\]
+for any closed curve $\gamma$ in that disc. 
+\end{corollary}
 
 
 \begin{theorem}[Morera]

@@ -4,6 +4,110 @@ We provide no proofs here.
 
 \subsection{Real Analysis}
 
+\subsubsection{Continuity (on metric spaces)}
+
+Recall the following notions of continuity.
+
+\begin{df}
+    Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces, and $f \colon X \rightarrow Y$ be a map. Then, 
+    \begin{itemize}
+        \item We say that $f$ is \emph{continuous} at $x \in X$, 
+        if for every $\epsilon > 0$ there is $\delta > 0$ such that for every $x' \in X$ 
+        satisfying $d_X(x, x') < \delta$, we have 
+        \[
+        d_Y(f(x), f(x')) < \epsilon.
+        \]
+        $f$ is \emph{continuous} if $f$ is continuous at every $x \in X$.
+        \item We say that $f \colon X \rightarrow Y$ is \emph{uniformly continuous}, 
+        if $f$ is continuous at every $x \in X$ and $\delta = \delta (\epsilon)$ doesn't depend on $x$.
+        Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces, and $f \colon X \rightarrow Y$. 
+        \item We say that $f$ is \emph{Lipschitz}, if there is a constant $M > 0$ such that for all $x_1, x_2 \in X$, we have
+        \[
+        d_Y(f(x_1), f(x_2)) \leq M \cdot d_X(x_1, x_2).
+        \]
+        \item We say that $f$ is \emph{bi-Lipschitz}, if there are constants $M_1 > 0, M_2 > 0$ such that for all $x_1, x_2 \in X$, we have 
+        \[
+        M_2 \cdot d_X (x_1, x_2) \leq d_Y(f(x_1), f(x_2)) \leq M_1 \cdot d_X (x_1, x_2).
+        \]
+        \item We say that $f$ is an \emph{isometry}, or \emph{distance preserving}, if for every $x_1, x_2 \in X$, we have 
+        \[
+        d_Y(f(x_1), f(x_2)) = d_X(x_1, x_2).
+        \]
+    \end{itemize}
+\end{df}
+
+\begin{remark}
+It is immediate that we have the following implications:
+\[
+\text{biLipschitz} \implies \text{Lipschitz} \implies \text{Uniform Continuity} \implies \text{Continuity}
+\]
+\end{remark}
+
+\begin{theorem}
+A continuous function $f \colon S \rightarrow \R$, where $S \subseteq \R^n$ is compact, 
+is uniformly continuous.
+\end{theorem}
+
+\begin{proposition}
+BiLipschitz maps are injective.
+\end{proposition}
+
+\begin{proposition}
+A surjective biLipschitz map is a homeomorphism.
+\end{proposition}
+
+\begin{theorem}
+Let $X$ be a complete metric space. If $A \subseteq X$ is closed, then $A$ is also complete.
+\end{theorem}
+
+\subsubsection{Convergence of Functions, DCT}
+
+Recall the following different notions of convergence of functions:
+
+\begin{df}
+A sequence of functions $f_n \colon [a, b] \rightarrow \mathbb{R}$ 
+\emph{converges point-wise} to $f \colon [a,b] \rightarrow \mathbb{R}$,
+if for every $x \in [a,b]$, the sequence of real numbers $f_n(x)$ converges to $f(x)$. 
+That is, for every $x \in [a,b]$ and every $\epsilon > 0$, there exists $N_{x, \epsilon} \in \mathbb{N}$ 
+such that for all $n \geq N_{x, \epsilon}$ we have $|f_n(x) - f(x)| < \epsilon$.
+\end{df}
+
+\begin{df}
+A sequence of functions $f_n \colon [a, b] \rightarrow \mathbb{R}$ 
+\emph{converges uniformly} to $f \colon [a, b] \rightarrow \mathbb{R}$, 
+if for all $\epsilon > 0$, there exists $N_{\epsilon} > 0$ such that for all $n \geq N_{\epsilon}$ and for all $x \in [a, b]$ we have $|f_n(x) - f(x)| < \epsilon$. This is equivalent to
+\[
+\sup \limits_{x \in [a, b]} |f_n(x) - f(x)| \rightarrow 0, \text{ as } n \rightarrow \infty.
+\]
+\end{df}
+
+\begin{remark}
+Note that it is clear that uniform convergence implies point-wise convergence.
+\end{remark}
+
+\begin{remark}
+If we have uniform convergence, we can interchange limits and integrals. 
+Point-wise convergence is generally not enough. For point-wise convergence, we can 
+genrerally use DCT.
+\end{remark}
+
+\begin{theorem}[Dominated Convergence Theorem]
+Let $g \colon X \rightarrow [0, \infty]$ be integrable,
+and $f, f_n \colon X \rightarrow [-\infty, \infty]$, 
+$n \geq 1$ be measurable functions such that 
+\[
+|f_n(x)| \leq g(x), \forall x \in X \text{ and } f_n \overset{n \rightarrow \infty}{\rightarrow} f \mu\text{-a.e.} 
+\]
+Then,
+\[
+\left| \int f_n d\mu - \int f d\mu \right| \leq \int |f_n - f| d\mu \overset{n \rightarrow \infty}{\rightarrow} 0.
+\]
+\end{theorem}
+
+\begin{remark}
+$f_n \rightarrow f$ $\mu$-a.e. means that $f_n$ tends to $f$ pointwise 
+except for a measure zero set.
+\end{remark}
 
 \subsection{Topology}
 
@@ -23,8 +127,9 @@ We provide no proofs here.
 \end{remark}
 
 \begin{example}
-    In the discrete topology on a set $X$, every subset of $X$ is open.
-    It follows that every set is closed as well.
+In the discrete topology on a set $X$, every subset of $X$ is open.
+It follows that every set is closedE as well. 
+It follows that every function from a discrete space is continuous.
 \end{example}
 
 \begin{example}
@@ -109,4 +214,61 @@ Recall the notion of Hausdorff:
     Products and subspaces of Hausdorff spaces are Hausdorff.
 \end{proposition}
 
-\subsection{Miscellanious}
+\begin{proposition}
+Metric spaces are Hausdorff.
+\end{proposition}
+
+\subsection{Connectedness}
+
+\begin{df}
+A topological space $X$ is disconnected if there exists a pair of open sets $U$ and $V$ in $X$ such that
+$U \cap V = \emptyset$, $U \cup V = X$, and $U, V \neq \emptyset$. $X$ is connected if it is not disconnected. That is, for all nonempty opens such 
+that $U \cap V = \emptyset$ and $U \cup V = X$, $U = \emptyset$ or $V = \emptyset$.
+\end{df}
+
+\begin{proposition}
+The following are equivalent:
+\begin{itemize}
+    \item $X$ is connected.
+    \item The only subsets of $X$ which are both open and closed are $X$ and $\emptyset$.
+    \item $X$ is nonempty and it can't be written as $X = V_1 \cup V_2$, of two disjoint nonempty closed subset.
+\end{itemize}
+\end{proposition}
+
+\begin{df}
+A topological space $X$ is \emph{path connected} if there exists a path between any two points in $X$.
+\end{df}
+
+\begin{theorem}
+Every path connected space is connected. 
+\end{theorem}
+
+\begin{remark}
+If the space is locally path connected, then the converse to the above holds.
+\end{remark}
+
+\begin{proposition}
+The closure of a connected set is connected.
+\end{proposition}
+
+\begin{example}
+The Topologist's sine curve is a counter example to the converse statement.
+That is, it is connected, but not path connected nor locally path connected.
+\end{example}
+
+\subsection{Compactness}
+
+\begin{df}
+A topological space $X$ is \emph{sequentially compact}, if every sequence in $X$ has a 
+convergent subsequence in $X$. That is, for every sequence $(x_n)_{n \geq 1}$ in $X$, 
+there is a sub-sequence $(x_{n_k})_{k \geq 1}$ and a point $x \in X$ such that $x_{n_k} \rightarrow x$ 
+as $k \rightarrow \infty$.
+\end{df}
+
+\begin{theorem}
+If $X$ is a metric space, then sequentially compactness is equivalent to compactness.
+\end{theorem}
+
+\begin{corollary}
+Every compact metric space is complete.
+\end{corollary}

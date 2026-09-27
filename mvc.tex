@@ -2,6 +2,8 @@
 
 Here, we include no proofs.
 
+\subsection{Multivariate Limits, Chain Rules, Geometry}
+
 \begin{exercise}
     Find the equation of the plane in $\R^3$ passing through 
     $P=(0,0,1), Q=(1,0,0), R=(1,1,1)$.
@@ -23,6 +25,15 @@ Here, we include no proofs.
     which is simply $x-y+z = 1$.
 \end{solution}
 
+\begin{theorem}[Point-to-Plane Distance]
+Let $P=(x_0,y_0,z_0)$ be a point and let $ax+by+cz+d=0$ be 
+a plane, where $(a,b,c)\neq(0,0,0)$. Then the distance from $P$ to the plane is
+\[
+\frac{|ax_0+by_0+cz_0+d|}
+{\sqrt{a^2+b^2+c^2}}.
+\]
+\end{theorem}
+
 \begin{exercise}
     Compute the arc length of the helix $\gamma(t) = (\sin(t),-\cos(t), t)$
     from $t = 0$ to $t = 2\pi$.
@@ -38,7 +49,7 @@ Here, we include no proofs.
 The following is a nice way to determine if a limit doesn't exist:
 \begin{theorem}
     $\lim \limits_{(x,y) \rightarrow (a,b)} f(x,y) = L$ if and only if for all
-    $\gamma \colon [-,1,1] \rightarrow \R^2$ such that $\gamma(0) = (a,b)$, then 
+    $\gamma \colon [-1,1] \rightarrow \R^2$ such that $\gamma(0) = (a,b)$, then 
     $\lim \limits_{t \to 0} f(\gamma(t)) = L$.
 \end{theorem}
 
@@ -79,8 +90,182 @@ Now,
 so the limit is $0$ via squeeze.
 \end{solution}
 
+\begin{exercise}
+Let
+\[
+z=x^2+y^2,
+\qquad
+x=t^2,
+\qquad
+y=e^t.
+\]
+Find $\dfrac{dz}{dt}$.
+\begin{enumerate}[label=(\Alph*)]
+    \item $2t^2+2e^t$
+    \item $4t+2e^{2t}$
+    \item $4t^3+2e^{2t+1}$
+    \item $4t^3+2e^{2t}$
+    \item $2t^2+e^t$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). This is just chain rule: 
+$\frac{dz}{dt} = \Dfrac{z}{x}\Dfrac{x}{t} + \Dfrac{z}{y}\Dfrac{y}{t}$.
+\end{solution}
+
+\begin{exercise}
+Let
+\[
+z=f(x,y),
+\qquad
+x=u^2-v^2,
+\qquad
+y=2uv.
+\]
+Which expression gives $\dfrac{\partial z}{\partial u}$?
+\begin{enumerate}[label=(\Alph*)]
+    \item
+    $2u\frac{\partial f}{\partial x}
+    +2v\frac{\partial f}{\partial y}$
+
+    \item
+    $2u\frac{\partial f}{\partial x}
+    -2v\frac{\partial f}{\partial y}$
+
+    \item
+    $2v\frac{\partial f}{\partial x}
+    +2u\frac{\partial f}{\partial y}$
+
+    \item
+    $2u\frac{\partial f}{\partial x}
+    +2u\frac{\partial f}{\partial y}$
+
+    \item
+    $(u^2-v^2)\frac{\partial f}{\partial x}
+    +2uv\frac{\partial f}{\partial y}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). Again, chain rule.
+\end{solution}
+
+\begin{exercise}
+Let
+\[
+z=f(x,y),
+\qquad
+x=s^2+t,
+\qquad
+y=st.
+\]
+Which expression gives $\dfrac{\partial^2z}{\partial s^2}$?
+\begin{enumerate}[label=(\Alph*)]
+    \item
+    $4s^2f_{xx}+4stf_{xy}+t^2f_{yy}$
+
+    \item
+    $4s^2f_{xx}+4stf_{xy}+t^2f_{yy}+2f_x$
+
+    \item
+    $2f_x+4s^2f_{xx}+4stf_{xy}+2tf_{yy}$
+
+    \item
+    $4s^2f_{xx}+2stf_{xy}+t^2f_{yy}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). First, we find 
+\[
+z_s = f_x \cdot x_s + f_y \cdot y_s 
+= 2sf_x + tf_y.
+\]
+Next, we have
+\[
+z_{ss} = 2f_x + 2s\pfrac{f_x}{s} + t\pfrac{f_y}{s}.
+\]
+We have that 
+\[
+\pfrac{f_x}{s} = f_{xx}x_s + f_{xy}y_s
+= 2sf_{xx} + tf_{xy}
+\]
+and
+\[
+\pfrac{f_y}{s} = f_{yx}x_s + f_{yy}y_s 
+= 2sf_{xy} + tf_{yy}.
+\]
+Therefore, we have
+\[
+z_{ss} = 2f_x + 2s(2sf_{xx} + tf_{xy}) + t(2sf_{xy} + tf_{yy}).
+\]
+This is just (B).
+\end{solution}
+
+\subsection{Hessian}
+
+Let $f(x,y)$ be a twice-differntiable function on $\R^2$. Then, recall that 
+the critical values occur when $f_x$ and $f_y$ are zero. To find the type, 
+we use the Hessian matrix, $H$. 
+\begin{itemize}
+\item If $\det H < 0$, then it is a saddle.
+\item If $\det H > 0$ and $f_{xx} > 0$, then it is a relative minima.
+\item If $\det H > 0$ and $f_{xx} < 0$, then it is a relative maxima.
+\end{itemize}
+
 \subsection{Fourier Transformation}
 
+Recall that how to find the Fourier series of a periodic function.
+Let $f(x)$ be defined on the interval $(-L,L)$ and extended outside this
+interval by $f(x+2L)=f(x)$, so that $f$ is $2L$-periodic. 
+The Fourier series of $f(x)$ is
+\[
+\frac{a_0}{2}
++
+\sum_{n=1}^{\infty}
+\left(
+a_n\cos\left(\frac{n\pi x}{L}\right)
++
+b_n\sin\left(\frac{n\pi x}{L}\right)
+\right),
+\]
+where the Fourier coefficients are
+\[
+a_n
+=
+\frac{1}{L}
+\int_{-L}^{L}
+f(x)\cos\left(\frac{n\pi x}{L}\right)\,dx,
+\qquad n=0,1,2,\ldots,
+\]
+and
+\[
+b_n
+=
+\frac{1}{L}
+\int_{-L}^{L}
+f(x)\sin\left(\frac{n\pi x}{L}\right)\,dx,
+\qquad n=1,2,\ldots.
+\]
+\begin{remark}
+Note that in the Fourier series corresponding to an odd function, 
+only sine terms can be present. In the Fourier series
+corresponding to an even function, only cosine terms (and possibly a constant)
+can be present.
+\end{remark}
+Note that we can also formulate a complex version:
+\[
+f(x)
+\sim
+\sum_{n=-\infty}^{\infty}
+c_n e^{in\pi x/L},
+\]
+where the complex Fourier coefficients are
+\[
+c_n
+=
+\frac{1}{2L}
+\int_{-L}^{L}
+f(x)e^{\frac{-in\pi x}{L}}dx.
+\]
 \begin{exercise}
 What is the Fourier series corresponds to the sawtooth wave $s(x)$:
 \[
@@ -227,16 +412,35 @@ where $C$ is the boundary of $R$ described in the counter-clockwise (positive) s
 \end{theorem}
 
 \begin{theorem}
-Let $\mathbf{A}$ be a vector field. Then, the following conditions are equivalent:
+Let $\mathbf{A}$ be a vector field (that is continously differentiable on an open, simply 
+connected domain $D\subseteq \R^3$). Then, the following conditions are equivalent:
 \begin{itemize}
 \item $\int_C \mathbf{A} \cdot d\mathbf{r}$ is independent
 of the path.
 \item There exists a scalar function $\theta$ such that $\mathbf{A} = \nabla \theta$.
 In this case, the integral is equal to $\theta(P) - \theta(Q)$, where $P$ and $Q$ denote the finishing and starting points.
-\item $\nabla \times \mathbf{A} = 0$ ($\curl \mathbf{A}= 0$). If $C$ is a closed path, then 
-this $\nabla \times \mathbf{A} = 0$ is equivalent to $\mathbf{A}$ being convervative.
+\item $\nabla \times \mathbf{A} = 0$ ($\curl \mathbf{A}= 0$).
+\item $\mathbf{A}$ is conservative.
 \end{itemize}
 \end{theorem}
+
+\begin{exercise}
+Which of the following apply to the vector field
+\[
+\vec{F}=\langle x^2-y^2,-2xy,z^2\rangle
+\]
+defined on all of $\mathbb{R}^3$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\operatorname{div}\vec{F}=0$
+    \item Conservative and curl vanishes.
+    \item Conservative, but curl does not vanish.
+    \item Curl vanishes, but not conservative.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Note that the curl vanishes, and $\R^3$ is simply connected, so (B).
+\end{solution}
 
 \begin{df}[Differential Element of Surface Area]
 The differential element of surface area is
@@ -249,6 +453,15 @@ dS =
 \right|
 \,dv_1\,dv_2.
 \]
+\end{df}
+
+\begin{df}
+If $S$ is a surface then the \emph{flux} of a vector field $\textbf{A}$ across 
+$S$ is defined as
+\[
+\int_S \textbf{A} \cdot \hat{\textbf{n}} dS,
+\]    
+where $\hat{\textbf{n}}$ is a unit normal pointing out $S$.
 \end{df}
 
 \begin{theorem}[Divergence Theorem]
@@ -264,7 +477,8 @@ then
 Suppose $S$ is an open surface with a simple closed curve $C$ forming its boundary, and let $\textbf{A}$ be a vector 
 field with continuous partial derivatives. Then:
 \[
-\oint_{C} \mathbf{A} \cdot d \mathbf{r} = \oint_S \curl \mathbf{A} \cdot \hat{\mathbf{n}} dS
+\oint_{C} \mathbf{A} \cdot d \mathbf{r} 
+= \int_S \curl \mathbf{A} \cdot \hat{\mathbf{n}} dS
 \]
 where the direction of the unit normal to $S$ and the sense of $C$ are related by a right-hand rule. 
 That is, $\hat{\mathbf{n}}$ is in the direction a right-handed screw moves when turned in the direction of $C$.

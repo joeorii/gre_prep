@@ -11,11 +11,11 @@ between vecotrs $A$ and $B$ and $\vec{u}$ is a unit vector in the direction of $
 \end{proposition}
 
 \begin{proposition}
-$|A \times B|$ is the area of a parallelogram with sides $A, B$.
+ $|A \times B|$ is the area of a parallelogram with sides $A, B$.
 \end{proposition}
 
 \begin{proposition}
-Show that $A \cdot (B \times C) = B \cdot (C \times A) = C \cdot (A \times B)$ 
+$A \cdot (B \times C) = B \cdot (C \times A) = C \cdot (A \times B)$ 
 is in absolute value equal to the volume of a parallelepiped with 
 sides of vectors $A,B,C$.
 \end{proposition}
@@ -188,7 +188,7 @@ For matrices of appropriate sizes, answer true or false:
     1 & 0 \\ 0 & -1
 \end{pmatrix}, B =I$. \\
 
-2. Take $A = \begin{pmatrix}
+2. False. Take $A = \begin{pmatrix}
     0 & 1 \\ 0 & 0
 \end{pmatrix}, B = \begin{pmatrix}
     1 & 0 \\ 0 & 0
@@ -253,3 +253,153 @@ other. This is not possible. The remaining cases are possible.
 In the case 2, we situate them all perpendicularly to each other. In the case 3,
 we let $v_1 = v_2$, $v_3 = v_4$, and make these two vectors perpendicular to each other.
 \end{solution}
+
+\subsection{Special Forms}
+
+\begin{theorem}[Diagonalizability]
+$A \in M_n(K)$, where $K$ is a field, is diagonalizable (to say $D$) if and only if 
+$A$ has n linearly independent eigenvectors. In this case, the diagonal 
+elements of $D$ are the corresponding eigenvalues and 
+$D = P^{-1}A{P}$, where $P$ is the matrix whose columns are the eigenvectors.
+\end{theorem}
+
+\begin{theorem}[Spectral Theorem (for $\R$)]
+Every eigenvalue of a real symmetric matrix is real.
+Furthermore, eveyr real symmetric matrix is orthogonally diagonalizable, meaning 
+there is an orthogonal matrix $P$ (so $PP^T = I$) and diagonal $D$ 
+such that $PDP^{-1} = A$ ($A$ is the real symmetric matrix).
+\end{theorem}
+
+\begin{theorem}
+A matrix is diagonalizable if and only if its minimal polynomial is a product of 
+distinct linear factors (over the base field).
+\end{theorem}
+
+\begin{exercise}
+Let $A=
+\begin{pmatrix}
+4 & 1 & -1\\
+2 & 5 & -2\\
+1 & 1 & 2
+\end{pmatrix}$. Is it diagonalizable? If so, find the transformation 
+matrix and the diagonal.
+\end{exercise}
+\begin{solution}
+The characteristic polynomial is $(5 - x)(x - 3)^2$, so its eigenvalues 
+are $5$ and $3$. We want to find that the total sum of each eigenspaces 
+is equal to $3$. The eigenspace corresponding to the eigenvalue $5$ is 
+spanned by $\begin{pmatrix}
+    1 & 2 & 1
+\end{pmatrix}^T$. The eigenspace corresponding to the eigenvalue $3$ is 
+spanned by the vectors $\begin{pmatrix}
+    -1 & 1 & 0
+\end{pmatrix}^T, \begin{pmatrix}
+    1 & 0 & 1
+\end{pmatrix}^T$. Thus, it's diagonalizable. In particular, we have
+\[
+A = PDP^{-1}, \qquad P = \begin{pmatrix}
+    -1 & 1 & 1 \\
+    1 & 0 & 2 \\
+    0 & 1 & 1
+\end{pmatrix}, \qquad D = \begin{pmatrix}
+    3 & 0 & 0 \\
+    0 & 3 & 0 \\
+    0 & 0 & 5
+\end{pmatrix}
+\]
+\end{solution}
+
+
+\begin{exercise}
+Let $A$ be an $m\times m$ matrix over $\mathbb{C}$ and $m>1$. Suppose that $A^n = I$ for some 
+$n>0$, where $I$ is the $m\times m$ identity matrix. Which of the following are true?
+\begin{enumerate}[label=(\Roman*)]
+    \item $A$ can be diagonalized.
+
+    \item If $\lambda$ is an eigenvalue that is not real, then
+    \[
+    1+\lambda+\cdots+\lambda^{n-1}=0.
+    \]
+
+    \item The characteristic polynomial has coefficients in $\mathbb{R}$.
+\end{enumerate}
+
+\begin{enumerate}[label=(\Alph*)]
+    \item 1 only
+    \item 2 only
+    \item 3 only
+    \item 1 and 2 only
+    \item 1, 2, and 3
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). The minimal polynomial divides $x^n - 1$, so it doesn't have repeated roots. Thus, diagonalizable. 
+If $\lambda$ is a nonreal eigenvalue, then it is a complx $n$-th root of unity. 
+3 is not true if we consider say a $2\times2$ matrix with diagonal entries $i$.
+\end{solution}
+
+\begin{theorem}[Spectral Theorem (for $\C$)]
+Let $A\in M_n(\C)$ be Hermitian, so $A^{\ast} = \overline{A}^T = A$.
+Then, there exists a unitary matrix $U$ (so $UU^{\ast} = I$) such that $U^{\ast}AU = D$, where 
+$D$ is a diagonal matrix with real entries. Equivalently, $A = UDU^{\ast}$.
+In particular, $A$ is unitarily diagonalizable and all of its eigenvalues are real. Moreover, $\mathbb C^n$ has an orthonormal basis consisting of eigenvectors of $A$.
+\end{theorem}
+
+
+\begin{theorem}[Triangulizability]
+Let $A$ be a square matrix whose characteristic polynomial
+factors into linear polynomials. Then $A$ is similar to a triangular 
+matrix, that is, there exists an invertible matrix $P$ such that 
+$P^{-1}AP$ is triangular.
+\end{theorem}
+
+\begin{theorem}[Primary Decomposition Theorem]
+Let $T \colon V \rightarrow V$ be a linear operator with minimal polynomial
+\[
+m(t)=f_1(t)^{n_1}f_2(t)^{n_2}\cdots f_r(t)^{n_r},
+\]
+where the $f_i(t)$ are distinct monic irreducible polynomials. 
+Then $V$ is the direct sum of $T$-invariant subspaces $W_1,\ldots,W_r$, where
+\[
+W_i=\ker f_i(T)^{n_i}.
+\]
+Moreover, $f_i(t)^{n_i}$ is the minimal polynomial of the 
+restriction of $T$ to $W_i$.
+\end{theorem}
+
+\begin{theorem}
+A linear operator $T \colon V \rightarrow V$ is diagonalizable 
+if and only if its minimal polynomial $m(t)$ is a product of 
+distinct linear polynomials.
+\end{theorem}
+
+
+\begin{theorem}[Jordan Canonical Form]
+Let $T:V\to V$ be a linear operator whose characteristic and minimal
+polynomials are, respectively,
+\[
+\Delta(t)
+=
+(t-\lambda_1)^{n_1}\cdots(t-\lambda_r)^{n_r}
+\qquad\text{and}\qquad
+m(t)
+=
+(t-\lambda_1)^{m_1}\cdots(t-\lambda_r)^{m_r},
+\]
+where the $\lambda_i$ are distinct scalars. Then $T$ has a block diagonal
+matrix representation $J$ in which each diagonal entry is a Jordan block
+$J_{ij}=J(\lambda_i)$. For each $\lambda_{ij}$, the corresponding $J_{ij}$
+have the following properties:
+\begin{enumerate}
+    \item There is at least one $J_{ij}$ of order $m_i$; all other
+    $J_{ij}$ are of order $\leq m_i$.
+    \item The sum of the orders of the $J_{ij}$ is $n_i$.
+    \item The number of $J_{ij}$ equals the geometric multiplicity
+    of $\lambda_i$.
+    \item The number of $J_{ij}$ of each possible order is uniquely
+    determined by $T$.
+\end{enumerate}
+\end{theorem}
+
+
+

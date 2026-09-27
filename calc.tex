@@ -1,0 +1,104 @@
+\section{Calculus}
+
+\subsection{Convergence Tests}
+
+\begin{theorem}[Divergence Test]
+The series $\sum_{n \geq 0} a_n$ diverges if $\lim_{n\rightarrow\infty} a_n \neq 0$.
+\end{theorem}
+
+\begin{theorem}[$p$-series Test]
+The series $\sum_{n \geq 0} \frac{1}{n^p}$, for some $p\in\R$ converges if and only if
+$p > 1$.
+\end{theorem}
+
+\begin{theorem}
+Suppose that $\sum a_n, \sum b_n$ are nonnegative series. Consider the quantity
+\[
+\lim_{n\to\infty}\frac{a_n}{b_n}=L
+\]
+where $L\in[0,\infty]$. Then we have the following three conclusions:
+\begin{itemize}
+    \item If $L=0$, the series $\sum a_n$ converges if $\sum b_n$ converges.
+    \item If $L=\infty$, the series $\sum b_n$ converges if $\sum a_n$ converges.
+    \item If $L\in(0,\infty)$, the series $\sum a_n$ converges if and only if $\sum b_n$ converges.
+\end{itemize}
+\end{theorem}
+
+\begin{theorem}
+Suppose that $\{a_n\}$ is a positive series such that there exists a continuous,
+decreasing function $f(x)$ satisfying $f(n)=a_n$. Then the series $\{a_n\}$ converges 
+if and only if the improper integral
+\[
+\int_0^\infty f(x) dx
+\]
+exists (converges).
+\end{theorem}
+
+\begin{theorem}[Alternating Series Test]
+Suppose that $\{a_n\}$ is a positive, decreasing series. 
+If $\lim_{n\to\infty}a_n=0$, the series $\sum_{n \geq 0}(-1)^n a_n$ converges.
+\end{theorem}
+
+\begin{example}
+The series $\sum \frac{1}{n}$ doesn't converge, but the alternating 
+series $\sum \frac{(-1)^n}{n}$ does converge.
+\end{example}
+
+\subsection{Integration, FTC, and Variants}
+Recall $u$-substitution. Suppose we have the integral
+\[
+\int_a^b f(g(x))g'(x)dx.
+\]
+Then, if we set $u = g(x)$, then this integral becomes
+\[
+\int_{g(a)}^{g(b)} f(u) du.
+\]
+Here are some useful specific cases:
+\begin{align*}
+\int_0^a f\left(\frac{x}{a}\right)dx &= a\int_0^1 f(u)du \\
+\int_a^b f(x-c) dx &= \int_{a-c}^{b-c}f(u) du \\
+\int_a^b f(a+b-x) dx &= \int_a^b f(u) du
+\end{align*}
+
+\begin{theorem}[Leibniz's Rule]
+Suppose that $a(x)$ and $b(x)$ are differentiable, and that
+$f(x,t)$ and $\frac{\partial f}{\partial x}(x,t)$ are continuous.
+Then
+\[
+\frac{d}{dx}\int_{a(x)}^{b(x)}f(x,t) dt
+=
+f(x,b(x))b'(x) - f(x,a(x))a'(x) +
+\int_{a(x)}^{b(x)}
+\frac{\partial f}{\partial x}(x,t) dt.
+\]
+\end{theorem}
+
+
+\subsection{Fubini}
+
+The assumptions for Fubini are quite technical, so I leave it up 
+to the wikipedia page. This is a result from measure theory which essentially
+states when we can swap integrals. For absolutely integrable functions (or Lebesgue 
+measurable), we can do this.
+
+\begin{exercise}
+Assume $b>a>0$. Calculate the integral:
+\[
+\int_0^\infty \frac{e^{-ax}-e^{-bx}}{x}\,dx.
+\]
+\textit{Hint: Write the integrand as an integral from $a$ to $b$.}
+\begin{enumerate}[label=(\Alph*)]
+    \item $\ln a-\ln b^2$
+    \item $\ln b-\ln a^2$
+    \item $\ln a^2-\ln b^2$
+    \item $\ln a-\ln b$
+    \item $\ln b-\ln a$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). The integral is
+\[
+\int_0^{\infty} \int_{a}^b e^{-xy} dy dx.
+\]
+We use Fubini to flip the order of integration.
+\end{solution}

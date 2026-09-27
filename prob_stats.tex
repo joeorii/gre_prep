@@ -110,7 +110,22 @@ If $B_1,\ldots,B_n$ form a partition of $\Omega$, then
 \]
 \end{theorem}
 
-
+\begin{exercise}
+Suppose you have two cards: one is painted black on both sides and the other 
+is painted black on one side and orange on the other. You select a card at 
+random and view one side. You notice it is black. What is the probability 
+the other side is orange?
+\begin{enumerate}[label=(\Alph*)]
+    \item $\frac{1}{2}$
+    \item $\frac{1}{3}$
+    \item $\frac{1}{4}$
+    \item $\frac{1}{5}$
+    \item $1$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). $P(O \cap B) = \frac{1}{4}$ and $P(B) = \frac{3}{4}$.
+\end{solution}
 
 \subsection{Random Variables}
 
@@ -366,3 +381,152 @@ Moreover,
 \frac{(b-a)^2}{12}.
 \]
 \end{example}
+
+
+\subsection{Sampling}
+
+\begin{df}
+Given the random variables $X_1,X_2,\ldots,X_n$, the \emph{sample mean} $\overline{X}$ is the statistic defined as the arithmetic mean of these variables,
+\[
+\overline{X}
+=
+\frac{X_1+X_2+\cdots+X_n}{n}
+=
+\frac{1}{n}\sum_{i=1}^{n}X_i.
+\]
+\end{df}
+
+\begin{df}
+Given the random variables $X_1,X_2,\ldots,X_n$, the \emph{sample variance} $S^2$ is defined by
+\[
+S^2
+=
+\frac{1}{n-1}\sum_{i=1}^{n}
+\left(X_i-\overline{X}\right)^2.
+\]
+The \textbf{sample standard deviation} is the statistic defined by $S=\sqrt{S^2}$.
+\end{df}
+
+\begin{proposition}
+Suppose that the random variables $X_1,X_2,\ldots,X_n$ are independently sampled from a distribution $F_X$ that has mean $\mu$ and finite variance $\sigma^2$. Then
+\begin{enumerate}
+\item $\mathbb{E}\left(\overline{X}\right)=\mu$
+\item $\operatorname{Var}\left(\overline{X}\right)=\frac{\sigma^2}{n}$
+\item $\mathbb{E}\left(S^2\right)=\sigma^2$
+\end{enumerate}
+\end{proposition}
+
+\begin{df}
+For real values $x_1,x_2,\ldots,x_n$, the \emph{sample variance} $s^2$ is defined as
+\[
+s^2
+=
+\frac{1}{n-1}\sum_{i=1}^{n}
+\left(x_i-\overline{x}\right)^2,
+\qquad
+\text{where}
+\qquad
+\overline{x}
+=
+\frac{1}{n}\sum_{j=1}^{n}x_j.
+\]
+\end{df}
+
+\begin{exercise}
+A random sample of size $n$ is taken from a population with finite variance.
+If the sample size is increased from $n$ to $4n$, by what factor does the
+standard deviation of the sample mean change?
+\begin{enumerate}[label=(\Alph*)]
+    \item $4$
+    \item $2$
+    \item $1$
+    \item $\frac{1}{2}$
+    \item $\frac{1}{4}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). From the proposition above. 
+\end{solution}
+
+\begin{exercise}
+Suppose that $X_1,\ldots,X_n$ are independent random variables with
+common variance $\sigma^2$. If the sample size is increased by a factor
+of $9$, what happens to the variance of the sample mean?
+\begin{enumerate}[label=(\Alph*)]
+    \item It becomes $9$ times as large.
+    \item It becomes $3$ times as large.
+    \item It remains unchanged.
+    \item It becomes $\frac{1}{3}$ as large.
+    \item It becomes $\frac{1}{9}$ as large.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(E).
+\end{solution}
+
+\begin{exercise}
+A population has mean $20$ and standard deviation $12$. A random sample
+of size $36$ is selected. What are the mean and standard deviation of the
+sample mean?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $20,\ 12$
+    \item $20,\ 2$
+    \item $20,\ \frac{1}{2}$
+    \item $3,\ 12$
+    \item $3,\ 2$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Note the mean doesn't change. The sampled variance is $4$, so the sample sd is $2$.
+\end{solution}
+
+\begin{exercise}
+Suppose that the variance of a population is $100$. For a sample of size
+$25$, what is the variance of the sample mean?
+\begin{enumerate}[label=(\Alph*)]
+    \item $0.16$
+    \item $0.4$
+    \item $4$
+    \item $25$
+    \item $2500$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C).
+\end{solution}
+
+\begin{exercise}
+A population has mean $\mu$ and variance $\sigma^2$. Which of the
+following statements must be true for the sample mean $\overline{X}$
+of a random sample of size $n$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $E[\overline{X}]=\frac{\mu}{n}$
+    \item $E[\overline{X}]=\mu$
+    \item $\operatorname{Var}(\overline{X})=\sigma^2$
+    \item $\operatorname{SD}(\overline{X})=\frac{\sigma}{n}$
+    \item $\operatorname{Var}(\overline{X})=\frac{\sigma^2}{\sqrt{n}}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B).
+\end{solution}
+
+\subsection{Chebyshev and Markov}
+
+Just in case.
+
+\begin{theorem}[Markov's Inequality]
+If a random variable $X$ can only take nonnegative values, then
+\[
+\mathbb{P}(X\geq a)\leq\frac{\mathbb{E}(X)}{a},
+\qquad \text{for all }a>0.
+\]
+\end{theorem}
+
+\begin{theorem}[Chebyshev's Inequality]
+If $X$ is a random variable with mean $\mu$ and variance $\sigma^2$, then for all $c>0$,
+\[
+\mathbb{P}(|X-\mu|\geq c)\leq\frac{\sigma^2}{c^2}.
+\]
+\end{theorem}
