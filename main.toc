@@ -44,4 +44,4 @@
 \contentsline {subsection}{\numberline {9.1}Logic}{36}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2}Fundamental Groups}{36}{subsection.9.2}%
 \contentsline {section}{\numberline {10}Obscure Questions in MVC Format}{37}{section.10}%
-\contentsline {section}{Bibliography}{77}{section*.2}%
+\contentsline {section}{Bibliography}{83}{section*.2}%

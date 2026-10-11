@@ -2352,3 +2352,348 @@ Now, the volume is half a sphere of radius $1$, so it is $\frac{2}{3} \pi$.
 Thus, (E).
 \end{solution}
 
+\begin{exercise}
+How many surjective functions $f:\{1,\dots,7\}\to\{1,\dots,4\}$ satisfy $f(1)=f(2)$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $1320$
+    \item $1440$
+    \item $1560$
+    \item $1680$
+    \item $1800$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). The best way to do this is noting that we really only 
+need to count the number of surjective functions from a set 
+of size 6 to a set of size 4. This is:
+\[
+4^6 - {4 \choose 1} 3^6 + {4 \choose 2} 2^6 - {4 \choose 3} 1^6
+= 1560.
+\]
+\end{solution}
+
+\begin{remark}
+The number of surjective functions between finite sets $N, M$ of 
+size $n,m$ are as follows:
+\[
+\sum_{k = 0}^m (-1)^k {{m}\choose{k}} (m - k)^n.
+\]
+\end{remark}
+\begin{exercise}
+How many surjective functions $f:\{1,\dots,8\}\to\{1,\dots,3\}$ satisfy both of the following conditions?
+\begin{itemize}
+    \item Exactly two elements are mapped to $3$.
+    \item $f(1)\neq f(2)$.
+\end{itemize}
+\begin{enumerate}[label=(\Alph*)]
+    \item $960$
+    \item $1056$
+    \item $1176$
+    \item $1224$
+    \item $1344$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). This requires case work. If $1$ or $2$ maps to $3$, or not. 
+First suppose neither go to $3$. Then, they split to $1$ and $2$, so this 
+gives $2$ cases. The remaining 6 can go to wherever, as long as exactly two go to $3$, so 
+this gives ${6\choose2}\cdot 2^4$. This gives $2 \cdot {6\choose2}\cdot 2^4 = 480$. Next, 
+either $1$ or $2$ maps to $3$. Now, $1$ or $2$ maps to $3$, and the reamining goes to 
+either $1$ or $2$, which is $2 \cdot 2$ cases. Now, of the reamining $6$ numbers, exactly one 
+goes to $3$, and the reamining can go to $1$ or $2$, but one of these were already hit, which 
+gives $2^5 - 1$ ways. The number of ways here is $2 \cdot 2 \cdot {6\choose1} (2^5 - 1) = 744$.
+Summing these two cases, we get $1224$. 
+\end{solution}
+
+\begin{exercise}
+Let $f:[8]\to[4]$ be surjective. How many such functions have 
+the property that exactly two elements of $[4]$ have preimages 
+consisting of a single element?
+\begin{enumerate}[label=(\Alph*)]
+    \item $8400$
+    \item $10080$
+    \item $13440$
+    \item $16800$
+    \item $20160$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). We choose the two elements of the domaind and target 
+which are chosen. This is $2 \cdot {8 \choose 2} \cdot {4 \choose 2}$.
+For the remaining $6$ values in the domain, we have $2$ elements for the target. 
+We need the $6$ to surject onto the $2$, but we can't have the preimages to be just one element.
+This is $2^6 - 2 - 2 \cdot {6\choose1}$. Multiplying these, we have 
+\[
+2 \cdot {8 \choose 2} \cdot {4 \choose 2} \cdot \left(2^6 - 2 - 2 \cdot {6\choose1}\right)
+= 16800.
+\]
+\end{solution}
+
+\begin{exercise}
+Let
+\[
+M=\begin{pmatrix} A & B\\ C & D \end{pmatrix}
+\]
+be a $7\times7$ matrix, where $A$ is an invertible $3\times3$ matrix and $D$ is $4\times4$.
+
+Suppose $\dim(\ker M)=2$. Which of the following must be true?
+
+\begin{enumerate}
+    \item $\det(D-CA^{-1}B)=1$
+    \item $\operatorname{rank}(D-CA^{-1}B)=2$
+    \item $D-CA^{-1}B$ is invertible.
+    \item $D$ is invertible.
+    \item $BC=0$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let
+\[
+M=\begin{pmatrix} A & B\\ C & D \end{pmatrix}
+\]
+be invertible, where $A$ is invertible. Write
+\[
+M^{-1}=\begin{pmatrix} P & Q\\ R & S \end{pmatrix}.
+\]
+
+Which of the following expressions is necessarily equal to $S$?
+
+\begin{enumerate}
+    \item $D^{-1}$
+    \item $(D-CA^{-1}B)^{-1}$
+    \item $D-CA^{-1}B$
+    \item $A^{-1}B(D-CA^{-1}B)^{-1}$
+    \item $(D-BA^{-1}C)^{-1}$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let
+\[
+\mathbf F(x,y,z)=\frac{(x,y,z)}{(x^2+y^2+z^2)^{3/2}}.
+\]
+Let $S$ be the sphere
+\[
+\left(x-\frac12\right)^2+y^2+z^2=1
+\]
+with outward orientation.
+
+What is
+\[
+\iint_S \mathbf F\cdot\mathbf n\,dS?
+\]
+
+\begin{enumerate}
+    \item $0$
+    \item $2\pi$
+    \item $4\pi$
+    \item $8\pi$
+    \item Undefined
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $\phi,\psi:\mathbb R^3\to\mathbb R$ be twice continuously differentiable scalar functions.
+
+Which expression must be identically zero?
+
+\begin{enumerate}
+    \item $\nabla\cdot(\phi\nabla\psi)$
+    \item $\nabla\cdot(\nabla\phi\times\nabla\psi)$
+    \item $\nabla\times(\phi\nabla\psi)$
+    \item $\nabla\cdot(\nabla\phi)$
+    \item $\nabla\cdot(\phi\nabla\phi)$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $B$ denote the unit ball in $\mathbb R^3$, and let $\mathbf G$ be any twice continuously differentiable vector field on a neighborhood of $B$.
+
+Define
+\[
+\mathbf H=\nabla\times\mathbf G+(x^2z,y^2z,z^3).
+\]
+
+What is the outward flux of $\mathbf H$ through $\partial B$?
+
+\begin{enumerate}
+    \item $0$
+    \item $\dfrac{\pi}{5}$
+    \item $\dfrac{4\pi}{5}$
+    \item $\dfrac{4\pi}{3}$
+    \item $\dfrac{12\pi}{5}$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Suppose $f:\mathbb R\to\mathbb R$ is continuously differentiable, and let $a\in\mathbb R$.
+
+Evaluate
+\[
+\lim_{h\to0}\frac{1}{h^2}
+\left(\int_a^{a+h}f(t)\,dt-hf(a)\right).
+\]
+
+\begin{enumerate}
+    \item $-f'(a)$
+    \item $0$
+    \item $\dfrac12 f'(a)$
+    \item $f'(a)$
+    \item $2f'(a)$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Evaluate
+\[
+\lim_{x\to0}\frac{1}{x^2}
+\int_{\sin x}^{x^2}
+\left(\int_0^t e^{u^2}\,du\right)dt.
+\]
+
+\begin{enumerate}
+    \item $-1$
+    \item $-\dfrac12$
+    \item $0$
+    \item $\dfrac12$
+    \item $1$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Evaluate
+\[
+\lim_{n\to\infty}\sum_{k=1}^{n}\frac{1}{\sqrt{n^2+k}}.
+\]
+
+\begin{enumerate}
+    \item $0$
+    \item $\dfrac12$
+    \item $1$
+    \item $\ln(1+\sqrt2)$
+    \item The sequence diverges to $+\infty$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Evaluate
+\[
+\lim_{n\to\infty}\sum_{k=1}^{n}\frac{1}{\sqrt{n^2+nk}}.
+\]
+
+\begin{enumerate}
+    \item $1$
+    \item $2(\sqrt2-1)$
+    \item $\ln(1+\sqrt2)$
+    \item $\dfrac{\pi}{4}$
+    \item $\dfrac{\sqrt2}{2}$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Evaluate
+\[
+\lim_{n\to\infty}\sum_{k=1}^{n}\frac{k}{n^2+k^2}.
+\]
+
+\begin{enumerate}
+    \item $\ln2$
+    \item $\dfrac12\ln2$
+    \item $\dfrac{\pi}{4}$
+    \item $\dfrac14$
+    \item The sequence diverges to $+\infty$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let
+\[
+a_n=\frac{1}{n+1}+\frac{1}{n+2}+\cdots+\frac{1}{2n}.
+\]
+
+Which of the following is true?
+
+\begin{enumerate}
+    \item $a_n\to0$
+    \item $a_n\to\dfrac12$
+    \item $a_n\to\ln2$
+    \item $a_n\to1$
+    \item $a_n\to+\infty$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+For a fixed real number $p>0$, define
+\[
+a_n(p)=\sum_{k=1}^{n}\frac{1}{\sqrt{n^2+k^p}}.
+\]
+
+For which values of $p$ is
+\[
+\lim_{n\to\infty}a_n(p)=1?
+\]
+
+\begin{enumerate}
+    \item $0<p<2$
+    \item $0<p\leq2$
+    \item $p=2$ only
+    \item $p\geq2$
+    \item Every $p>0$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Suppose $(a_n)$ is a sequence of real numbers such that
+\[
+\sum_{n=1}^{\infty}a_n
+\]
+converges.
+
+Which of the following must also converge?
+
+\begin{enumerate}
+    \item $\displaystyle\sum_{n=1}^{\infty}|a_n|$
+    \item $\displaystyle\sum_{n=1}^{\infty}(-1)^n a_n$
+    \item $\displaystyle\sum_{n=1}^{\infty}a_n^2$
+    \item $\displaystyle\sum_{n=1}^{\infty}\frac{a_n}{n}$
+    \item $\displaystyle\sum_{n=1}^{\infty}na_n$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $(a_n)$ be a sequence of nonnegative real numbers such that
+\[
+\sum_{n=1}^{\infty}a_n^2<\infty.
+\]
+
+Which of the following must be true?
+
+\begin{enumerate}
+    \item $\displaystyle\sum_{n=1}^{\infty}a_n$ converges.
+    \item $\displaystyle\sum_{n=1}^{\infty}(-1)^n a_n$ converges.
+    \item $\displaystyle\sum_{n=1}^{\infty}\frac{a_n}{n}$ converges.
+    \item $\displaystyle\lim_{n\to\infty}na_n=0$
+    \item The sequence $(a_n)$ is eventually decreasing.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $(a_n)$ be a real sequence such that both series
+\[
+\sum_{n=1}^{\infty}a_n
+\qquad\text{and}\qquad
+\sum_{n=1}^{\infty}(-1)^n a_n
+\]
+converge.
+
+Which of the following must converge?
+
+\begin{enumerate}
+    \item $\displaystyle\sum_{n=1}^{\infty}|a_n|$
+    \item $\displaystyle\sum_{n=1}^{\infty}a_n^2$
+    \item $\displaystyle\sum_{n=1}^{\infty}a_{2n}$
+    \item $\displaystyle\sum_{n=1}^{\infty}(-1)^n|a_n|$
+    \item $\displaystyle\sum_{n=1}^{\infty}\sqrt{|a_n|}$
+\end{enumerate}
+\end{exercise}

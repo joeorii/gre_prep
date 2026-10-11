@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1790492695 -1
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1791725702 -1
   "./references.bib" 1786898238 279 8e30965969931c4ea55601a886934924 ""
-  "main.bcf" 1790492695 107890 ae77a22361c07a6b0a1258ed37ee4bfd "pdflatex"
+  "main.bcf" 1791725702 107890 ae77a22361c07a6b0a1258ed37ee4bfd "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1790492694 "/Users/joeorii/Desktop/Folder/Math/projects/gre_prep/main.tex" "main.pdf" "main" 1790492695 0
-  "/Users/joeorii/Desktop/Folder/Math/projects/gre_prep/main.tex" 1790491669 431 0cab5e321d51289617db44079dd822c1 ""
+["pdflatex"] 1791725701 "/Users/joeorii/Desktop/Folder/Math/projects/GRE_prep/gre_prep_mycode/main.tex" "main.pdf" "main" 1791725702 0
+  "/Users/joeorii/Desktop/Folder/Math/projects/GRE_prep/gre_prep_mycode/main.tex" 1790491669 431 0cab5e321d51289617db44079dd822c1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -91,6 +91,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy6.pfb" 1254269338 28109 6d61305ed3d0eb794ebe36f15cf44aa0 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb" 1254269338 27802 5c876bb2c4040caaf035d60bd74a86bd ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb" 1255129361 110323 92daea7ca7b4120bd2b54b047c93be27 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/wasy-type1/wasy10.pfb" 1579560704 33599 0bed01d43ee0675cf5ec1221acad6641 ""
   "/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
@@ -288,15 +289,15 @@
   "complexana.tex" 1790489112 5250 4ac573406deab7bbd61c852a8620ca2f ""
   "groups.tex" 1790491139 6396 5db1fba50e12d681295973540e1fbf79 ""
   "la.tex" 1790486755 13436 561e1cfc0a8689b1139632f34ed9c48d ""
-  "main.aux" 1790492695 6754 594773e22044079829cb913ea42b1f48 "pdflatex"
+  "main.aux" 1791725702 6754 35022601a8f36c271e4c62ff8c0e5b23 "pdflatex"
   "main.bbl" 1790348825 1868 6b26ec6131afb651a1cf4be724e35004 "biber main"
-  "main.out" 1790492695 7323 81c34ace6ae74b16600b26937129e7c4 "pdflatex"
-  "main.run.xml" 1790492695 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "main.out" 1791725702 7323 81c34ace6ae74b16600b26937129e7c4 "pdflatex"
+  "main.run.xml" 1791725702 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
   "main.tex" 1790491669 431 0cab5e321d51289617db44079dd822c1 ""
-  "main.toc" 1790492695 3973 73d17eb4b39d5afb613fc4a887ad8442 "pdflatex"
-  "miscellanious.tex" 1790492692 1070 930f1dcca14b053848927cd3d9e0155a ""
+  "main.toc" 1791725702 3973 cf1ffa2d01bfb29adcf792c3c9997fa1 "pdflatex"
+  "miscellanious.tex" 1791721870 1071 9860588d0098f667741fc302c8ba641d ""
   "mvc.tex" 1790486037 19619 2745f2cb60703b26b58729ea7f39c7bc ""
-  "obscure_mcq.tex" 1790492535 66405 e17360a5daaae2dc742bb3e4024c1453 ""
+  "obscure_mcq.tex" 1791725700 74687 7ac7b344db7d72c99f4b1dd89f346a3f ""
   "prob_stats.tex" 1790408153 11361 dc480d3f8d319d806315fba7f0f98375 ""
   "specifics.tex" 1790226954 4608 ed9b735b5ee1c9260a0af7335328694c ""
   (generated)
