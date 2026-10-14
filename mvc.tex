@@ -484,6 +484,16 @@ where the direction of the unit normal to $S$ and the sense of $C$ are related b
 That is, $\hat{\mathbf{n}}$ is in the direction a right-handed screw moves when turned in the direction of $C$.
 \end{theorem}
 
+\begin{theorem}[Gauss's Flux Theorem]
+Let $S$ be a closed surface with outward unit normal $\hat{\textbf{n}}$, and let $O$ be the origin of the coordinate system. Then:
+\[
+\int_S \frac{\hat{\textbf{n}} \cdot \textbf{r}}{r^3} = \begin{cases}
+0, & \text{ if } O \text{ is exterior to } S \\
+4\pi, & \text{ if } O \text{ is interior to } S
+\end{cases}
+\]
+\end{theorem}
+
 \begin{exercise}
 Evaluate
 \[
