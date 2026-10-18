@@ -348,14 +348,39 @@ unit vector $\hat{s}$, denoted $\pfrac{\phi}{s}$, we have
 We recall some useful identities relating these different notions.
 
 \begin{theorem}
-    Let $\phi \colon \R^3 \rightarrow \R$ and $F$ be a vector field (or 
-    more simply, a vector valued function).
+Let $f,g \colon \R^3 \rightarrow \R$ be a smooth scalar function 
+and $A,B$ be a vector field (or more simply, a vector valued function).
     \begin{itemize}
-        \item $\curl (\nabla \phi) = 0$
-        \item $\divergence (\curl F) = 0$
-        \item $\curl (\curl (F)) = \nabla (\divergence F) - \nabla ^2 F$
+        \item $\curl (\nabla f) = 0$
+        \item $\divergence (\curl A) = 0$
+        \item $\curl (\curl (A)) = \nabla (\divergence A) - \nabla ^2 A$
+        \item $\nabla(fg) = f \nabla g + g \nabla f$
+        \item $\divergence (fA) = \nabla f \cdot A + f \divergence \cdot A$
+        \item $\curl (fA) = \nabla f \times A + f \curl A$
+        \item $\divergence ( A \times B) = B \cdot \curl A - A \cdot \curl B$
     \end{itemize}
 \end{theorem}
+
+\begin{exercise}
+Let $f,g \colon \R^3 \rightarrow \R$ be smooth scalar functions. 
+Show that $\nabla \cdot (\nabla f \times \nabla g) = 0$.
+\end{exercise}
+\begin{solution}
+$\divergence(\nabla f \times \nabla g) = \nabla g (\curl(\nabla f)) - \nabla f(\curl(\nabla g))$.
+However, curl of grad is $0$, so each of the parts inside the brackets are zero.
+\end{solution}
+
+\begin{exercise}
+Let $f,g \colon \R^3 \rightarrow \R$ be smooth scalar functions.   
+Show that $\curl (f \nabla g) = \nabla f \times \nabla g$.
+\end{exercise}
+\begin{solution}
+We just apply one of the identities above:
+\[
+\curl (f \nabla g) = \nabla f \times \nabla g + f \curl (\nabla g),
+\]
+but curl of grad is zero, so the term on the right vanishes.
+\end{solution}
 
 \subsection{Partial Derivatives and Jacobians}
 

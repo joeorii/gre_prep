@@ -2569,15 +2569,12 @@ integrand is $r^2$, while the volume element is $dV = r^2 \sin \theta d\phi d\th
 \end{solution}
 
 \begin{exercise}
-Suppose $f:\mathbb R\to\mathbb R$ is continuously differentiable, and let $a\in\mathbb R$.
-
-Evaluate
+Suppose $f:\mathbb R\to\mathbb R$ is continuously differentiable, and let $a\in\mathbb R$. Evaluate
 \[
 \lim_{h\to0}\frac{1}{h^2}
 \left(\int_a^{a+h}f(t)\,dt-hf(a)\right).
 \]
-
-\begin{enumerate}
+\begin{enumerate}[label=(\Alph*)]
     \item $-f'(a)$
     \item $0$
     \item $\dfrac12 f'(a)$
@@ -2585,6 +2582,10 @@ Evaluate
     \item $2f'(a)$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(C). The top and bottom tend to zero, so by L'h\^{o}pital, we differentiate the top and bottom.
+We find that this limit is equal to $\frac{f(a+h) - f(a)}{2h}$.
+\end{solution}
 
 \begin{exercise}
 Evaluate
@@ -2592,9 +2593,8 @@ Evaluate
 \lim_{x\to0}\frac{1}{x^2}
 \int_{\sin x}^{x^2}
 \left(\int_0^t e^{u^2}\,du\right)dt.
-\]
-
-\begin{enumerate}
+x\]
+\begin{enumerate}[label=(\Alph*)]
     \item $-1$
     \item $-\dfrac12$
     \item $0$
@@ -2602,14 +2602,24 @@ Evaluate
     \item $1$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(B). We use L'h\^{o}pital again, with FTC. If $F(t)$ is the inner integral, then 
+we have the derivative with respec to $x$ of the above if $2xF(x^2) - \cos(x)F(\sin(x))$.
+Then, the limit we need to evaluate is $\frac{2xF(x^2) - \cos(x)F(\sin(x))}{2x}$ as $x \rightarrow 0$.
+The first part tends to zero, since $F(0) = 0$. As for the second part, we rewrite it as 
+\[
+-\frac{1}{2}\underbrace{\frac{F(\sin(x))}{\sin(x)}}_{\rightarrow F'(0)}
+\cdot \underbrace{\frac{\sin (x)}{x}}_{\rightarrow 1} \cdot \underbrace{\cos (x)}_{\rightarrow 1}.
+\]
+To finish off, $F'(t) = e^{t^2}$, so $F'(0) = 1$.
+\end{solution}
 
 \begin{exercise}
 Evaluate
 \[
 \lim_{n\to\infty}\sum_{k=1}^{n}\frac{1}{\sqrt{n^2+k}}.
 \]
-
-\begin{enumerate}
+\begin{enumerate}[label=(\Alph*)]
     \item $0$
     \item $\dfrac12$
     \item $1$
@@ -2617,14 +2627,25 @@ Evaluate
     \item The sequence diverges to $+\infty$.
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(C). This is the squeeze theorem. Note that 
+\[
+\frac{1}{\sqrt{n^2 + n}} \leq \frac{1}{\sqrt{n^2 + k}} \leq \frac{1}{\sqrt{n^2 + 1}}.
+\]
+Since there are $n$ terms of the finite sum, so
+\[
+\frac{1}{\sqrt{1 + \frac{1}{n}}} = \frac{n}{\sqrt{n^2 + n}} \leq 
+\sum_{k = 1}^n \frac{1}{\sqrt{n^2 + k}} \leq \frac{n}{\sqrt{n^2 + 1}} = \frac{1}{\sqrt{1 + \frac{1}{n^2}}}
+\]
+Taking $n \rightarrow \infty$, the sum is bounded above and below by $1$.
+\end{solution}
 
 \begin{exercise}
 Evaluate
 \[
 \lim_{n\to\infty}\sum_{k=1}^{n}\frac{1}{\sqrt{n^2+nk}}.
 \]
-
-\begin{enumerate}
+\begin{enumerate}[label=(\Alph*)]
     \item $1$
     \item $2(\sqrt2-1)$
     \item $\ln(1+\sqrt2)$
@@ -2632,14 +2653,21 @@ Evaluate
     \item $\dfrac{\sqrt2}{2}$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(B). The summand can be reformulated to $\frac{1}{n} \cdot \frac{1}{\sqrt{1 + \frac{k}{n}}}$.
+This has the form of a Riemann sum, and it is equal to the integral 
+\[
+\int_0^1 \frac{1}{\sqrt{1 + x}} dx.
+\]
+The integral is $\left(2\sqrt{x + 1}\right) \Big|_0^1$.
+\end{solution}
 
 \begin{exercise}
 Evaluate
 \[
 \lim_{n\to\infty}\sum_{k=1}^{n}\frac{k}{n^2+k^2}.
 \]
-
-\begin{enumerate}
+\begin{enumerate}[label=(\Alph*)]
     \item $\ln2$
     \item $\dfrac12\ln2$
     \item $\dfrac{\pi}{4}$
@@ -2647,6 +2675,17 @@ Evaluate
     \item The sequence diverges to $+\infty$.
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(B). We divide the summand out. Then, we can write it as:
+\[
+\frac{1}{n} \cdot \frac{\frac{k}{n}}{1 + \left(\frac{k}{n}\right)^2}.
+\]
+This is the form of a Riemann sum, so the integral is 
+\[
+\int_0^1 \frac{x}{1 + x^2} dx = \frac{1}{2}\ln|1 + x^2| \Bigg|_0^1 
+= \frac{1}{2} \ln(2)
+\]
+\end{solution}
 
 \begin{exercise}
 Let
@@ -2655,8 +2694,7 @@ a_n=\frac{1}{n+1}+\frac{1}{n+2}+\cdots+\frac{1}{2n}.
 \]
 
 Which of the following is true?
-
-\begin{enumerate}
+\begin{enumerate}[label=(\Alph*)]
     \item $a_n\to0$
     \item $a_n\to\dfrac12$
     \item $a_n\to\ln2$
@@ -2664,19 +2702,22 @@ Which of the following is true?
     \item $a_n\to+\infty$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(C). This is $\sum_{k = 1}^n \frac{1}{k + n}$, and the summand is equal to 
+$\frac{1}{n} \cdot \frac{1}{1 + \frac{k}{n}}$. Thus, we're taking the integral 
+$\int_0^1 \frac{1}{1+x}dx$.
+\end{solution}
 
 \begin{exercise}
 For a fixed real number $p>0$, define
 \[
 a_n(p)=\sum_{k=1}^{n}\frac{1}{\sqrt{n^2+k^p}}.
 \]
-
 For which values of $p$ is
 \[
 \lim_{n\to\infty}a_n(p)=1?
 \]
-
-\begin{enumerate}
+\begin{enumerate}[label=(\Alph*)]
     \item $0<p<2$
     \item $0<p\leq2$
     \item $p=2$ only
@@ -2684,17 +2725,39 @@ For which values of $p$ is
     \item Every $p>0$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(A). We focus on the integrad, which can be rewritten as
+\[
+\frac{1}{n} \cdot \frac{1}{\sqrt{1 + n^{p-2}\left(\frac{k}{n}\right)^{p}}}.
+\]
+We focus on the non-$\frac{1}{n}$ part. Then, 
+\[
+1 \geq \frac{1}{\sqrt{1 + n^{p-2}\left(\frac{k}{n}\right)^{p}}} \geq \frac{1}{\sqrt{1 + n^{p - 2}}},
+\]
+by noting that $0 \leq \left(\frac{k}{n}\right)^{p} \leq 1$.
+This implies that 
+\[
+1 \geq a_n(p) \geq \frac{1}{\sqrt{1 + n^{p - 2}}}.
+\]
+Now, if $0 < p < 2$, then the RHS tends to $1$. If $p = 2$, then we can't quite 
+use the same methods, but we can actually use a method of Riemann sums.
+The integral is
+\[
+\int_0^1 \frac{1}{\sqrt{1 + x^2}} dx =
+\left(\ln|x + \sqrt{1 + x^2}|\right)\Bigg|_0^1
+= \ln(1 + \sqrt{2}).
+\]
+If $p > 2$, we note that $0 < a_n(p) \leq a_n(2)$, but the limit for 
+$a_n(2) < 1$.
+\end{solution}
 
 \begin{exercise}
 Suppose $(a_n)$ is a sequence of real numbers such that
 \[
 \sum_{n=1}^{\infty}a_n
 \]
-converges.
-
-Which of the following must also converge?
-
-\begin{enumerate}
+converges. Which of the following must also converge?
+\begin{enumerate}[label=(\Alph*)]
     \item $\displaystyle\sum_{n=1}^{\infty}|a_n|$
     \item $\displaystyle\sum_{n=1}^{\infty}(-1)^n a_n$
     \item $\displaystyle\sum_{n=1}^{\infty}a_n^2$
@@ -2702,16 +2765,21 @@ Which of the following must also converge?
     \item $\displaystyle\sum_{n=1}^{\infty}na_n$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(D). First note that convergence of the series implies $a_n \rightarrow 0$. 
+Now, $a_n = (-1)^n \frac{1}{n}$ kills options (A), (B), and (E). Also, $a_n = (-1)^n \frac{1}{\sqrt{n}}$
+kills (C). (D) is the only one which remains. To rigoorusly prove (D) works, 
+we use Abel's theorem, which states that if $\sum a_n$ is converges and $(b_n)$ is a 
+monotonoic and bounded, then $\sum a_nb_n$ converges.
+\end{solution}
 
 \begin{exercise}
 Let $(a_n)$ be a sequence of nonnegative real numbers such that
 \[
 \sum_{n=1}^{\infty}a_n^2<\infty.
 \]
-
 Which of the following must be true?
-
-\begin{enumerate}
+\begin{enumerate}[label=(\Alph*)]
     \item $\displaystyle\sum_{n=1}^{\infty}a_n$ converges.
     \item $\displaystyle\sum_{n=1}^{\infty}(-1)^n a_n$ converges.
     \item $\displaystyle\sum_{n=1}^{\infty}\frac{a_n}{n}$ converges.
@@ -2719,6 +2787,22 @@ Which of the following must be true?
     \item The sequence $(a_n)$ is eventually decreasing.
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(C). This uses Cauchy Schwarz:
+\[
+\left(\sum_{n = 1}^N \frac{a_n}{n} \right)^2
+\leq \left(\sum_{n = 1}^N a_n^2\right) \left(\sum_{n = 1}^N \frac{1}{n^2}\right)
+\]
+Taking $N$ to infinity, the RHS converges, so the square is bounded. The the sum 
+in (C) is bounded. Since the $a_n$ are positive, the sum as $N \rightarrow \infty$
+is bounded, positive, and monotonically icnreasing, so converges.
+\end{solution}
+
+\begin{remark}
+Note that convergence tells us $a_n^2 \rightarrow 0$, so $|a_n| \rightarrow 0$, 
+because $|a_n| = \sqrt{a_n^2}$. Then, $a_n \rightarrow 0$ trivially, since 
+$a_n \rightarrow 0$ iff $|a_n| \rightarrow 0$.
+\end{remark}
 
 \begin{exercise}
 Let $(a_n)$ be a real sequence such that both series
@@ -2727,11 +2811,8 @@ Let $(a_n)$ be a real sequence such that both series
 \qquad\text{and}\qquad
 \sum_{n=1}^{\infty}(-1)^n a_n
 \]
-converge.
-
-Which of the following must converge?
-
-\begin{enumerate}
+converge. Which of the following must converge?
+\begin{enumerate}[label=(\Alph*)]
     \item $\displaystyle\sum_{n=1}^{\infty}|a_n|$
     \item $\displaystyle\sum_{n=1}^{\infty}a_n^2$
     \item $\displaystyle\sum_{n=1}^{\infty}a_{2n}$
@@ -2739,3 +2820,6 @@ Which of the following must converge?
     \item $\displaystyle\sum_{n=1}^{\infty}\sqrt{|a_n|}$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(C). Just add the two conergent sequences together.
+\end{solution}

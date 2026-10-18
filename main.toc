@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {2.2}Hessian}{6}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Fourier Transformation}{6}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Grad, Div, Curl}{7}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Partial Derivatives and Jacobians}{8}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.5}Partial Derivatives and Jacobians}{9}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Line and Surface Integrals}{9}{subsection.2.6}%
 \contentsline {section}{\numberline {3}Linear Algebra}{14}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Dot Products and Cross Products}{14}{subsection.3.1}%
@@ -44,4 +44,4 @@
 \contentsline {subsection}{\numberline {9.1}Logic}{36}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2}Fundamental Groups}{36}{subsection.9.2}%
 \contentsline {section}{\numberline {10}Obscure Questions in MVC Format}{37}{section.10}%
-\contentsline {section}{Bibliography}{84}{section*.2}%
+\contentsline {section}{Bibliography}{85}{section*.2}%
