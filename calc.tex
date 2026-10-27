@@ -102,3 +102,284 @@ Assume $b>a>0$. Calculate the integral:
 \]
 We use Fubini to flip the order of integration.
 \end{solution}
+
+\subsection{Things to watch out for}
+
+We include some common misconseptions.
+
+\begin{remark}
+Let $a \in \R$, and suppose we have some $f(x)$ defined on the reals 
+such that $\int_a^{\infty} f(x) dx$ converges. This does not imply that 
+$f(x) \rightarrow 0$ as $x \rightarrow \infty$. We can consider some 
+`spike function', whose spikes become narrow and narrow as $x$ becomes large.
+For instance, let $f(x)$ be zero everywhere, except a spike of hegiht $n$ 
+and width $\frac{2}{n^3}$, around every positive integer. Then, the integral 
+is $\frac{\pi^2}{6}$, which converges, but clearly the limit doesn't exist. 
+If we want something like this, then it must be like the following statements:
+\begin{itemize}
+\item If the improper integral exists and $\lim_{x \rightarrow \infty} f(x) = L$, 
+where $L$ is some finite real, then $L = 0$.
+\item If the improper integral exists and $f(x)$ is uniformly continuous, then 
+the limit exist (Barbalat's lemma). By the above, it must be zero.
+\item If $f$ is nonnegative and eventually nonincreasing, then $\lim_{x \rightarrow \infty} f(x) = 0$.
+\end{itemize}
+\end{remark}
+
+\begin{remark}
+We note that $|f(x)| \rightarrow \infty$  does not imply that $f(x) \rightarrow \infty$
+or $f(x)\rightarrow -\infty$.
+\end{remark}
+
+\subsection{Standard Calculus Facts to Quicken Things}
+
+We start withs ome basic limits.
+\begin{itemize}
+\item $\lim_{x\rightarrow 0}\frac{\sin x}{x}=1$
+\item $\lim_{x\rightarrow 0}\frac{\tan x}{x}=1$
+\item $\lim_{x\rightarrow 0}\frac{1-\cos x}{x^2}=\frac{1}{2}$
+\item $\lim_{x\rightarrow 0}\frac{\arctan x}{x}=1$
+\end{itemize}
+
+Useful Taylor expansions:
+\begin{align*}
+\sin x&=x-\frac{x^3}{3!} + \frac{x^5}{5!} - \dots \\
+\cos x&=1-\frac{x^2}{2!} + \frac{x^4}{4!} - \dots \\
+\tan x&=x+\frac{x^3}{3}+ \frac{2x^5}{15} + \dots.
+\end{align*}
+
+\subsection{Group Theory and Binary Operations}
+
+\subsubsection*{Basic Group Facts}
+
+For a finite group $G$,
+\[
+\operatorname{ord}(g)\mid |G|
+\qquad(g\in G).
+\]
+
+\textbf{Cauchy's Theorem.}
+If a prime $p$ divides $|G|$, then $G$
+contains an element of order $p$.
+
+For a cyclic group $G=\langle g\rangle$
+of order $n$,
+\[
+\boxed{
+\operatorname{ord}(g^k)
+=
+\frac{n}{\gcd(n,k)}.
+}
+\]
+
+\subsubsection*{Permutation Cycles}
+
+The inverse of a cycle reverses its direction:
+\[
+\boxed{
+(a\ b\ c)^{-1}=(a\ c\ b).
+}
+\]
+
+Disjoint cycles commute.
+
+The order of a permutation is the least
+common multiple of its disjoint cycle lengths.
+
+\subsubsection*{Two Binary Operations}
+
+Suppose two binary operations $\cdot$ and
+$\star$ share a two-sided identity $e$ and
+satisfy the interchange law
+\[
+(a\cdot b)\star(c\cdot d)
+=
+(a\star c)\cdot(b\star d).
+\]
+
+Then the Eckmann--Hilton argument gives
+\[
+\boxed{
+a\star b=a\cdot b
+}
+\]
+and the common operation is commutative:
+\[
+\boxed{
+a\cdot b=b\cdot a.
+}
+\]
+
+\textbf{GRE strategy:}
+When two operations are related by an
+unfamiliar identity, try substituting
+identity elements into different positions.
+
+
+\subsection{Topology: Connectedness and Closure}
+
+\subsubsection*{Basic Implications}
+
+\[
+\boxed{
+\text{Path-connected}
+\implies
+\text{Connected}.
+}
+\]
+
+The converse is false.
+
+A continuous image of a connected set
+is connected.
+
+A continuous image of a path-connected set
+is path-connected.
+
+If $C$ is connected and
+\[
+C\subseteq A\subseteq\overline C,
+\]
+then $A$ is connected.
+
+In particular, the closure of a connected
+set is connected.
+
+\subsubsection*{Topologist's Sine Curve}
+
+Consider
+\[
+S=
+\left\{
+\left(x,\sin\frac1x\right):0<x\le1
+\right\}
+\cup
+\bigl(\{0\}\times[-1,1]\bigr).
+\]
+
+This set is:
+\begin{itemize}
+    \item connected;
+    \item closed;
+    \item not path-connected.
+\end{itemize}
+
+The infinitely rapid oscillations prevent
+a continuous path from connecting the
+vertical segment to the oscillating graph.
+
+\textbf{GRE strategy:}
+Do not confuse adjoining limit points
+with creating continuous paths.
+
+
+\subsection{Piecewise Smoothness}
+
+Suppose
+\[
+f(x)=
+\begin{cases}
+g(x),&x<a,\\
+h(x),&x\ge a.
+\end{cases}
+\]
+
+For continuity at $a$, require
+\[
+\boxed{g(a)=h(a)}
+\]
+using the appropriate one-sided extensions.
+
+For $f$ to be $C^1$ across $a$, require
+\[
+\boxed{
+g(a)=h(a),\qquad
+g'(a)=h'(a).
+}
+\]
+
+For $f$ to be $C^2$ across $a$, require
+\[
+\boxed{
+\begin{aligned}
+g(a)&=h(a),\\
+g'(a)&=h'(a),\\
+g''(a)&=h''(a).
+\end{aligned}
+}
+\]
+
+Assume the pieces extend smoothly
+to the joining point.
+
+\textbf{GRE strategy:}
+Check continuity first. If the function
+values do not match, there is no reason
+to calculate the derivatives.
+
+
+\subsection{Geometry: Useful Formulas}
+
+\subsubsection*{Circular Sectors}
+
+For a circle of radius $r$ and angle
+$\theta$ measured in radians,
+\[
+\boxed{A=\frac12r^2\theta.}
+\]
+
+The arc length is
+\[
+\boxed{s=r\theta.}
+\]
+
+\subsubsection*{Hyperbolas}
+
+For
+\[
+\frac{x^2}{a^2}-\frac{y^2}{b^2}=1,
+\]
+the foci are $(\pm c,0)$, where
+\[
+\boxed{c^2=a^2+b^2.}
+\]
+
+The asymptotes are
+\[
+\boxed{y=\pm\frac ba x.}
+\]
+
+The first-quadrant asymptote makes angle
+\[
+\boxed{\theta=\arctan\left(\frac ba\right)}
+\]
+with the positive $x$-axis.
+
+\subsubsection*{Ellipses}
+
+For
+\[
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=1,
+\qquad a>b>0,
+\]
+the focal distance satisfies
+\[
+\boxed{c^2=a^2-b^2.}
+\]
+
+\subsubsection*{Other Geometric Formulas}
+
+A tetrahedron with three mutually
+perpendicular edges of lengths $a,b,c$
+has volume
+\[
+\boxed{V=\frac{abc}{6}.}
+\]
+
+For a sphere of radius $r$,
+\[
+\boxed{
+V=\frac43\pi r^3,
+\qquad
+S=4\pi r^2.
+}
+\]

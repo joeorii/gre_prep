@@ -63,6 +63,11 @@ e, (12), (123), (1234), (12345), (12)(34), (123)(45)
 \]
 \end{solution}
 
+\begin{remark}
+Note that in the problem above, conjugacy classes of $S_n$ biject with the number of
+partitions of $n$.
+\end{remark}
+
 \begin{exercise}
 How many idempotent elements are there in $\mathbb{Z}/12\mathbb{Z}$? That is, how many $x$ satisfy $x^2=x$?
 
@@ -76,7 +81,7 @@ How many idempotent elements are there in $\mathbb{Z}/12\mathbb{Z}$? That is, ho
 \end{exercise}
 \begin{solution}
 (D). $0,1,4,9$. More generally, this follows by the CRT. $\Z/3\Z$ and $\Z/4\Z$ have two 
-idempotents each.
+idempotents each, so CRT tells us to multiply these quantities.
 \end{solution}
 
 \begin{exercise}
@@ -2821,5 +2826,637 @@ converge. Which of the following must converge?
 \end{enumerate}
 \end{exercise}
 \begin{solution}
-(C). Just add the two conergent sequences together.
+(C). Just add the two convergent sequences together.
 \end{solution}
+
+\begin{exercise}
+For each real number $p>-1$, define
+\[
+L(p)=\lim_{n\to\infty}
+\frac{1}{n^{p+1}}\sum_{k=1}^n k^p.
+\]
+What is the set of all possible values of $L(p)$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $(0,1]$
+    \item $[0,1]$
+    \item $(0,\infty)$
+    \item $(0,\infty]$
+    \item $[0,\infty]$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). We see that
+\[
+\frac{1}{n^{p + 1}}\sum_{k = 1}^n k^p  = \frac{1}{n} \sum_{k = 1}^n \left(\frac{k}{n}\right)^p.
+\]
+Thus, $L(p)$ is actually a Riemann sum. The integral is 
+\[
+\int_0^1 x^p dx = \frac{1}{p + 1}.
+\]
+Thus, (C).
+\end{solution}
+
+\begin{exercise}
+Let $(a_n)$ be any sequence of nonnegative real numbers satisfying
+\[
+\sum_{n=1}^{\infty}a_n=1.
+\]
+What is the set of all possible values of
+\[
+\sum_{n=1}^{\infty}a_n^2?
+\]
+\begin{enumerate}[label=(\Alph*)]
+    \item $[0,1]$
+    \item $(0,1]$
+    \item $(0,1)$
+    \item $[0,\infty)$
+    \item $\{1\}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Cauchy Schwarz gives the lower bound. For the upper bound, we note that all terms are nonnegative,
+so each $a_n \in [0,1]$. Therefore, $a_n^2 \leq a_n$, so we can bound the sum of squares above 
+by the linear sum, which is $1$. To test whether this is attainable, just take $a_1 = 0$, rest $0$.
+If we want to be precise, then we should show every value is attainable. For this, we just use a geometric series.
+\end{solution}
+
+\begin{exercise}
+For $p\in\mathbb R$, define
+\[
+a_n(p)=\frac{1}{n^{p+1}}\sum_{k=1}^n k^p.
+\]
+What is the set of all possible limits of $a_n(p)$
+as $n\to\infty$, allowing $+\infty$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $[0,\infty)$
+    \item $(0,\infty)$
+    \item $(0,\infty]$
+    \item $[0,\infty]$
+    \item $\{0,+\infty\}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). If $p \leq - 1$, we have divergence. If $p > -1$, then we have the sum converges to 
+$\frac{1}{p + 1}$, so attains all positive reals.
+\end{solution}
+
+\begin{exercise}
+For each $p>0$, define
+\[
+a_n(p)=\sum_{k=1}^n\frac{1}{n+k^p}.
+\]
+What is the set of all possible values of
+\[
+\lim_{n\to\infty}a_n(p)?
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\{0,1\}$
+    \item $[0,1]$
+    \item $\{0,\ln 2,1\}$
+    \item $(0,1]$
+    \item $\{0,\ln 2\}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). First, if $p = 1$, then this is the integral $\int_0^1 \frac{1}{1 + x}dx = \ln(2)$. 
+If $p \in (0,1)$, then
+\[
+\frac{1}{n} \cdot \frac{1}{1 + n^{p - 1}} \leq \frac{1}{n + n^p} 
+\leq \frac{1}{n + k^p} \leq \frac{1}{n + 1} \leq \frac{1}{n}.
+\]
+Therefore, $a_n(p) = 1$ by squeeze. If $p > 1$, then we note that $\frac{1}{n + k^p} \leq \frac{1}{n}$ and 
+$\frac{1}{n + k^p} \leq \frac{1}{k^p}$. This leads to the following:
+\[
+a_n(p) \leq \frac{K}{n} + \sum_{k = K + 1}^{\infty} \frac{1}{k^p},
+\]
+for some arbitrary integer $K$. Since the second part converges by $p$-series, we can take $K$ to be arbitrarily 
+large and send it to zero. The first term clearly tends to $0$, so we have as desired.
+\end{solution}
+
+\begin{exercise}
+Let $f:[0,1]\to[0,\infty)$ be continuous and satisfy $f(0)=1$. Define
+\[
+L(f)=\lim_{n\to\infty}
+\frac{1}{n}\sum_{k=1}^n f\left(\frac{k}{n}\right).
+\]
+As $f$ varies over all such functions,
+what is the set of possible values of $L(f)$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $[0,1]$
+    \item $(0,1]$
+    \item $(0,\infty)$
+    \item $[0,\infty)$
+    \item $(0,\infty]$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). This is the integral of $f(x)$ over the interal $[0,1]$.
+Since $f$ is positive and $f(0) = 1$, its integral is strictly positive. Also, 
+it is finite because it is a continuous function on a compact set, so is bounded. Thus, (C).
+For instance, take $f(x) = (1-x)^t$, for $t \geq 0$.
+\end{solution}
+
+
+\begin{exercise}
+Let $A$ be a $3\times5$ real matrix and $B$ a
+$5\times3$ real matrix such that
+\[
+AB=I_3.
+\]
+What is the rank of $I_5-BA$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $1$
+    \item $2$
+    \item $3$
+    \item $5$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). $AB = I_3$ implies that $B$ is injective. Thus, $\rank(B) = 3$. Now, 
+we note that $\ker(I_5 - BA) = \IM(B)$, since if $x = By$, then 
+\[
+(I_5 - BA)By = By - By = 0. 
+\]
+Also, if $(I_5 - BA)y = 0$, then $I_5y = BAy$, so $y= B(Ay)$, i.e. $y \in \IM (B)$.
+Therefore, 
+\[
+\rank(I_5 - BA) = 5 - \dim \ker(I_5 - BA) = 5 - \rank(B) = 2.
+\]
+\end{solution}
+
+\begin{exercise}
+Let
+\[
+M=\begin{pmatrix}A&B\\C&D\end{pmatrix}
+\]
+be a $5\times5$ matrix, where $A$ is an invertible $2\times2$ matrix. Suppose
+\[
+\det(A)=3,\qquad \det(M)=-12.
+\]
+What is $\det(D-CA^{-1}B)$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $-12$
+    \item $-4$
+    \item $0$
+    \item $4$
+    \item $36$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). This is an application of Schur decomposition: $\det(M) = \det(A) \det(D - CA^{-1}B)$.
+\end{solution}
+
+\begin{remark}
+Recall that Schur decomposition is the following:
+\[
+\begin{pmatrix}
+A & B \\
+0 & \underbrace{D - CA^{-1}B}_{=:S}
+\end{pmatrix} = \underbrace{\begin{pmatrix}
+I & 0 \\
+-CA^{-1} & I
+\end{pmatrix}}_{=: L } \underbrace{\begin{pmatrix}
+A & B \\
+C & D
+\end{pmatrix}}_{=: M}
+\]
+As $\det(L) = 1$, we get that $\det(A) \det(D - CA^{-1}B) = \det(M)$. We also get:
+\begin{itemize}
+    \item $\rank M = \rank A + \rank S$
+    \item $M$ is invertible if and only if $S$ is invertible.
+\end{itemize}
+A nice consequence of Schur decomposition is calculating things like
+$\det (A + uv^T) = \det(A) \det(1 + v^TA^{-1}u)$
+\end{remark}
+
+\begin{exercise}
+Let $u,v\in\mathbb R^5$ be column vectors
+such that
+\[
+v^Tu=-1.
+\]
+What is the rank of the matrix
+\[
+I_5+uv^T?
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $1$
+    \item $2$
+    \item $3$
+    \item $4$
+    \item $5$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). We claim $\dim \ker(I_5 + uv^T) = 1$. First, notice that 
+\[
+(I_5 + uv^T)u = u - u = 0.
+\]
+Conersely, if some $x \in \ker(I_5 + uv^T)$, then 
+$x = -uv^Tx$, but $v^Tx$ is a scalar, so our claim is true.
+\end{solution}
+
+\begin{exercise}
+Let $M(t)$ be the $5\times5$ matrix whose diagonal entries are $t$ and whose
+off-diagonal entries are all $1$. Which expression equals $\det M(t)$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $(t+1)^4(t-4)$
+    \item $(t-1)^4(t+4)$
+    \item $(t-1)^5$
+    \item $(t+4)^4(t-1)$
+    \item $t^4(t+4)$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Use Schur decomposition. Let $u = (1,1,1,1,1)$. Then, $M(t) = (t - 1)I_5 + u^Tu$.
+Therefore, we have that 
+\begin{multline*}
+\det(M(t)) = \det((t - 1)I_5) \det(I_5 - u^T\left((t - 1)I_5\right)^{-1}u)\\
+= (t-1)^5\cdot (1 + \frac{5}{t - 1}) = (t-1)^4(t + 4)
+\end{multline*}
+Note that in the second equality, we used Sylvesters determinant theorem:
+\[
+\det(I_5 - u^T\left((t - 1)I_5\right)^{-1}u)
+= \det(1 + \left((t - 1)I_5\right)^{-1}uu^T)
+= \det(1 + \frac{5}{t - 1})
+= 1 + \frac{5}{t - 1}.
+\]
+\end{solution}
+
+\begin{exercise}
+Let $A$ be a real $4\times4$ matrix satisfying
+\[
+A^2-3A+2I=0
+\]
+and
+\[
+\operatorname{tr}(A)=7.
+\]
+What is $\det(A)$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $2$
+    \item $4$
+    \item $6$
+    \item $8$
+    \item $16$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). Note that every eigenvalue of $A$ must satisfy the polynomial. 
+The possible eigenvalues of $A$ are $1$ and $2$. The only possible combination
+is $1,2,2,2$, which multiplies to $8$.
+\end{solution}
+
+\begin{exercise}
+Let $A$ be a $5\times5$ matrix satisfying
+\[
+A^3=0,\qquad \operatorname{rank}(A)=3.
+\]
+What is $\operatorname{rank}(A^2)$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $1$
+    \item $2$
+    \item $3$
+    \item Cannot be determined from the information given.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Use Jordan normal form. $A^3 = 0$ tells us that every Jordan block 
+has size at most $3$. Now, note that the number of Jordan blocks of a 
+nilpotent matrix equals its nullity, so there are two Jordan blocks. 
+This means that $A \sim J_3(0) \oplus J_2(0)$. Now, $A^2$ then has rank $1$.
+\end{solution}
+
+\begin{exercise}
+Let $A$ and $B$ be real $5\times5$ matrices
+satisfying
+\[
+AB=-BA.
+\]
+Suppose $A$ is invertible. Which of the following must be true?
+\begin{enumerate}[label=(\Alph*)]
+    \item $A$ is singular.
+    \item $B$ is singular.
+    \item $B$ is invertible.
+    \item $B=0$.
+    \item $AB=BA$.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). $A$ is invertible, so $ABA^{-1} = -B$ and $\det(B) = -\det(B)$.
+\end{solution}
+
+\begin{exercise}
+Let $A$ be an arbitrary real $3\times3$ matrix. 
+Which of the following matrices must be invertible?
+\begin{enumerate}[label=(\Alph*)]
+    \item $I-A$
+    \item $I+A$
+    \item $I+A^2$
+    \item $I+A^TA$
+    \item $A^TA$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $A$ be a real $4\times4$ matrix satisfying
+\[
+A^2=I,\qquad \operatorname{tr}(A)=0.
+\]
+What is $\det(A)$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $-2$
+    \item $-1$
+    \item $0$
+    \item $1$
+    \item $2$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). Note that all eigenvalues of $A$ satisfy $x^2 - 1$, so candidates are $\pm 1$.
+These must sum to $0$, so the possiblility is $+1, +1, -1, -1$. 
+\end{solution}
+
+\begin{exercise}
+Let $P_4(\mathbb R)$ denote the vector space
+of real polynomials of degree at most $4$. Define the linear transformation
+\[
+T:P_4(\mathbb R)\to P_4(\mathbb R)
+\]
+by
+\[
+T(p)(x)=p(x+1)-p(x).
+\]
+What is the rank of $T$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $1$
+    \item $3$
+    \item $4$
+    \item $5$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D) We use rank nullity. The only maximal degree-$4$ polynomials which are invariant 
+under the linear transformation $x + 1$ are those which are purely constant. Thus,
+$\dim \ker T = 1$.
+\end{solution}
+
+\begin{exercise}
+Let
+\[
+D=\begin{pmatrix}
+1&0&0\\
+0&1&0\\
+0&0&2
+\end{pmatrix}
+\]
+and define
+\[
+T:M_3(\mathbb R)\to M_3(\mathbb R)
+\]
+by
+\[
+T(X)=DX-XD.
+\]
+What is $\dim(\ker T)$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $1$
+    \item $3$
+    \item $4$
+    \item $5$
+    \item $6$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). We have a block matrix, so we can really just find the kernels of the blocks.
+The kernel is $M_2(\R) \oplus M_1(\R)$, which dimensions is $2^2 + 1^2 = 5$.
+\end{solution}
+
+\begin{exercise}
+Let $Q$ be a real $3\times3$ orthogonal
+matrix satisfying
+\[
+\det(Q)=-1.
+\]
+Which of the following must be true?
+\begin{enumerate}[label=(\Alph*)]
+    \item $1$ is an eigenvalue of $Q$.
+    \item $-1$ is an eigenvalue of $Q$.
+    \item $\operatorname{tr}(Q)=-1$.
+    \item $Q^2=I$.
+    \item $Q$ is symmetric.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Recall that eigenvalues of orthogonal matrices have absolute value $1$. Since the matrix 
+is real, if we have a complex eigenvalue $\lambda$, it comes with a complex conjugate $\overline{\lambda}$,
+where $\lambda \overline{\lambda} = 1$. However, we require $-1$ to be an eigenvalue due to the determinant.
+\end{solution}
+
+\begin{exercise}
+Let $A$ be a real $4\times4$ matrix with
+\[
+\operatorname{rank}(A)=3.
+\]
+What is the rank of the adjugate matrix $\operatorname{adj}(A)$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $1$
+    \item $2$
+    \item $3$
+    \item $4$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Since $\rank(A) = n - 1$, $\rank (\adj(A)) = 1$. Just remember the adjugate 
+criterion.
+\end{solution}
+
+\begin{exercise}
+Let $A$ be a $2\times3$ matrix and $B$
+a $3\times2$ matrix. Suppose the eigenvalues of $AB$ are $2$ and $5$. What is
+$\det(I_3+BA)$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $6$
+    \item $12$
+    \item $15$
+    \item $18$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(E). First note that $\det(I_3 + BA) = \det(I_2 + AB)$. Since $2$ and $5$ are eigenvalues 
+of $AB$, we find that $3$ and $6$ are eigenvalues of $I_2 + AB$. Thus, the determinant is $18$.
+\end{solution}
+
+\begin{remark}
+We prove a super brief lemma: if $\lambda$ is an eigenvalue of $A \in M_n$, then $cI_n + A$
+has $c + \lambda$ as an eigenvalue. The proof is simple: If $v$ is an eigenvector associated to 
+$\lambda$, then $(cI + A)v = cv + Av = (c + \lambda)v$.
+\end{remark}
+
+\begin{exercise}
+Let $A$ be a real $4\times4$ matrix. Which of the following conditions guarantees 
+that $A$ is diagonalizable over $\R$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $A^2=0$
+    \item $(A-I)^2=0$
+    \item $A^3=A$
+    \item The characteristic polynomial of $A$
+          is $(t-1)^4$.
+    \item $\operatorname{tr}(A)=0$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Let $m_A(t)$ be the minimal polynomial of $A$. Then, if $p(t)$ is some polynomial 
+such that $p(A) = 0$, then $m_A(t) \mid p(t)$. Since (C) is a product of linear factors, 
+then $m_A(t)$ is a product of linear parts, so done.
+\end{solution}
+
+\begin{exercise}
+Let $A$ be a $3\times3$ matrix satisfying
+\[
+\det(A)=2.
+\]
+What is $\det(\operatorname{adj}(A))$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac12$
+    \item $1$
+    \item $2$
+    \item $4$
+    \item $8$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). Use that $\det(\adj(A)) = (\det(A))^{3 - 1}$.
+\end{solution}
+
+\begin{exercise}
+Let $A$ be a real symmetric $3\times3$ matrix
+such that
+\[
+\operatorname{tr}(A)=0,\qquad
+\operatorname{tr}(A^2)=6,\qquad
+\det(A)=0.
+\]
+
+What is $\operatorname{tr}(A^4)$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $9$
+    \item $12$
+    \item $16$
+    \item $18$
+    \item $36$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). $\det(A)$ tells us that ate least one of its eigenvalues are $0$. For the remaining 
+two, if $\lambda$ is one, then $\tr(A) = 0$ implies that the other is $-\lambda$. 
+Then, we must have that $\lambda^2 = 3$ via the $\tr(A^2) = 6$ condition. Thus, $\lambda = \sqrt{3}$.
+It follows that $A^4$ is similar to a matrix with diagonal entries $9,9,0$, so we are done.
+\end{solution}
+
+\begin{exercise}
+Suppose $A$ is a real $4\times4$ matrix
+satisfying
+\[
+\operatorname{rank}(A)=2.
+\]
+Which of the following is the set of all possible values of 
+$\operatorname{rank}(A^2)$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $\{0,1,2\}$
+    \item $\{1,2\}$
+    \item $\{0,2\}$
+    \item $\{2\}$
+    \item $\{0,1,2,3\}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+Let $A$ be a real $5\times5$ matrix with
+characteristic polynomial
+\[
+p_A(t)=(t-2)^3(t+1)^2.
+\]
+
+What is
+\[
+\operatorname{tr}(\operatorname{adj}(A))?
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $-8$
+    \item $-4$
+    \item $-2$
+    \item $2$
+    \item $4$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $A$ and $B$ be commuting nilpotent
+$4\times4$ matrices, so that
+\[
+AB=BA.
+\]
+
+Which of the following must be true?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $A+B$ is invertible.
+    \item $A-B$ is invertible.
+    \item $A+B$ is nilpotent.
+    \item $A+B$ is symmetric.
+    \item $AB$ is invertible.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Consider the linear transformation
+\[
+T:M_3(\mathbb R)\to M_3(\mathbb R)
+\]
+defined by
+\[
+T(X)=\frac12(X+X^T).
+\]
+
+What is the rank of $T$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $3$
+    \item $4$
+    \item $5$
+    \item $6$
+    \item $9$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $A$ be a real $2\times2$ matrix with
+\[
+\operatorname{tr}(A)=3,\qquad \det(A)=2.
+\]
+
+Which expression is equal to $A^5$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $16A-15I$
+    \item $31A-30I$
+    \item $32A-31I$
+    \item $25A-24I$
+    \item $A+30I$
+\end{enumerate}
+\end{exercise}

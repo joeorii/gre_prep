@@ -109,6 +109,45 @@ $f_n \rightarrow f$ $\mu$-a.e. means that $f_n$ tends to $f$ pointwise
 except for a measure zero set.
 \end{remark}
 
+
+\subsection{Supremum, Infimum, Limsup, and Liminf}
+
+Recall that for a real sequence $(a_n)$, we can define
+\[
+\limsup_{n\to\infty}a_n := \lim_{n\to\infty}\sup_{k\ge n}a_k
+\]
+and
+\[
+\liminf_{n\to\infty}a_n:=\lim_{n\to\infty}\inf_{k\ge n}a_k.
+\]
+We recall some useful properties regarding $\limsup$ and $\liminf$.
+
+\begin{proposition}[Sequences of Reals]
+Let $(a_n)$ be a real sequence. Then, the following hold:
+\begin{itemize}
+\item $\liminf a_n \leq \limsup a_n$
+\item $a_n$ converges to $L$ if and only if $\liminf a_n=\limsup a_n=L$.
+\item $\limsup(-a_n)=-\liminf a_n$ and $\liminf(-a_n)=-\limsup a_n$.
+\item If $a_n$ is bounded, then \begin{itemize}
+    \item $\limsup a_n$ is the largest subsequential limit.
+    \item $\liminf a_n$ is the smallest subsequential limit.
+\end{itemize}
+\end{itemize}
+\end{proposition}
+
+\begin{proposition}[Sequences of Sets]
+Let $(A_n)$ be a sequence of sets. Then,
+\[
+\limsup_{n\to\infty}A_n = \bigcap_{N=1}^{\infty} \bigcup_{n\ge N}A_n,
+\]
+which is the set of points belonging to infinitely many $A_n$. We also have 
+\[
+\liminf_{n\to\infty}A_n = \bigcup_{N=1}^{\infty}\bigcap_{n\ge N}A_n,
+\]
+which is the set of points belonding to all but finitely many $A_n$.
+\end{proposition}
+
+
 \subsection{Topology}
 
 \subsubsection{Open and Closed Sets}
@@ -250,10 +289,20 @@ If the space is locally path connected, then the converse to the above holds.
 \begin{proposition}
 The closure of a connected set is connected.
 \end{proposition}
+\begin{corollary}
+Let $X$ be a connected set, and $\overline{X}$ be its closure. 
+If $X \subseteq A \subseteq \overline{X}$, then $A$ is also connected.
+\end{corollary}
 
 \begin{example}
 The Topologist's sine curve is a counter example to the converse statement.
 That is, it is connected, but not path connected nor locally path connected.
+Here, we are talking about the set $\{(x, \sin (\frac{1}{x})) \colon x \in (0,1]\} \cup \{(0,0)\}$.
+If we consider the set 
+\[
+\{(x, \sin (\frac{1}{x})) \colon x \in (0,1]\} \cup \{(0,y) \colon y \in [-1,1]\},
+\]
+then we have taken the closure. It remains connected.
 \end{example}
 
 \subsection{Compactness}
