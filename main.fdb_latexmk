@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1793107539 -1
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1793113821 -1
   "./references.bib" 1786898238 279 8e30965969931c4ea55601a886934924 ""
-  "main.bcf" 1793107539 107890 ae77a22361c07a6b0a1258ed37ee4bfd "pdflatex"
+  "main.bcf" 1793113821 107890 ae77a22361c07a6b0a1258ed37ee4bfd "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1793107538 "/Users/joeorii/Desktop/Folder/Math/projects/GRE_prep/gre_prep_mycode/main.tex" "main.pdf" "main" 1793107539 0
+["pdflatex"] 1793113820 "/Users/joeorii/Desktop/Folder/Math/projects/GRE_prep/gre_prep_mycode/main.tex" "main.pdf" "main" 1793113821 0
   "/Users/joeorii/Desktop/Folder/Math/projects/GRE_prep/gre_prep_mycode/main.tex" 1790491669 431 0cab5e321d51289617db44079dd822c1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -285,18 +285,18 @@
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "ODE.tex" 1790488011 3451 2117b31a8e1452daf3eed5d72e2f107e ""
   "anal_top.tex" 1793107538 11566 47e79463f3f0c3ba8931b5bd2c6473da ""
-  "calc.tex" 1793107117 8415 99ec681cd9ac16b233f1c0223ae10909 ""
+  "calc.tex" 1793113287 4827 e1e5752359d7a676efce10b22a5e4a0d ""
   "complexana.tex" 1790489112 5250 4ac573406deab7bbd61c852a8620ca2f ""
   "groups.tex" 1790491139 6396 5db1fba50e12d681295973540e1fbf79 ""
   "la.tex" 1792519196 15429 dce1f7537738141568bb5c7a9f25cd0e ""
-  "main.aux" 1793107539 8264 86d10e88023cf148941270407c6cf970 "pdflatex"
-  "main.bbl" 1792493564 1868 6b26ec6131afb651a1cf4be724e35004 "biber main"
-  "main.out" 1793107539 9577 97ba37698682bce72e18efef110dba7e "pdflatex"
-  "main.run.xml" 1793107539 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "main.aux" 1793113821 7825 86a7890718d928adac569bed355d8fd8 "pdflatex"
+  "main.bbl" 1793113467 1868 6b26ec6131afb651a1cf4be724e35004 "biber main"
+  "main.out" 1793113821 8848 5dfe39e67009bfabb6e9da969ab9b49d "pdflatex"
+  "main.run.xml" 1793113821 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
   "main.tex" 1790491669 431 0cab5e321d51289617db44079dd822c1 ""
-  "main.toc" 1793107539 5031 60329ec9e7a2ec1eb9c8768df0751c02 "pdflatex"
+  "main.toc" 1793113821 4715 2a9548d502319a9493d993fca3f4a3b7 "pdflatex"
   "miscellanious.tex" 1792492625 1500 16e62493281e322dc33cfe6d1d5d38a2 ""
-  "mvc.tex" 1793107017 21535 b8544c3c61eed84567c63185bc07e0f6 ""
+  "mvc.tex" 1793113818 22395 4bba121528a3b1b7c22c7aaef934f935 ""
   "obscure_mcq.tex" 1792570863 96678 d4991560bc8d41c26018543be0df8b6f ""
   "prob_stats.tex" 1790408153 11361 dc480d3f8d319d806315fba7f0f98375 ""
   "specifics.tex" 1792518923 4648 56c1e1aa8d7a858d60b6cb79c2d76872 ""
