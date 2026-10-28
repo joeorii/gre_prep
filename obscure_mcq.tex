@@ -3527,7 +3527,10 @@ f(x)=\frac{\ln(1+x)}{x},
     \item $(0,\ln2)$
 \end{enumerate}
 \end{exercise}
-
+\begin{solution}
+(B) $f$ is continuous on this interval, so we just evaluate the limits to the end points.
+as $x \rightarrow 1$, $f \rightarrow \ln(2)$. As $x \rightarrow 0$, the limit is $1$.
+\end{solution}
 
 \begin{exercise}
 Let $(G,\cdot)$ be a group with identity $e$,
@@ -3550,6 +3553,10 @@ for all $a,b,c,d\in G$. Which of the following must hold?
     \item $G$ is trivial.
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(D). Consider identities on $\cdot$ and $\star$, and see that they're equal. 
+Next, we can swap around some variables to get commutativity.
+\end{solution}
 
 \begin{exercise}
 Let
@@ -3573,6 +3580,9 @@ Determine
     \item Neither limit exists.
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(B). For $\limsup$, take even $n$, and for $\liminf$, take odd $n$.
+\end{solution}
 
 \begin{exercise}
 Suppose
@@ -3598,6 +3608,9 @@ that
     \item None of the above.
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(D) This is a classical analysis result.
+\end{solution}
 
 \begin{exercise}
 Consider the subset of $\mathbb R^2$
@@ -3628,26 +3641,750 @@ Which of the following statements hold?
     \item I, II, and III
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(C). $S$ is the closure of the graph part of $\sin\left(\frac{1}{x}\right)$, so is closed.
+The graph is connected and closures of connected spaces are connected. Clearly not path connected.
+\end{solution}
 
 \begin{exercise}
 Consider the hyperbola
 \[
 \frac{x^2}{4}-\frac{y^2}{12}=1.
 \]
-
 A circle centered at the origin passes
-through the foci of the hyperbola.
-
-What is the area of the circular sector
-bounded by the positive $x$-axis,
-the first-quadrant asymptote of the
+through the foci of the hyperbola. What is the area of the circular sector
+bounded by the positive $x$-axis, the first-quadrant asymptote of the 
 hyperbola, and the circle?
-
 \begin{enumerate}[label=(\Alph*)]
     \item $2\pi$
     \item $\dfrac{4\pi}{3}$
     \item $\dfrac{8\pi}{3}$
     \item $4\pi$
     \item $\dfrac{16\pi}{3}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). The asymptotes are $y = \pm \sqrt{3}x$, so the angle created is $\frac{\pi}{3}$.
+As for the appropriate radius, we calculate the focus, which is $\sqrt{4 + 12} = 4$.
+Thus, the area is $\frac{1}{2}\cdot4^2\cdot\frac{\pi}{3}$.
+\end{solution}
+
+\begin{exercise}
+Let $G$ be a finite group of order $|G| = 56$. Let $n_7$ denote the number of Sylow
+$7$-subgroups of $G$.
+Which of the following gives all possible values of $n_7$ allowed by Sylow's
+congruence and divisibility conditions?
+\begin{enumerate}[label=(\Alph*)]
+    \item $\{1\}$
+    \item $\{7\}$
+    \item $\{1,7\}$
+    \item $\{1,8\}$
+    \item $\{1,2,4,8\}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). Use Sylow III.
+\end{solution}
+
+
+\begin{exercise}
+Let $A$ be an invertible real $3\times3$
+matrix satisfying
+\[
+\det A=-6.
+\]
+Define
+\[
+E=\{x\in\mathbb R^3:\|Ax\|\le1\},
+\]
+where $\|\cdot\|$ denotes the Euclidean norm. What is the volume of $E$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac{2\pi}{9}$
+    \item $\dfrac{4\pi}{3}$
+    \item $\dfrac{2\pi}{3}$
+    \item $8\pi$
+    \item $\dfrac{8\pi}{9}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). We note that for an inertible matrix $A$, $\vol(A(S)) = |\det A| \vol(S)$, 
+where $S$ is some subset of $\R^3$. Since the set in concern here is really $A^{-1}(B)$,
+where $B$ is the unit ball, we get as desired.
+\end{solution}
+
+
+\begin{exercise}
+Let $(a_n)$ and $(b_n)$ be bounded real sequences. Consider the following statements.
+\begin{enumerate}[label=\Roman*.]
+    \item
+    \[
+    \limsup_{n\to\infty}(a_n+b_n)
+    \le
+    \limsup_{n\to\infty}a_n
+    +
+    \limsup_{n\to\infty}b_n.
+    \]
+
+    \item
+    \[
+    \limsup_{n\to\infty}(a_n+b_n)
+    =
+    \limsup_{n\to\infty}a_n
+    +
+    \limsup_{n\to\infty}b_n.
+    \]
+
+    \item
+    \[
+    \limsup_{n\to\infty}(-a_n)
+    =
+    -\liminf_{n\to\infty}a_n.
+    \]
+\end{enumerate}
+Which statements must be true?
+\begin{enumerate}[label=(\Alph*)]
+    \item I only
+    \item II only
+    \item III only
+    \item I and III only
+    \item I, II, and III
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). II is incorrect, because if $a_n$ is the sequence of all $1$s except for one index
+which is $-1$, and $b_n$ is the sequence of all $-1$ except for one index which is $1$, then 
+the LHS is $0$ whilst the RHS is $2$. III is clearly true.
+We prove I. Fix $N$. Then, $\sup_{n \geq N} (a_n + b_n) \leq \sup_{n \geq N} a_n + \sup_{n \geq N}$,
+so taking the limit $N \rightarrow \infty$, we get precisely as desired.
+\end{solution}
+
+
+\begin{exercise}
+Let $X$ and $Y$ be independent random variables, each uniformly distributed on $[0,1]$. Find
+\[
+\mathbb P(X+Y\le1,\ X\le Y).
+\]
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac18$
+    \item $\dfrac16$
+    \item $\dfrac14$
+    \item $\dfrac13$
+    \item $\dfrac12$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Just find the area.
+\end{solution}
+
+
+\begin{exercise}
+Let $A$ be a real $4\times4$ matrix with characteristic polynomial
+\[
+p_A(t)=(t-2)^3(t+1)
+\]
+and
+\[
+\dim\ker(A-2I)=2.
+\]
+What is the minimal polynomial of $A$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $(t-2)(t+1)$
+    \item $(t-2)^2(t+1)$
+    \item $(t-2)^3(t+1)$
+    \item $(t-2)^2$
+    \item $(t-2)^3$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). $p_A(t)$ is the characteristic polynomial. The algebraic multiplicity of $2$ is $3$
+and the geometric multiplicity of $2$ is $2$. 
+Therefore, we have that $J_1(2) \oplus J_2(2)$ as a component. Finally, we have $-1$ 
+as an eigenvalue, so the missing piece is $J_1(-1)$. 
+Since $A \sim J_1(2) \oplus J_2(2) \oplus J_1(-1)$, it is clear that (B) is the one.
+\end{solution}
+
+\begin{exercise}
+Evaluate
+\[
+\lim_{h\to0}
+\frac1{h^3}
+\int_0^h\sin(t^2)\,dt.
+\]
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $\dfrac16$
+    \item $\dfrac13$
+    \item $\dfrac12$
+    \item $1$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). L'h\"{o}pital says that limit is equal to 
+\[
+\lim_{h \rightarrow 0} \frac{\frac{d}{dh} \int \dots}{3h^2}.
+\]
+To differentiate this integral with respect to $h$, we use Leibniz:
+\[
+\frac{d}{dh} \left(\int_0^h\sin(t^2) dt\right)
+= \sin(h^2) \cdot 1 - 0 + \int_0^h 2t 0 dt
+= \sin(h^2)
+\]
+Taking the limit, only the degree-$2$ term in the Taylor expansion remains from
+ $\sin(h^2)$. In particular, the numereator should be $2$ after 
+two derivatives, and the bottom is $6$. Thus, (C).
+\end{solution}
+
+
+\begin{exercise}
+Five distinguishable balls are placed independently and uniformly at random
+into three distinguishable boxes. What is the probability that no box is empty?
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac{10}{27}$
+    \item $\dfrac{40}{81}$
+    \item $\dfrac{50}{81}$
+    \item $\dfrac59$
+    \item $\dfrac23$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C) Total number of ways is $3^5$. As for the condition, we use PIE:
+\[
+3^5 - {3\choose 1} 2^5 + {3 \choose 2} 1^5 
+= 150.
+\]
+The above is subtracting when at least $1$ box is empty, then adding back in 
+when there were two empty boxes.
+\end{solution}
+
+
+\begin{exercise}
+Let $R$ be the region in $\mathbb R^2$
+defined by
+\[
+x\ge0,\qquad y\ge0,
+\]
+\[
+2x+y\le6,\qquad x+2y\le6.
+\]
+What is the area of $R$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $5$
+    \item $6$
+    \item $7$
+    \item $8$
+    \item $9$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Just some coordinate geo.
+\end{solution}
+
+
+\begin{exercise}
+Suppose $(a_n)$ is a sequence of
+nonnegative real numbers satisfying
+\[
+\sum_{n=1}^{\infty}a_n<\infty.
+\]
+
+Consider the following statements.
+
+\begin{enumerate}[label=\Roman*.]
+    \item
+    $\displaystyle\lim_{n\to\infty}a_n=0$.
+
+    \item
+    $\displaystyle
+    \sum_{n=1}^{\infty}a_n^2<\infty$.
+
+    \item
+    $\displaystyle
+    \sum_{n=1}^{\infty}\sqrt{a_n}<\infty$.
+\end{enumerate}
+
+Which statements must be true?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item I only
+    \item II only
+    \item I and II only
+    \item II and III only
+    \item I, II, and III
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). I is standard. II also follows because after some fixed $N$, $a_n^2 < a_n$, so 
+the squared series tends to $0$ by comparison. III is not true; just consider 
+$a_n = \frac{1}{n^2}$.
+\end{solution}
+
+
+\begin{exercise}
+Let $G$ be a group of order $21$. Consider the following statements.
+\begin{enumerate}[label=\Roman*.]
+    \item $G$ has a normal subgroup
+    of order $7$.
+
+    \item $G$ has a normal subgroup
+    of order $3$.
+
+    \item $G$ is cyclic.
+\end{enumerate}
+Which statements must be true?
+\begin{enumerate}[label=(\Alph*)]
+    \item I only
+    \item II only
+    \item I and II only
+    \item I and III only
+    \item I, II, and III
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). III is clearly false. For I and II, we want to show that the number of Sylow-$p$
+subgroups is exactly one (or not), since all Sylow subgroups are conjugate to each other.
+By Sylow III, there exists a Sylow-$7$ subgroup.
+The number of such subgroups are $n_7 \mid 21$ and $n_7 \equiv 1 \pmod{7}$.
+$n_7$ cannot be divisible by $7$, so $n_7 \mid 3$, forcing just one 
+Sylow-$7$ subgroup.
+For $p = 3$, $n_3 \mid 7$ and congruent to $1 \pmod{3}$. Actually, $n_3 \in \{1,7\}$ then 
+so $n_3$ can be not equal to $1$.
+\end{solution}
+
+
+\begin{exercise}
+Consider the plane $x+y+z=3$.
+The plane intersects the three positive coordinate axes at points $P,Q,R$.
+What is the area of triangle $PQR$?
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac92$
+    \item $\dfrac{9\sqrt2}{2}$
+    \item $\dfrac{9\sqrt3}{2}$
+    \item $9\sqrt3$
+    \item $\dfrac{27}{2}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C) We get an equilateral triangle of side $3\sqrt{2}$.
+\end{solution}
+
+\begin{exercise}
+An urn contains $4$ red balls, $3$ blue balls, and $2$ green balls.
+Two balls are drawn uniformly at random without replacement.
+Given that at least one of the two balls is red, what is the probability that both balls are red?
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac16$
+    \item $\dfrac29$
+    \item $\dfrac3{13}$
+    \item $\dfrac14$
+    \item $\dfrac4{13}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(E). We use conditional probability. Probability of $2$ red is $\frac{4\cdot 3}{9 \cdot 8}$.
+Probability of at least one red is $1 - \frac{5\cdot 4}{9\cdot 8}$.
+Now, the intersection of having $2$ reds and at least $1$ red is just having exactly two reds.
+Thus, the probability of intersection is equal to probability of $2$ red.
+Thus, the answer is 
+\[
+\frac{\frac{1}{6}}{\frac{52}{72}} = \frac{3}{13}.
+\]
+\end{solution}
+
+\begin{exercise}
+Let $A$ be a real symmetric $3\times3$
+matrix with eigenvalues
+\[
+1,\quad 1,\quad 4.
+\]
+What is the set of all possible values
+of the Rayleigh quotient
+\[
+R(x)=\frac{x^TAx}{x^Tx},
+\qquad x\in\mathbb R^3\setminus\{0\}?
+\]
+\begin{enumerate}[label=(\Alph*)]
+    \item $\{1,4\}$
+    \item $(1,4)$
+    \item $[1,4]$
+    \item $[0,4]$
+    \item $[1,\infty)$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). We diagonalize $A$, so that $x^TAx = x^2 + y^2 + 4z^2$.
+Thus,
+\[
+R(x) = \frac{x^2 + y^2 + 4z^2}{x^2 + y^2 + z^2} = 1 + \frac{3z^2}{x^2 + y^2 + z^2}.
+\]
+Setting $x = y = 0$ and $z = 1$, we attain $4$. Setting $z = 0$ and $x,y \neq 0$, we attain $1$.
+Also, every intermediate value occurs.
+\end{solution}
+
+\begin{exercise}
+Consider the function
+\[
+f(x,y)=x^4+y^4-2x^2-2y^2.
+\]
+
+How many distinct local minima does
+$f$ have in $\mathbb R^2$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $1$
+    \item $2$
+    \item $3$
+    \item $4$
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+Let $T:\mathbb R^2\to\mathbb R^2$ be a
+linear transformation represented by
+a matrix $A$ satisfying
+\[
+\det A=-3.
+\]
+
+Let $\Delta$ be the triangle with vertices
+\[
+(0,0),\qquad(2,1),\qquad(1,3).
+\]
+
+What is the area of $T(\Delta)$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac52$
+    \item $5$
+    \item $\dfrac{15}{2}$
+    \item $10$
+    \item $15$
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+Let $X$ and $Y$ be independent
+real-valued random variables satisfying
+\[
+\operatorname{Var}(X)=2,
+\qquad
+\operatorname{Var}(Y)=3.
+\]
+
+What is
+\[
+\operatorname{Var}(2X-Y)?
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $5$
+    \item $7$
+    \item $11$
+    \item $13$
+    \item $20$
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+Consider the following statements.
+
+\begin{enumerate}[label=\Roman*.]
+    \item Every uniformly continuous function
+    $f:(0,1)\to\mathbb R$ has a finite
+    limit as $x\to0^+$.
+
+    \item If $f:(0,1)\to\mathbb R$ is
+    differentiable and
+    \[
+    |f'(x)|\le10
+    \quad\text{for every }x\in(0,1),
+    \]
+    then $f$ is uniformly continuous.
+
+    \item If $f:(0,1)\to\mathbb R$
+    is continuous and the sequence
+    $(f(1/n))_{n\ge2}$ converges,
+    then $\lim_{x\to0^+}f(x)$ exists.
+\end{enumerate}
+
+Which statements must be true?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item I only
+    \item II only
+    \item I and II only
+    \item I and III only
+    \item I, II, and III
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+Let $G$ be a group of order
+\[
+|G|=45=3^2\cdot5.
+\]
+
+Consider the following statements.
+
+\begin{enumerate}[label=\Roman*.]
+    \item Both the Sylow $3$-subgroup
+    and the Sylow $5$-subgroup
+    are normal.
+
+    \item $G$ is abelian.
+
+    \item $G$ is cyclic.
+\end{enumerate}
+
+Which statements must be true?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item I only
+    \item II only
+    \item I and II only
+    \item I and III only
+    \item I, II, and III
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+Let
+\[
+F(x,y,z)=(x^3,y^3,z^3).
+\]
+
+Let $S$ be the unit sphere
+\[
+x^2+y^2+z^2=1,
+\]
+oriented outward.
+
+Evaluate
+\[
+\iint_S F\cdot n\,dS.
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac{4\pi}{5}$
+    \item $\dfrac{8\pi}{5}$
+    \item $\dfrac{12\pi}{5}$
+    \item $4\pi$
+    \item $12\pi$
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+A permutation of
+\[
+\{1,2,3,4,5\}
+\]
+is chosen uniformly at random.
+
+What is the probability that
+the permutation has no fixed points?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac13$
+    \item $\dfrac{11}{30}$
+    \item $\dfrac38$
+    \item $\dfrac25$
+    \item $\dfrac12$
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+Let $A$ be a diagonalizable real
+$5\times5$ matrix with three distinct
+real eigenvalues whose eigenspaces
+have dimensions $2$, $2$, and $1$.
+
+Let
+\[
+V=\{X\in M_5(\mathbb R):AX=XA\}.
+\]
+
+What is $\dim V$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $5$
+    \item $7$
+    \item $9$
+    \item $11$
+    \item $13$
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+Let $f:\mathbb R\to\mathbb R$ be
+differentiable and suppose
+\[
+f'(x)\ge0
+\qquad\text{for every }x\in\mathbb R.
+\]
+
+Consider the following statements.
+
+\begin{enumerate}[label=\Roman*.]
+    \item $f$ is nondecreasing.
+    \item $f$ is injective.
+    \item $f$ has at most one zero.
+\end{enumerate}
+
+Which statements must be true?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item I only
+    \item II only
+    \item III only
+    \item I and II only
+    \item I, II, and III
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+Let $A$ be an invertible real
+$3\times3$ matrix with
+\[
+\det A=5.
+\]
+
+Consider the region
+\[
+R=
+\left\{
+x\in\mathbb R^3:
+\begin{array}{l}
+(Ax)_i\ge0,\quad i=1,2,3,\\
+(Ax)_1+(Ax)_2+(Ax)_3\le1
+\end{array}
+\right\}.
+\]
+
+What is the volume of $R$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $\dfrac16$
+    \item $\dfrac1{10}$
+    \item $\dfrac1{15}$
+    \item $\dfrac1{30}$
+    \item $\dfrac56$
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+Let $\sigma$ be a uniformly random
+permutation of
+\[
+\{1,2,\ldots,7\}.
+\]
+
+Let $X$ be the number of fixed points:
+\[
+X=\#\{i:\sigma(i)=i\}.
+\]
+
+What is $\mathbb E[X]$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $\dfrac17$
+    \item $1$
+    \item $\dfrac72$
+    \item $7$
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+What is the minimum value of
+\[
+f(x,y)=x^2+y^2
+\]
+subject to
+\[
+x+2y=5?
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $1$
+    \item $4$
+    \item $5$
+    \item $10$
+    \item $25$
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+Let $A$ be a real $6\times6$ matrix
+with characteristic polynomial
+\[
+p_A(t)=(t-3)^4(t+1)^2.
+\]
+
+Suppose
+\[
+\dim\ker(A-3I)=2.
+\]
+
+The generalized eigenspace
+corresponding to the eigenvalue $3$ is
+\[
+G_3=\ker((A-3I)^6).
+\]
+
+What is $\dim G_3$?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $2$
+    \item $3$
+    \item $4$
+    \item $5$
+    \item $6$
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+Let $(f_n)$ be a sequence of continuous
+real-valued functions on $[0,1]$
+converging uniformly to $f$.
+
+Consider the following statements.
+
+\begin{enumerate}[label=\Roman*.]
+    \item $f$ is continuous.
+
+    \item If every $f_n$ is
+    differentiable, then $f$ is
+    differentiable.
+
+    \item
+    \[
+    \lim_{n\to\infty}
+    \int_0^1 f_n(x)\,dx
+    =
+    \int_0^1 f(x)\,dx.
+    \]
+\end{enumerate}
+
+Which statements must be true?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item I only
+    \item II only
+    \item I and II only
+    \item I and III only
+    \item I, II, and III
 \end{enumerate}
 \end{exercise}

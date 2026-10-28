@@ -52,4 +52,4 @@
 \contentsline {subsection}{\numberline {9.2}Fundamental Groups}{41}{subsection.9.2}%
 \contentsline {subsection}{\numberline {9.3}Some Specific Rings}{41}{subsection.9.3}%
 \contentsline {section}{\numberline {10}Obscure Questions in MVC Format}{41}{section.10}%
-\contentsline {section}{Bibliography}{104}{section*.2}%
+\contentsline {section}{Bibliography}{115}{section*.2}%
