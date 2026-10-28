@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1793113821 -1
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1793117087 -1
   "./references.bib" 1786898238 279 8e30965969931c4ea55601a886934924 ""
-  "main.bcf" 1793113821 107890 ae77a22361c07a6b0a1258ed37ee4bfd "pdflatex"
+  "main.bcf" 1793117087 107890 ae77a22361c07a6b0a1258ed37ee4bfd "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1793113820 "/Users/joeorii/Desktop/Folder/Math/projects/GRE_prep/gre_prep_mycode/main.tex" "main.pdf" "main" 1793113821 0
+["pdflatex"] 1793117086 "/Users/joeorii/Desktop/Folder/Math/projects/GRE_prep/gre_prep_mycode/main.tex" "main.pdf" "main" 1793117087 0
   "/Users/joeorii/Desktop/Folder/Math/projects/GRE_prep/gre_prep_mycode/main.tex" 1790491669 431 0cab5e321d51289617db44079dd822c1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -288,16 +288,16 @@
   "calc.tex" 1793113287 4827 e1e5752359d7a676efce10b22a5e4a0d ""
   "complexana.tex" 1790489112 5250 4ac573406deab7bbd61c852a8620ca2f ""
   "groups.tex" 1790491139 6396 5db1fba50e12d681295973540e1fbf79 ""
-  "la.tex" 1792519196 15429 dce1f7537738141568bb5c7a9f25cd0e ""
-  "main.aux" 1793113821 7825 86a7890718d928adac569bed355d8fd8 "pdflatex"
+  "la.tex" 1793115587 15632 3b5dd71c9b6146c369f23896154398a1 ""
+  "main.aux" 1793117087 7825 8180ffa29eb55130ffd8a7bed8dd9a6c "pdflatex"
   "main.bbl" 1793113467 1868 6b26ec6131afb651a1cf4be724e35004 "biber main"
-  "main.out" 1793113821 8848 5dfe39e67009bfabb6e9da969ab9b49d "pdflatex"
-  "main.run.xml" 1793113821 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "main.out" 1793117087 8848 5dfe39e67009bfabb6e9da969ab9b49d "pdflatex"
+  "main.run.xml" 1793117087 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
   "main.tex" 1790491669 431 0cab5e321d51289617db44079dd822c1 ""
-  "main.toc" 1793113821 4715 2a9548d502319a9493d993fca3f4a3b7 "pdflatex"
-  "miscellanious.tex" 1792492625 1500 16e62493281e322dc33cfe6d1d5d38a2 ""
-  "mvc.tex" 1793113818 22395 4bba121528a3b1b7c22c7aaef934f935 ""
-  "obscure_mcq.tex" 1792570863 96678 d4991560bc8d41c26018543be0df8b6f ""
+  "main.toc" 1793117087 4715 0c1cfce95f38e2660c3e3b89f7a811e2 "pdflatex"
+  "miscellanious.tex" 1793115210 1500 16e62493281e322dc33cfe6d1d5d38a2 ""
+  "mvc.tex" 1793113841 22395 4bba121528a3b1b7c22c7aaef934f935 ""
+  "obscure_mcq.tex" 1793117085 100618 1cf7b05e8bf7da6c23f8cb6f5127c27b ""
   "prob_stats.tex" 1790408153 11361 dc480d3f8d319d806315fba7f0f98375 ""
   "specifics.tex" 1792518923 4648 56c1e1aa8d7a858d60b6cb79c2d76872 ""
   (generated)

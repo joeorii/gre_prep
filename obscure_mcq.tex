@@ -3381,7 +3381,7 @@ $\operatorname{rank}(A^2)$?
 \end{enumerate}
 \end{exercise}
 \begin{solution}
-
+(A); use Sylvester.
 \end{solution}
 
 \begin{exercise}
@@ -3390,12 +3390,10 @@ characteristic polynomial
 \[
 p_A(t)=(t-2)^3(t+1)^2.
 \]
-
 What is
 \[
 \operatorname{tr}(\operatorname{adj}(A))?
 \]
-
 \begin{enumerate}[label=(\Alph*)]
     \item $-8$
     \item $-4$
@@ -3404,16 +3402,18 @@ What is
     \item $4$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(B). We note that $A \adj(A) = \det(A) I$, so 
+\[
+\tr(\adj(A)) = \det(A) \tr(A^{-1}).
+\]
+The trace of $A^{-1}$ is the sum of reciprocal of eigenvalues, 
+which is $-\frac{1}{2}$. The determinant is $8$, so $-4$.
+\end{solution}
 
 \begin{exercise}
-Let $A$ and $B$ be commuting nilpotent
-$4\times4$ matrices, so that
-\[
-AB=BA.
-\]
-
+Let $A$ and $B$ be commuting nilpotent $4\times4$ matrices, so that $AB=BA$.
 Which of the following must be true?
-
 \begin{enumerate}[label=(\Alph*)]
     \item $A+B$ is invertible.
     \item $A-B$ is invertible.
@@ -3422,6 +3422,9 @@ Which of the following must be true?
     \item $AB$ is invertible.
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(C).This is basic algebra.
+\end{solution}
 
 \begin{exercise}
 Consider the linear transformation
@@ -3432,9 +3435,7 @@ defined by
 \[
 T(X)=\frac12(X+X^T).
 \]
-
 What is the rank of $T$?
-
 \begin{enumerate}[label=(\Alph*)]
     \item $3$
     \item $4$
@@ -3443,20 +3444,210 @@ What is the rank of $T$?
     \item $9$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(D). Assign arbitrary inputs and see what lines up. 
+Alternatively, look at the kernel; it is matrices of $0$ 
+diagonal entries and alternating diagonals.
+\end{solution}
 
 \begin{exercise}
 Let $A$ be a real $2\times2$ matrix with
 \[
 \operatorname{tr}(A)=3,\qquad \det(A)=2.
 \]
-
 Which expression is equal to $A^5$?
-
 \begin{enumerate}[label=(\Alph*)]
     \item $16A-15I$
     \item $31A-30I$
     \item $32A-31I$
     \item $25A-24I$
     \item $A+30I$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Note that characteristic polynomial of $A$ is 
+\[
+\chi_A(t)  = t^2 - \tr(A)t + \det (A).
+\]
+Thus, $\chi_A(t) = t^2 - 3t + 2$. We iteratively substitute then.
+\end{solution}
+
+\begin{exercise}
+Evaluate
+\[
+\lim_{x\to0}
+\frac{\tan(3x)-3\tan x}{x^3}.
+\]
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $2$
+    \item $6$
+    \item $8$
+    \item $+\infty$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). Use the Taylor expansion of $\tan(x)$:
+\[
+\tan(x) = x + \frac{x^3}{3} + O(x^5) + \dots
+\]
+Then, the order $3$ terms only matter.
+\end{solution}
+
+\begin{exercise}
+Evaluate
+\[
+\lim_{x\to2}
+\frac{\ln x}{\sin(\pi x)}.
+\]
+\begin{enumerate}[label=(\Alph*)]
+    \item $0$
+    \item $\ln 2$
+    \item $+\infty$
+    \item $-\infty$
+    \item The limit does not exist.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(E). Evaluate from the LHS and the RHS.
+\end{solution}
+
+\begin{exercise}
+What is the exact range of
+\[
+f(x)=\frac{\ln(1+x)}{x},
+\qquad 0<x<1?
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $(0,1)$
+    \item $(\ln2,1)$
+    \item $[\ln2,1]$
+    \item $(1,\infty)$
+    \item $(0,\ln2)$
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+Let $(G,\cdot)$ be a group with identity $e$,
+and suppose $\star$ is another binary
+operation on $G$ with the same two-sided
+identity $e$, satisfying
+\[
+(a\cdot b)\star(c\cdot d)
+=
+(a\star c)\cdot(b\star d)
+\]
+for all $a,b,c,d\in G$. Which of the following must hold?
+\begin{enumerate}[label=(\Alph*)]
+    \item $G$ is cyclic.
+    \item $\star=\cdot$, but $G$ need not
+          be abelian.
+    \item $G$ is abelian, but the two
+          operations need not coincide.
+    \item $\star=\cdot$ and $G$ is abelian.
+    \item $G$ is trivial.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let
+\[
+a_n=(-1)^n+\frac1n.
+\]
+
+Determine
+\[
+\left(
+\limsup_{n\to\infty}a_n,\,
+\liminf_{n\to\infty}a_n
+\right).
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $(0,0)$
+    \item $(1,-1)$
+    \item $(-1,1)$
+    \item $(1,0)$
+    \item Neither limit exists.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Suppose
+\[
+f:[1,\infty)\to[0,\infty)
+\]
+satisfies
+\[
+\int_1^\infty f(x)\,dx<\infty.
+\]
+
+Which additional hypothesis guarantees
+that
+\[
+\lim_{x\to\infty}f(x)=0?
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $f$ is continuous.
+    \item $f$ is $C^\infty$.
+    \item $f$ is bounded.
+    \item $f$ is uniformly continuous.
+    \item None of the above.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Consider the subset of $\mathbb R^2$
+defined by
+\[
+S=
+\left\{
+\left(x,\sin\frac1x\right):
+0<x\le1
+\right\}
+\cup
+\bigl(\{0\}\times[-1,1]\bigr).
+\]
+
+Which of the following statements hold?
+
+\begin{enumerate}[label=\Roman*.]
+    \item $S$ is connected.
+    \item $S$ is path-connected.
+    \item $S$ is closed.
+\end{enumerate}
+
+\begin{enumerate}[label=(\Alph*)]
+    \item I only
+    \item II only
+    \item I and III only
+    \item II and III only
+    \item I, II, and III
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Consider the hyperbola
+\[
+\frac{x^2}{4}-\frac{y^2}{12}=1.
+\]
+
+A circle centered at the origin passes
+through the foci of the hyperbola.
+
+What is the area of the circular sector
+bounded by the positive $x$-axis,
+the first-quadrant asymptote of the
+hyperbola, and the circle?
+
+\begin{enumerate}[label=(\Alph*)]
+    \item $2\pi$
+    \item $\dfrac{4\pi}{3}$
+    \item $\dfrac{8\pi}{3}$
+    \item $4\pi$
+    \item $\dfrac{16\pi}{3}$
 \end{enumerate}
 \end{exercise}
