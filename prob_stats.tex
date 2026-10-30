@@ -432,6 +432,73 @@ s^2
 \]
 \end{df}
 
+\begin{df}
+For real observations $(x_1, y_1), \dots, (x_n, y_n)$, the \emph{sample covariance} is defined as 
+\[
+s_{XY} = \frac{1}{n - 1} \sum_{i = 1}^n (x_i - \overline{x})(y_i - \overline{y})
+\]
+\end{df}
+
+\begin{df}
+For a random variable $X$ with mean $\mu$ and standard deviation $\sigma$, the
+\emph{z-score} of an observation $x$ is
+\[
+z=\frac{x-\mu}{\sigma}.
+\]
+\end{df}
+
+\begin{remark}
+The z-score measures how many standard deviations an observation is from the mean.
+For instance:
+\begin{itemize}
+    \item $z=0$ $\rightarrow$ at the mean.
+    \item $z=1$ $\rightarrow$ one standard deviation above the mean.
+    \item $z=-2$ $\rightarrow$ two standard deviations below the mean.
+\end{itemize}
+\end{remark}
+
+\begin{theorem}[Linear Regression (Least Squares)]
+Given data points $(x_i,y_i)$, $i=1,\ldots,n$, the least-squares regression
+line of $y$ on $x$ is $\hat{y} = b_0 + b_1 x$, where the coefficients minimize 
+the squared residuals
+\[
+\sum_{i=1}^n(y_i-b_0-b_1x_i)^2.
+\]
+Explicitly,
+\begin{align*}
+b_1&= \frac{\sum_{i=1}^n(x_i-\overline x) (y_i-\overline y)} {\sum_{i=1}^n(x_i-\overline x)^2} \\
+b_0 &= \overline y-b_1\overline x
+\end{align*}
+\end{theorem}
+
+\begin{remark}
+Note that an equivalently, we have 
+\[
+b_1=
+\frac{\operatorname{Cov}(X,Y)}
+{\operatorname{Var}(X)}
+=r\frac{s_y}{s_x}
+\]
+Here $r$ is the sample Pearson correlation coefficient, and $s_x,s_y$ are the sample
+standard deviations.
+\end{remark}
+
+\begin{df}
+The \emph{Pearson correlation coefficient} $r$ is $r = \frac{\Cov(X,Y)}{\sigma_X \sigma_Y}$.
+The sample Pearson correlation coefficient is the same, with everything sampled version.
+\end{df}
+
+\begin{remark}
+Here are some useful properties of the linear regression by least squared residuals.
+\begin{itemize}
+\item The regression line passes through $(\overline x,\overline y)$.
+\item Residuals are $e_i=y_i-\widehat y_i$.
+\item For regression with an intercept, $\sum_i e_i=0$.
+\item The sign of $b_1$ equals the sign of the correlation coefficient $r$.
+\item In simple linear regression with an intercept, $R^2=r^2$.
+\end{itemize}
+\end{remark}
+
 \begin{exercise}
 A random sample of size $n$ is taken from a population with finite variance.
 If the sample size is increased from $n$ to $4n$, by what factor does the
@@ -512,6 +579,288 @@ of a random sample of size $n$?
 (B).
 \end{solution}
 
+\begin{exercise}
+A population has mean $70$ and standard deviation
+$8$. What is the $z$-score of an observation
+with value $86$?
+
+\begin{enumerate}[label=(\Alph*)]
+\item $\frac12$
+\item $1$
+\item $\frac32$
+\item $2$
+\item $\frac52$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). $z = \frac{86 - 70}{8}$.
+\end{solution}
+
+\begin{exercise}
+Suppose $X$ is normally distributed with
+mean $100$ and standard deviation $15$.
+What is $P(X\le115)$, approximately?
+
+\begin{enumerate}[label=(\Alph*)]
+\item $0.1587$
+\item $0.3413$
+\item $0.5000$
+\item $0.6826$
+\item $0.8413$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). We are $+1$ standard deviation. Because $X$ is normally distributed, 
+this is (D).
+\end{solution}
+
+\begin{exercise}
+Suppose $E[X]=12$ and $\operatorname{Var}(X)=9$. Let $Y=-2X+5$.
+If an observation of $X$ has value $15$, what is the corresponding $z$-score of $Y$?
+\begin{enumerate}[label=(\Alph*)]
+\item $-2$
+\item $-1$
+\item $0$
+\item $1$
+\item $2$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Note that the observation of $Y$ has value $-25$. Also, 
+$E[Y] = -19$. Further, $\Var(Y) = 36$, so the standard deivation is $6$. Therefore, 
+\[
+z = \frac{-25 + 19}{6} = -1.
+\]
+\end{solution}
+
+\begin{exercise}
+The four values
+\[
+2,\quad4,\quad4,\quad6
+\]
+constitute an entire population. What is the population standard deviation?
+\begin{enumerate}[label=(\Alph*)]
+\item $\sqrt2$
+\item $2$
+\item $\sqrt{\frac83}$
+\item $4$
+\item $8$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A) . We note that the average is $\frac{1}{4}(2 + 4 + 4 + 6) = 4$. Thus, the 
+population standard deviation is 
+\[
+\sqrt{\frac{1}{4}(2^2 + 0^2 + 0^2 + 2^2)} = \sqrt{2}.
+\]
+\end{solution}
+
+\begin{exercise}
+The observations
+\[
+1,\quad3,\quad5
+\]
+form a sample. What is their sample standard deviation,
+using the usual denominator $n-1$?
+\begin{enumerate}[label=(\Alph*)]
+\item $\sqrt{\frac83}$
+\item $\sqrt2$
+\item $2$
+\item $\sqrt8$
+\item $4$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). We calculate the sample mean is $3$. Thus, the sample standard deviation is
+\[
+\sqrt{\frac{1}{2}(2^2 + 2^2)} = 2
+\]
+\end{solution}
+
+\begin{exercise}
+Suppose $E[X]=12$ and $\operatorname{Var}(X)=9$. 
+Define
+\[
+Z=\frac{X-12}{3}.
+\]
+What is the standard deviation of $Z$?
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $1$
+\item $3$
+\item $9$
+\item Cannot be determined
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). The variance of $Z$ is $1$. Thus, the standard deviation is $1$.
+\end{solution}
+
+\begin{exercise}
+Let $X_1,\ldots,X_{36}$ be independent, identically distributed normal random variables, 
+each having mean $80$ and standard deviation $12$.
+Let
+\[
+\overline X=\frac1{36}\sum_{i=1}^{36}X_i.
+\]
+What is $P(\overline X\ge84)$, approximately?
+\begin{enumerate}[label=(\Alph*)]
+\item $0.0228$
+\item $0.1587$
+\item $0.3413$
+\item $0.8413$
+\item $0.9772$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). The $z$-score is $2$.
+\end{solution}
+
+\begin{exercise}
+Consider the data points $(1,2), (2,3),(3,5)$. 
+What is the least-squares regression line $\widehat y=b_0+b_1x$?
+\begin{enumerate}[label=(\Alph*)]
+\item $\widehat y=1+\frac32x$
+\item $\widehat y=\frac13+\frac32x$
+\item $\widehat y=-\frac13+\frac32x$
+\item $\widehat y=\frac13+2x$
+\item $\widehat y=\frac32+\frac13x$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). We have $\overline{x} = 2$ and $\overline{y} = \frac{10}{3}$. Thus, 
+\[
+b_1 = \frac{(-1)(-\frac{4}{3}) + (0)(-\frac{1}{3}) + (1)(\frac{5}{3})}{1^2 + 0^2 + 1^2} = \frac{3}{2}.
+\]
+Next, 
+\[
+b_0 = \frac{10}{3} - \frac{3}{2}\cdot 2 = \frac{1}{3}.
+\]
+\end{solution}
+
+\begin{exercise}
+For a dataset $(x_i,y_i)$, suppose
+\[
+\overline x=3,\qquad \overline y=8,
+\]
+and
+\[
+\sum_i(x_i-\overline x)^2=20,
+\]
+\[
+\sum_i(x_i-\overline x)(y_i-\overline y)=-10.
+\]
+
+What is the least-squares regression line
+of $y$ on $x$?
+
+\begin{enumerate}[label=(\Alph*)]
+\item $\widehat y=8-\frac12x$
+\item $\widehat y=\frac{13}{2}-\frac12x$
+\item $\widehat y=\frac{19}{2}+\frac12x$
+\item $\widehat y=\frac{19}{2}-\frac12x$
+\item $\widehat y=8-2x$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+The sample correlation coefficient between
+$X$ and $Y$ is $r=-0.6$.
+
+Their sample standard deviations are
+\[
+s_X=5,\qquad s_Y=10.
+\]
+
+What is the slope of the least-squares
+regression line of $Y$ on $X$?
+
+\begin{enumerate}[label=(\Alph*)]
+\item $-\frac{12}{5}$
+\item $-\frac65$
+\item $-\frac35$
+\item $\frac35$
+\item $\frac65$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+A least-squares regression line is given by
+\[
+\widehat y=2+3x.
+\]
+
+One observed data point is $(4,11)$.
+
+What is the residual at this point?
+
+\begin{enumerate}[label=(\Alph*)]
+\item $-3$
+\item $-1$
+\item $1$
+\item $3$
+\item $14$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+In a simple linear regression model with
+an intercept, the sample correlation
+coefficient between $X$ and $Y$ is $0.8$.
+
+What percentage of the total variation
+in $Y$ is explained by the fitted regression?
+
+\begin{enumerate}[label=(\Alph*)]
+\item $16\%$
+\item $36\%$
+\item $64\%$
+\item $80\%$
+\item $160\%$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+A least-squares regression line of $Y$
+on $X$ has slope $-2$.
+
+The sample means are
+\[
+\overline x=10,\qquad\overline y=20.
+\]
+
+What is the predicted value of $Y$ when
+$X=13$?
+
+\begin{enumerate}[label=(\Alph*)]
+\item $8$
+\item $12$
+\item $14$
+\item $18$
+\item $26$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+A distribution has mean $\mu$ and
+positive standard deviation $\sigma$.
+
+An observation of $53$ has $z$-score $-1$,
+while an observation of $77$ has
+$z$-score $2$.
+
+What is $\mu+\sigma$?
+
+\begin{enumerate}[label=(\Alph*)]
+\item $61$
+\item $65$
+\item $69$
+\item $73$
+\item $77$
+\end{enumerate}
+\end{exercise}
+
+
 \subsection{Chebyshev and Markov}
 
 Just in case.
@@ -530,3 +879,7 @@ If $X$ is a random variable with mean $\mu$ and variance $\sigma^2$, then for al
 \mathbb{P}(|X-\mu|\geq c)\leq\frac{\sigma^2}{c^2}.
 \]
 \end{theorem}
+
+
+
+

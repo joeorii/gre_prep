@@ -4025,10 +4025,8 @@ Consider the function
 \[
 f(x,y)=x^4+y^4-2x^2-2y^2.
 \]
-
 How many distinct local minima does
 $f$ have in $\mathbb R^2$?
-
 \begin{enumerate}[label=(\Alph*)]
     \item $0$
     \item $1$
@@ -4037,23 +4035,17 @@ $f$ have in $\mathbb R^2$?
     \item $4$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(E). $f_x = 4x^3 - 4x$ and $f_y = 4y^3 - 4y$.
+Then, $f_{xx} > 0$ at the critical points $(1,\pm 1), (-1, \pm 1)$ and the determinant of the Hessian is positive there.
+\end{solution}
 
 
 \begin{exercise}
 Let $T:\mathbb R^2\to\mathbb R^2$ be a
 linear transformation represented by
-a matrix $A$ satisfying
-\[
-\det A=-3.
-\]
-
-Let $\Delta$ be the triangle with vertices
-\[
-(0,0),\qquad(2,1),\qquad(1,3).
-\]
-
-What is the area of $T(\Delta)$?
-
+a matrix $A$ satisfying $\det A=-3$. Let $\Delta$ be the triangle with vertices
+$(0,0), (2,1), (1,3)$. What is the area of $T(\Delta)$?
 \begin{enumerate}[label=(\Alph*)]
     \item $\dfrac52$
     \item $5$
@@ -4062,7 +4054,16 @@ What is the area of $T(\Delta)$?
     \item $15$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(C). The original triangle has area $\frac{5}{2}$. Then, the area of $T(\Delta)$ 
+is $|\det T| \cdot \text{Area}(\Delta)$.
+\end{solution}
 
+\begin{remark}
+I guess more generally, if you have an invertible linear transformation $T$ acting on 
+$S \subseteq \R^n$, then $\vol(T(S)) = \det(T) \vol(S)$, where the volume here is the 
+Euclidean volume.
+\end{remark}
 
 \begin{exercise}
 Let $X$ and $Y$ be independent
@@ -4072,12 +4073,10 @@ real-valued random variables satisfying
 \qquad
 \operatorname{Var}(Y)=3.
 \]
-
 What is
 \[
 \operatorname{Var}(2X-Y)?
 \]
-
 \begin{enumerate}[label=(\Alph*)]
     \item $5$
     \item $7$
@@ -4086,7 +4085,9 @@ What is
     \item $20$
 \end{enumerate}
 \end{exercise}
-
+\begin{solution} 
+(C). Follows from $\Var(aX + bY) = a^2\Var(X) + b^2\Var(Y)$.
+\end{solution}
 
 \begin{exercise}
 Consider the following statements.
@@ -4109,9 +4110,7 @@ Consider the following statements.
     $(f(1/n))_{n\ge2}$ converges,
     then $\lim_{x\to0^+}f(x)$ exists.
 \end{enumerate}
-
 Which statements must be true?
-
 \begin{enumerate}[label=(\Alph*)]
     \item I only
     \item II only
@@ -4120,28 +4119,28 @@ Which statements must be true?
     \item I, II, and III
 \end{enumerate}
 \end{exercise}
-
+\begin{solution}
+(C). For I, take a Cauchy seqences converging to $0$. Then, uniform continuity of $f$ implies that 
+$f$ applied to the sequence is Cauchy, therefore converges by completeness of $\R$. 
+For II, note that $f$ is Lipschitz continuous, so is uniformly continuous. That is, by MVT, 
+for all $x,y \in (0,1)$, exists $c \in (x,y)$ such that $f(x) - f(y) = f'(c)(x-y)$. Taking 
+absolute values,
+\[
+|f(x) - f(y)| = |f'(c)(x-y)| \leq 10 |x-y|.
+\]
+III is not true. Just consider $f(x) = \sin\left(\frac{2\pi}{x}\right)$.
+\end{solution}
 
 \begin{exercise}
-Let $G$ be a group of order
-\[
-|G|=45=3^2\cdot5.
-\]
-
-Consider the following statements.
-
+Let $G$ be a group of order $|G| = 45$. Consider the following statements.
 \begin{enumerate}[label=\Roman*.]
     \item Both the Sylow $3$-subgroup
     and the Sylow $5$-subgroup
     are normal.
-
     \item $G$ is abelian.
-
     \item $G$ is cyclic.
 \end{enumerate}
-
 Which statements must be true?
-
 \begin{enumerate}[label=(\Alph*)]
     \item I only
     \item II only
@@ -4150,25 +4149,26 @@ Which statements must be true?
     \item I, II, and III
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(C). Sylow III says I is true. As for II, we note that the Sylow-$5$ group $P_5$ has 
+order $5$, so is cyclic (hence abelian). As for the Sylow-$3$ group $P_3$, it has order $9 = 3^2$, 
+so it is abelian. Now, we aim to use the inner direct product theorem on $G$.
+Since the Sylow subgroups are of coprime order, they have trivial intersection. 
+Also,
+\[
+|P_3P_5| = \frac{|P_3||P_5}{|P_3 \cap P_5|} = |P_3||P_5| = 5 \cdot 9 = |G|,
+\]
+implying that $G = P_3 P_5$ Applying the theorem, $G \cong P_3 \times P_5$, and a direct 
+product of abelian groups is clearly abelian. III is not true because $P_3$ could be acylic.
+\end{solution}
 
 
 \begin{exercise}
-Let
-\[
-F(x,y,z)=(x^3,y^3,z^3).
-\]
-
-Let $S$ be the unit sphere
-\[
-x^2+y^2+z^2=1,
-\]
-oriented outward.
-
+Let $F(x,y,z)=(x^3,y^3,z^3)$ and $S$ be the unit sphere oriented outward.
 Evaluate
 \[
-\iint_S F\cdot n\,dS.
+\iint_S F\cdot n dS.
 \]
-
 \begin{enumerate}[label=(\Alph*)]
     \item $\dfrac{4\pi}{5}$
     \item $\dfrac{8\pi}{5}$
@@ -4177,7 +4177,18 @@ Evaluate
     \item $12\pi$
 \end{enumerate}
 \end{exercise}
-
+\begin{solution}
+(D). Use divergence theorem. The flux integral is now 
+\[
+\int_V 3(x^2 + y^2 + z^2) dV.
+\]
+We use spherical coordinates now:
+\[
+\int_{\theta = 0}^{2\pi}\int_{\phi = 0}^{\pi}\int_{r = 0}^1 r^2 \cdot r^2\sin\phi dr d\phi d\theta
+= \frac{2\pi}{5} \int_{\phi = 0}^{\pi}\sin\phi d\phi
+= \frac{4\pi}{5}.
+\]
+\end{solution}
 
 \begin{exercise}
 A permutation of
@@ -4185,10 +4196,7 @@ A permutation of
 \{1,2,3,4,5\}
 \]
 is chosen uniformly at random.
-
-What is the probability that
-the permutation has no fixed points?
-
+What is the probability that the permutation has no fixed points?
 \begin{enumerate}[label=(\Alph*)]
     \item $\dfrac13$
     \item $\dfrac{11}{30}$
@@ -4197,21 +4205,21 @@ the permutation has no fixed points?
     \item $\dfrac12$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(B). There are $5!$ permutations. Those which have nonfixed points are those where all numbers 
+are present. This consists of elements in the conjugacy classes $(12345)$ and $(12)(345)$.
+The number of these are $4!$ and ${5\choose 2}\cdot 2!$.
+Thus, the answer is $\frac{24 + 20}{120} = \frac{11}{30}$.
+\end{solution}
 
 
 \begin{exercise}
-Let $A$ be a diagonalizable real
-$5\times5$ matrix with three distinct
-real eigenvalues whose eigenspaces
-have dimensions $2$, $2$, and $1$.
-
-Let
+Let $A$ be a diagonalizable real $5\times5$ matrix with three distinct real eigenvalues 
+whose eigenspaces have dimensions $2$, $2$, and $1$. Let
 \[
 V=\{X\in M_5(\mathbb R):AX=XA\}.
 \]
-
 What is $\dim V$?
-
 \begin{enumerate}[label=(\Alph*)]
     \item $5$
     \item $7$
@@ -4220,6 +4228,12 @@ What is $\dim V$?
     \item $13$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(C). This $V = \ker(T)$, where $T(X) = AX - XA$. Those which lie in the 
+kernel of this are those which vanish on each block. In each block, 
+these are essentially scalar multiples of identities, so commute with anything 
+in that block. This gives the sum of $2^2 + 2^2 + 1$.
+\end{solution}
 
 
 \begin{exercise}
@@ -4248,6 +4262,9 @@ Which statements must be true?
     \item I, II, and III
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(A) I is clearly true by MVT. As for II and III, consider constant $f = 0$.
+\end{solution}
 
 
 \begin{exercise}
@@ -4279,7 +4296,11 @@ What is the volume of $R$?
     \item $\dfrac56$
 \end{enumerate}
 \end{exercise}
-
+\begin{solution}
+(D). The region without $A$ is just the region of positive $x,y,z$ bounded by the origin
+and $(1,0,0) (0,1,0), (0,0,1)$. The volume of this is $\frac{1}{6}$, so the transformed 
+space is $\frac{1}{5 }\cdot \frac{1}{6}$.
+\end{solution}
 
 \begin{exercise}
 Let $\sigma$ be a uniformly random
@@ -4287,14 +4308,11 @@ permutation of
 \[
 \{1,2,\ldots,7\}.
 \]
-
 Let $X$ be the number of fixed points:
 \[
 X=\#\{i:\sigma(i)=i\}.
 \]
-
 What is $\mathbb E[X]$?
-
 \begin{enumerate}[label=(\Alph*)]
     \item $0$
     \item $\dfrac17$
@@ -4303,18 +4321,22 @@ What is $\mathbb E[X]$?
     \item $7$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(C). Define 
+\[
+I_i = \begin{cases}
+1 & \text{if } \sigma (i) = i, \\
+0 & \text{otherwise}
+\end{cases}
+\]
+Then, $X = I_1 + \dots + I_7$, and we can apply linearity of expectation.
+Now, $\E[I_i] = \frac{1}{7}$, because if one index is fixed, then there are $6!$ other choices.
+Thus, the answer is (C).
+\end{solution}
 
 
 \begin{exercise}
-What is the minimum value of
-\[
-f(x,y)=x^2+y^2
-\]
-subject to
-\[
-x+2y=5?
-\]
-
+What is the minimum value of $f(x,y)=x^2+y^2$ subject to $x + 2y = 5$?
 \begin{enumerate}[label=(\Alph*)]
     \item $1$
     \item $4$
@@ -4323,6 +4345,9 @@ x+2y=5?
     \item $25$
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(C). Use Cauchy Schwarz.
+\end{solution}
 
 
 \begin{exercise}
@@ -4331,20 +4356,16 @@ with characteristic polynomial
 \[
 p_A(t)=(t-3)^4(t+1)^2.
 \]
-
 Suppose
 \[
 \dim\ker(A-3I)=2.
 \]
-
 The generalized eigenspace
 corresponding to the eigenvalue $3$ is
 \[
 G_3=\ker((A-3I)^6).
 \]
-
 What is $\dim G_3$?
-
 \begin{enumerate}[label=(\Alph*)]
     \item $2$
     \item $3$
@@ -4353,15 +4374,15 @@ What is $\dim G_3$?
     \item $6$
 \end{enumerate}
 \end{exercise}
-
+\begin{solution}
+(C). The possible Jordan decomposition associated to the eigenvalue $3$ is $J_1(3) \oplus J_3(3)$
+or $J_2(3) \oplus J_2(3)$. In these, we find that the dimension of $G_3$ is $4$, since after 
+powers of $6$, all `shifted' Jordan blocks vanish.
+\end{solution}
 
 \begin{exercise}
-Let $(f_n)$ be a sequence of continuous
-real-valued functions on $[0,1]$
-converging uniformly to $f$.
-
-Consider the following statements.
-
+Let $(f_n)$ be a sequence of continuous real-valued functions on $[0,1]$
+converging uniformly to $f$. Consider the following statements.
 \begin{enumerate}[label=\Roman*.]
     \item $f$ is continuous.
 
@@ -4377,9 +4398,7 @@ Consider the following statements.
     \int_0^1 f(x)\,dx.
     \]
 \end{enumerate}
-
 Which statements must be true?
-
 \begin{enumerate}[label=(\Alph*)]
     \item I only
     \item II only
@@ -4388,3 +4407,10 @@ Which statements must be true?
     \item I, II, and III
 \end{enumerate}
 \end{exercise}
+\begin{solution}
+(D). I is true by a basic result: If $f_n$ are continuous and converges uniformly to some $f$,
+then $f$ is continuous. For III, uniform convergence implies point-wise convergence.
+Also, $f$ is continuous on the compact interval $[0,1]$, so it's bounded, so we have some dominating function. 
+Thus, DCT says this is true. As for II, this is not necessarily true; we cannot conclude anything about 
+differentiability at this point. (note that uniform convergence of the derivative is sufficient, but not necessary).
+\end{solution}

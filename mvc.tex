@@ -774,3 +774,55 @@ where $C$ is the circle $x^2+y^2=16$, traversed counterclockwise.
 \begin{solution}
 
 \end{solution}
+
+\subsection{Jacobians and Volume/ Area Elements}
+
+We include a quick cheat sheet for the volume/ area elements for calculating integrals 
+with Euclidean, polar, or spherical coordinates.
+
+\subsubsection{Euclidean (Cartesian) Coordinates}
+
+\begin{example}[$\R^2$]
+Here, $x=x$ and $y = y$, so $dA = dxdy$.
+\end{example}
+\begin{example}[$\R^3$]
+Here, $x=x$, $y = y$, and $z = z$, so $dV = dxdydz$.
+\end{example}
+
+
+
+\subsubsection{Polar Coordinates}
+
+\begin{example}[$\R^2$]
+Here, $x = r \cos \theta$ and $y = r \sin \theta$, subject to
+\[
+x^2 + y^ 2= r^2, \qquad \theta = \arctan \left(\frac{y}{x}\right).
+\]
+In this case, $dA = r dr d\theta$.
+\end{example}
+
+\begin{example}[$\R^3$]
+Here, $x = r \cos \theta, y = r \sin \theta, z = z$, subject to
+\[
+x^2 + y^ 2= r^2, \qquad \theta = \arctan \left(\frac{y}{x}\right).
+\]
+Here, $dV = rdr d\theta dz$.
+\end{example}
+
+\subsubsection{Spherical Coordinates ($\mathbb R^3$)}
+
+Here $\phi$ is measured from the positive $z$-axis and $\theta$ is measured from 
+positive $x$-axis to $y$-axis. We set
+\[
+\begin{aligned}
+x &= r\sin\phi\cos\theta,\\
+y &= r\sin\phi\sin\theta,\\
+z &= r\cos\phi,\\
+x^2+y^2+z^2 &= r^2.
+\end{aligned}
+\]
+In this case,
+\[
+dV=r^2\sin\phi
+dr d\phi d\theta
+\]
