@@ -153,3 +153,223 @@ for any closed curve $\gamma$ in that disc.
     \end{align*}
     Thus, the integral evaluates to $-2\pi i$.
 \end{solution}
+
+\subsection{More Results and Problems}
+
+\begin{theorem}[Maximum Modulus Principle]
+Let $\Omega\subseteq\mathbb{C}$ be a nonempty, connected, open subset of $\C$, and let
+$f \colon \Omega\to\mathbb{C}$ be holomorphic. If there exists $z_0\in\Omega$ such that
+$|f|$ attains a local maximum at $z_0$, then $f$ is constant on $\Omega$. 
+If $\Omega$ is actually bounded, $f$ is actually defined on $\overline{\Omega}$ such that 
+$f$ is continuous on $\overline{\Omega}$ and holomorphic on $\Omega$, then 
+\[
+\max_{z\in\overline{\Omega}}|f(z)| =
+\max_{z\in\partial\Omega}|f(z)|.
+\]
+In otherwords, it attains its maximum on the boundary. 
+\end{theorem}
+
+\begin{remark}
+In the setting above, if $f$ is nonconstant on $\Omega$, then in particular 
+$|f(z)| < \max_{\omega \in \partial \Omega} |f(w)|$, for every $z \in \Omega$.
+\end{remark}
+
+\begin{remark}
+If in addition $f$ is nonconstant and has no zeroes, we can say a similar
+result for minimas.
+\end{remark}
+
+\begin{theorem}[Polynomial Growth of Entire Functions]
+Let $f$ be entire and suppose there exist constants $C>0, \alpha > 0$ such that
+\[
+|f(z)|\leq C(1+|z|^\alpha),
+\]
+for all $z\in\Omega$. Then $f$ is a polynomial of degree at most
+$\lfloor\alpha\rfloor$. In particular, if $0\leq\alpha<1$, then $f$ is constant.
+\end{theorem}
+
+\begin{theorem}[Open Mapping Theorem]
+Let $\Omega\subseteq\mathbb{C}$ be a nonempty, connected, open subset of $\mathbb{C}$,
+and $f:\Omega\to\mathbb{C}$ be a nonconstant holomorphic function.
+Then $f$ is an open mapping.
+\end{theorem}
+
+\begin{theorem}[Argument Principle]
+Let $\Omega\subseteq\mathbb{C}$ be a nonempty, connected, open subset of $\mathbb{C}$.
+Let $\Gamma$ be a positively oriented, piecewise $C^1$, simple closed curve in
+$\mathbb{C}$, and let $D$ denote its bounded interior.
+Assume that $\overline{D}\subseteq\Omega$. Further, let $f \colon \Omega\to\widehat{\mathbb{C}}$ 
+be a meromorphic function that is not identically zero.
+Suppose $f$ has neither zeros nor poles on $\Gamma$.
+Let $N$ denote the number of zeros of $f$ in $D$, counted with multiplicity,
+and let $P$ denote the number of poles of $f$ in $D$, counted with order.
+Then
+\[
+\frac{1}{2\pi i}
+\oint_{\Gamma}
+\frac{f'(z)}{f(z)}\,dz
+=
+N-P.
+\]
+\end{theorem}
+
+\begin{corollary}[Rouch\'e's Theorem]
+Continue with the hypothesis above. If $f,g \colon \Omega \rightarrow \C$ are holomorphic 
+such that $|g(z)|<|f(z)|$ for all $z \in \Gamma$, then $f$ and $f+g$ have the same
+number of zeros in $D$, counted with multiplicity.
+\end{corollary}
+
+
+\begin{exercise}
+Let $f$ be holomorphic on the open unit disk
+and continuous on its closure. Suppose $|f(z)|\le 2$ for $|z|=1$
+and $f(0)=2i$. Which of the following must be true?
+\begin{enumerate}[label=(\Alph*)]
+\item $f(z)=0$ for all $z$.
+\item $f(z)=2iz$ for all $z$.
+\item $f(z)=2i$ for all $z$.
+\item $f$ has exactly one zero in the unit disk.
+\item $|f(z)|<2$ for every $|z|<1$.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Maximum-modulus principle.
+\end{solution}
+
+\begin{exercise}
+What is
+\[
+\max_{|z|=1}|z^4-3z^2|?
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $1$
+\item $2$
+\item $3$
+\item $4$
+\item $5$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). Factor out the $z^2$, but maximum of $|z^2 - 3|$ is $4$; take $z = -i$.
+\end{solution}
+
+\begin{exercise}
+Let $f:\mathbb C\to\mathbb C$ be entire
+and suppose
+\[
+|f(z)|\le 2+|z|^{3/2}
+\]
+for every $z\in\mathbb C$. What is the largest possible degree of $f$?
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $1$
+\item $2$
+\item $3$
+\item $f$ need not be a polynomial.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Use polynomial growth result of entire functions.
+\end{solution}
+
+\begin{exercise}
+Suppose $f$ is an entire function satisfying
+\[
+\operatorname{Re}(f(z))\le5
+\]
+for every $z\in\mathbb C$. Which of the following must be true?
+\begin{enumerate}[label=(\Alph*)]
+\item $f(0)$ is real.
+\item $f$ is identically zero.
+\item $f$ is constant.
+\item $f$ has at least one zero.
+\item $f$ is real-valued.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). This implies $e^f$ is bounded, which is entire, so $e^f$ is constant.
+This implies $f$ is constant, because $e^ff' = 0$ (by taking derivative), 
+implying that $f' = 0$.
+\end{solution}
+
+\begin{exercise}
+Let $D=\{z\in\mathbb C:|z|<1\}$ and let
+$f:D\to\mathbb C$ be a nonconstant holomorphic function.
+Which of the following sets could be the image $f(D)$?
+\begin{enumerate}[label=(\Alph*)]
+\item $[0,1]$
+\item $\{z:|z|=1\}$
+\item $\{z:|z|<1\}$
+\item $\mathbb R$
+\item $\{z:|z|\le1\}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Open mapping theorem (or just $f = z$).
+\end{solution}
+
+\begin{exercise}
+Let
+\[
+f(z)=\frac{z^2+1}{z(z-2)}
+\]
+and let $C$ be the positively oriented circle $|z|=\frac32$. Evaluate
+\[
+\frac{1}{2\pi i}\oint_C
+\frac{f'(z)}{f(z)}\,dz.
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $-1$
+\item $0$
+\item $1$
+\item $2$
+\item $3$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Use argument principle; there are two zeroes and two poles. Thus, $2-2$.
+\end{solution}
+
+\begin{exercise}
+How many zeros, counted with multiplicity,
+does
+\[
+p(z)=z^6+4z^2+1
+\]
+have in the open unit disk $|z|<1$?
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $1$
+\item $2$
+\item $4$
+\item $6$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Let $f = 4z^2$ and $g = z^6 + 1$. Then, $|g| < |f|$, so $p$ 
+and $f$ have the same number of zeroes. This is $2$ (counted with multiplicity of course).
+\end{solution}
+
+\begin{exercise}
+Let $C$ be the positively oriented
+unit circle $|z|=1$.
+
+What is
+\[
+\oint_C z^2e^{1/z}\,dz?
+\]
+
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $\frac{\pi i}{6}$
+\item $\frac{\pi i}{3}$
+\item $\pi i$
+\item $2\pi i$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Use residue theory. There's a pole at $0$ from the $e^{\frac{1}{z}}$.
+The third term from the expansion of $e^{\frac{1}{z}}$ matters, which has 
+coefficient $\frac{1}{3!} = \frac{1}{6}$. We need to multiply by $2\pi i$, so
+we get (C).
+\end{solution}

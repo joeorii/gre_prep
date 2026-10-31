@@ -38,23 +38,24 @@
 \contentsline {subsection}{\numberline {6.1}Basics of Holomorphic Functions}{38}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Cauchy's Integral Formula}{38}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Residue Theory}{39}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Analysis and Point-Set Topology}{40}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Real Analysis}{40}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Continuity (on metric spaces)}{40}{subsubsection.7.1.1}%
-\contentsline {subsubsection}{\numberline {7.1.2}Convergence of Functions, DCT}{41}{subsubsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.2}Supremum, Infimum, Limsup, and Liminf}{41}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Topology}{42}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Open and Closed Sets}{42}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Hausdorff}{43}{subsubsection.7.3.2}%
-\contentsline {subsection}{\numberline {7.4}Connectedness}{43}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Compactness}{44}{subsection.7.5}%
-\contentsline {section}{\numberline {8}Group Theory}{44}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Group Actions and Orbit-Stabilizers}{44}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Sylow's Theorems}{46}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Miscellaneous}{46}{subsection.8.3}%
-\contentsline {section}{\numberline {9}Miscellanious}{47}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Logic}{47}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Fundamental Groups}{47}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Some Specific Rings}{47}{subsection.9.3}%
-\contentsline {section}{\numberline {10}Obscure Questions in MVC Format}{48}{section.10}%
-\contentsline {section}{Bibliography}{122}{section*.2}%
+\contentsline {subsection}{\numberline {6.4}More Results and Problems}{40}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Analysis and Point-Set Topology}{43}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Real Analysis}{43}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Continuity (on metric spaces)}{43}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Convergence of Functions, DCT}{44}{subsubsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.2}Supremum, Infimum, Limsup, and Liminf}{45}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Topology}{45}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Open and Closed Sets}{45}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Hausdorff}{46}{subsubsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.4}Connectedness}{47}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Compactness}{47}{subsection.7.5}%
+\contentsline {section}{\numberline {8}Group Theory}{48}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Group Actions and Orbit-Stabilizers}{48}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Sylow's Theorems}{49}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Miscellaneous}{50}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Miscellanious}{50}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Logic}{50}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Fundamental Groups}{50}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Some Specific Rings}{51}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Obscure Questions in MVC Format}{51}{section.10}%
+\contentsline {section}{Bibliography}{126}{section*.2}%

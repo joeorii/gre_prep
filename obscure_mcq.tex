@@ -1853,7 +1853,7 @@ Suppose today is Wednesday. What day of the week will it be $10^{10}$ days from 
 \end{enumerate}
 \end{exercise}
 \begin{solution}
-(A). $10 \equiv 3 \pmod{7}$. Also, $10^10 \equiv 4 \pmod{6}$, so we just need to calculate
+(A). $10 \equiv 3 \pmod{7}$. Also, $10^{10} \equiv 4 \pmod{6}$, so we just need to calculate
 $3^4 \pmod{7}$, which is $4$. We move four days forward.
 \end{solution}
 
@@ -2469,7 +2469,7 @@ A & B \\ C & D
 \end{psmallmatrix}$ as above, the matrix $S := D - CA^{-1}B$ is called the \emph{Schur compelement} of $A$,
 when $A$ is invertible. It satisfies the following properties:
 \begin{itemize}
-    \item $\rank(M) = \rank(A) + +\rank(S)$
+    \item $\rank(M) = \rank(A) + \rank(S)$
     \item $\det(M) = \det(A) \det(S)$.
     \item $M$ is inveritble if and only if $S$ is invertible.
 \end{itemize}
@@ -2494,7 +2494,7 @@ Which of the following expressions is necessarily equal to $S$?
 \end{enumerate}
 \end{exercise}
 \begin{solution}
-(E). This comes from $MM^{-1} = I$, and using the rules above/ solving for $S$ 
+(B). This comes from $MM^{-1} = I$, and using the rules above/ solving for $S$ 
 using the Schur compelement of $A$.
 \end{solution}
 
