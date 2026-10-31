@@ -114,6 +114,36 @@ except for a measure zero set.
 If a sequence of continuous functions $(f_n)$ converge to $f$ uniformly, then $f$ is continuous.
 \end{proposition}
 
+\begin{proposition}
+Suppose $f_n \colon X \rightarrow \R$ is a sequence of functions which converge to $f$ pointwise. Then,
+$f_n \rightarrow f$ uniformly if and only if 
+\[
+\lim_{N \rightarrow \infty} \sup_{x \in X} |f_n(x) - f(x)| = 0
+\]
+\end{proposition}
+
+\begin{remark}
+A useful way to do this is to bound $|f_n(x) - f(x)| < a_n$, where 
+$a_n \rightarrow 0$.
+\end{remark}
+
+\begin{corollary}
+Suppose $f_n \colon X \rightarrow \R$ is a sequence of functions which converge to $f$ pointwise. 
+If $f$ is discontinuous, then $f_n$ doesn't converge to $f$ uniformly.
+\end{corollary}
+
+The following is a partial converse to two propositions ago:
+
+\begin{theorem}[Dini's Theorem]
+Let $f_n \colon X \rightarrow \R$ be a sequence of functions converging to $f$ pointwisely such that:
+\begin{itemize}
+\item $X$ is compact
+\item $f$ is continuous
+\item For every $x \in X$, $f_n(x)$ forms a monotonic sequence (either decreasing or increasing)
+\end{itemize}
+Then, $f_n \rightarrow f$ uniformly on $X$.
+\end{theorem}
+
 
 \subsection{Supremum, Infimum, Limsup, and Liminf}
 

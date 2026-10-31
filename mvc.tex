@@ -248,6 +248,162 @@ z_{ss} = 2f_x + 2s(2sf_{xx} + tf_{xy}) + t(2sf_{xy} + tf_{yy}).
 This is just (B).
 \end{solution}
 
+\subsection{Curvature}
+
+\begin{df}
+Let $I\subseteq\mathbb{R}$ be an open interval, and let $r:I\to\mathbb{R}^n$,
+where $n\geq 2$, be a $C^2$ regular curve, $r'(t) \neq 0$ for all $t \in I$.
+The \emph{unit tangent vector} is defined by
+\[
+\mathbf{T}(t)
+=
+\frac{r'(t)}
+{\|r'(t)\|}.
+\]
+The \emph{curvature} of $r$ at $t$
+is defined by
+\[
+\kappa(t)
+=
+\left\|\frac{d\mathbf{T}}{ds}\right\|
+=
+\frac{\|\mathbf{T}'(t)\|}
+{\|r'(t)\|},
+\]
+where $s$ denotes arc length, satisfying
+\[
+\frac{ds}{dt}=\|r'(t)\|.
+\]
+\end{df}
+
+\begin{theorem}[Curvature of a Plane Curve]
+Let $I\subseteq\mathbb{R}$ be an open interval,
+and let $t(t) = (x(t), y(t))$ be a $C^2$ regular curve in $\mathbb{R}^2$.
+Then its curvature is
+\[
+\kappa(t)=
+\frac{|x'(t)y''(t)-y'(t)x''(t)|}
+{(x'(t)^2+y'(t)^2)^{3/2}}.
+\]
+\end{theorem}
+
+\begin{theorem}[Curvature of a Space Curve]
+Let $I\subseteq\mathbb{R}$ be an open interval,
+and let $r \colon I \rightarrow \R^3$ be a $C^2$ regular curve. 
+Then, its curvature is
+\[
+\kappa(t)=
+\frac{\|\mathbf{r}'(t)\times\mathbf{r}''(t)\|}
+{\|\mathbf{r}'(t)\|^3}.
+\]
+\end{theorem}
+
+\begin{corollary}[Curvature of the Graph of a Function]
+Let $I\subseteq\mathbb{R}$ be an open interval and let $f:I\to\mathbb{R}$ be a $C^2$ function.
+Consider the plane curve given by the graph
+\[
+\mathbf{r}(x)=(x,f(x)).
+\]
+Then the curvature at $(x,f(x))$ is
+\[
+\kappa(x)=
+\frac{|f''(x)|}
+{(1+(f'(x))^2)^{3/2}}.
+\]
+\end{corollary}
+
+\begin{theorem}[Curvature of a Unit-Speed Curve]
+Let $I\subseteq\mathbb{R}$ be an open interval
+and let $\mathbf{r}:I\to\mathbb{R}^n$
+be a $C^2$ curve parametrized by arc length, so $\|r'(s)\| = 1$ for every $s \in I$. Then,
+\[
+\kappa(s)=\|\mathbf{r}''(s)\|.
+\]
+\end{theorem}
+
+\begin{theorem}[Curvature of a Circle]
+Let $R>0$ and consider the circle $r(t) = (a + R \cos t, b + R \sin t)$, for $t \in \R$. Then, 
+its curvature is constant and equal to $\frac{1}{R}$.
+\end{theorem}
+
+\begin{exercise}
+Consider the plane curve
+\[
+\mathbf{r}(t)
+=
+(3\cos t,3\sin t),
+\qquad t\in\mathbb{R}.
+\]
+What is its curvature at $t=\pi/4$?
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $\frac19$
+\item $\frac13$
+\item $3$
+\item $9$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). This is a circle of radius $3$.
+\end{solution}
+
+\begin{exercise}
+Let $C$ be the plane curve parametrized by
+\[
+\mathbf{r}(t)=(t,t^2),
+\qquad t\in\mathbb{R}.
+\]
+What is its curvature at $t=1$?
+\begin{enumerate}[label=(\Alph*)]
+\item $\frac15$
+\item $\frac{2}{5\sqrt5}$
+\item $\frac25$
+\item $\frac1{\sqrt5}$
+\item $2\sqrt5$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Let $r(t) = (t, t^2, 0)$. Then, 
+\[
+r'(t) = (1,2t,0), \quad r''(t) = (0,2,0).
+\]
+Therefore, the curvature is
+\[
+\frac{|r'(1) \times r''(1)|}{|r'(1)|^3} =  \frac{2}{5^{\frac{3}{2}}}
+\]
+\end{solution}
+
+\begin{exercise}
+Let $C$ be the space curve parametrized by
+\[
+\mathbf{r}(t)
+=
+(3\cos t,3\sin t,4t),
+\qquad t\in\mathbb{R}.
+\]
+What is its curvature at $t=0$?
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $\frac3{25}$
+\item $\frac4{25}$
+\item $\frac15$
+\item $\frac13$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). We have 
+\[
+r'(t) = (-3 \sin t, 3 \cos t, 4), \qquad r''(t) = (-3\cos t, -3\sin t, 0)
+\]
+Thus, 
+\[
+r'(t) \times r''(t) = (-12 \sin t, -12 \cos t, 9).
+\]
+At $t = 0$, we get $(0,-12,9)$, which has magnitude $15$. At the denominator,
+we have $r'(0) = (0,3,4)$, which has magnitude $5$.
+\end{solution}
+
+
 \subsection{Hessian}
 
 Let $f(x,y)$ be a twice-differntiable function on $\R^2$. Then, recall that 
@@ -772,8 +928,120 @@ Evaluate
 where $C$ is the circle $x^2+y^2=16$, traversed counterclockwise.
 \end{exercise}
 \begin{solution}
-
+Use Green's. the integral is 
+\[
+4\int_A dxdy = 4 \cdot 16\pi = 64 \pi.
+\]
 \end{solution}
+
+
+\begin{exercise}
+Let $\mathbf{F}:\mathbb{R}^3\to\mathbb{R}^3$
+be given by
+\[
+\mathbf{F}(x,y,z)
+=
+\left(-\frac y2,\frac x2,z^2\right).
+\]
+Let $C$ be the circle
+\[
+x^2+y^2=4,\qquad z=1,
+\]
+oriented counterclockwise when viewed from above. Evaluate
+\[
+\oint_C\mathbf{F}\cdot d\mathbf{r}.
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $\pi$
+\item $2\pi$
+\item $4\pi$
+\item $8\pi$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). We just use Stoke's. The unit outward normal is $\mathbf{n} = (0,0,1)$. By Stoke's 
+the integral is equal to 
+\[
+\int_S \curl \mathbf{F} \cdot \mathbf{n} dS 
+= \int_S (0,0,1) \cdot (0,0,1) dS = \int_S dS = 4\pi.
+\]
+\end{solution}
+
+\begin{exercise}
+Let $\mathbf{F}:\mathbb{R}^3\to\mathbb{R}^3$
+be given by
+\[
+\mathbf{F}(x,y,z)=(0,0,x^2).
+\]
+Let $S$ be the portion of the plane
+\[
+x+y+z=1
+\]
+lying in the first octant, oriented with an upward-pointing normal vector.
+Let $C=\partial S$ have the induced orientation. Evaluate
+\[
+\oint_C\mathbf{F}\cdot d\mathbf{r}.
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $-\frac23$
+\item $-\frac13$
+\item $0$
+\item $\frac13$
+\item $\frac23$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Use Stoke's theorem. Note the outwards unit normal is $\mathbf{n} = \frac{1}{\sqrt{3}}(1,1,1)$. 
+We want to make sense of the area element $dS$ first, but for this, we note that our surface can be 
+parametrized as $r(x,y) = (x,y, 1 - x - y)$. Thus,
+\[
+dS = |r_x \times r_y| dx dy = |(1,0,-1) \times (0,1,-1)|dxdy = \sqrt{3}dxdy
+\]
+Now, we can use Stoke's fully:
+\begin{multline*}
+\int_S \curl\mathbf{F} \cdot \mathbf{n} dS
+=\int_S (0,-2x,0)\cdot(1,1,1) dxdy
+\\
+= \int_{x = 0}^1 \int_{y = 0}^{1-x} -2x dxdy
+= -2\int_{x = 0}^1 x(1-x) dx 
+= -\frac{1}{3}.
+\end{multline*}
+\end{solution}
+
+\begin{exercise}
+Let $\mathbf{F}:\mathbb{R}^3\to\mathbb{R}^3$
+be given by
+\[
+\mathbf{F}(x,y,z)=(-y,x,0).
+\]
+Let $S$ be the annulus
+\[
+S=
+\{(x,y,0)\in\mathbb{R}^3:
+1\leq x^2+y^2\leq4\},
+\]
+oriented with upward-pointing normal. Let $C=\partial S$ have the induced
+orientation. Evaluate
+\[
+\oint_C\mathbf{F}\cdot d\mathbf{r}.
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $-6\pi$
+\item $0$
+\item $4\pi$
+\item $6\pi$
+\item $8\pi$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). Use Stoke's. The outward normal is $(0,0,1)$. $\curl \mathbf{F} = (0,0,2)$.
+Thus, the integral is equal to 
+\[
+\int_S 2dS = 2\int_S dS = 2(4\pi - \pi) = 6\pi.
+\]
+\end{solution}
+
 
 \subsection{Jacobians and Volume/ Area Elements}
 

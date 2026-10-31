@@ -11,7 +11,29 @@ We let $P$ and $Q$ be propositions.
 
 \subsection{Fundamental Groups}
 
-Some random fundamental groups to remember.
+Some random fundamental groups to remember. Note that fundamental groups 
+are usually taken with respect to a base point, but I'm lazy so I haven't written this below.
+
+\begin{proposition}
+If $X$ is path-connected, then $\pi_1(X, x_0)$ is independent of the 
+base point.
+\end{proposition}
+
+\begin{proposition}
+$\pi_1(X \times Y, (x_0, y_0)) \cong \pi_1(X, x_0) \times \pi_1(Y, y_0)$.
+\end{proposition}
+
+\begin{example}
+$\pi_1(\T^2) \cong \Z^2$, because $\T^2 = \S^1 \times \S^1$.
+\end{example}
+
+\begin{remark}
+If $X, Y$ are path connected, we can just omit base point.
+\end{remark}
+
+\begin{df}
+A topological space $X$ is \emph{simply connected} if $\pi_1(X) = 0$, or $\{e\}$.
+\end{df}
 
 \begin{itemize}
     \item $\pi_1(\mathbb{R}^n)=\{e\}$
@@ -28,6 +50,7 @@ Some random fundamental groups to remember.
     \item $\pi_1(\text{Klein bottle})
     =\langle a,b\mid aba^{-1}=b^{-1}\rangle$
     \item $\pi_1\left(\bigvee_{i=1}^k S^1\right)=F_k$, the free group on $k$ generators.
+    \item $\pi_1(X \times Y, ) \cong \pi_1(X) \times \pi_1(Y)$.
 \end{itemize}
 
 \subsection{Some Specific Rings}
@@ -45,3 +68,20 @@ Then, the following hold:
 \begin{example}
 Let $R$ be Noetherian. $R[x_1, x_2, \dots]$ is not Noetherian (as a ring).
 \end{example}
+
+\begin{remark}
+Note that if $R$ is a ring with only two left and/ or right ideals, 
+then $R$ is not necessarily a field. $R$ is merely a division ring, but 
+not commutative. Recall that fields are \emph{commutative division rings}.
+\end{remark}
+
+\begin{example}[non-Commutative division ring]
+Hurwitz quaternions are a great exmaple of a noncommutative division ring.
+This is $\H = \R \oplus \R i \oplus \R j \oplus \R k$ subject to the usual relations.
+More generally, quaternion algebras over fields give good examples.
+\end{example}
+
+\begin{remark}
+An interesting result of Frobenius states that every f.d. associative 
+real division algebra is isomorphic to $\R$, $\C$, or $\H$.
+\end{remark}

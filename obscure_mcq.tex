@@ -268,6 +268,10 @@ Which of the following spaces is contractible?
 (D).
 \end{solution}
 
+\begin{remark}
+Note that every field is dense in its completion.
+\end{remark}
+
 \begin{exercise}
 If $G$ acts transitively on a set $X$, and for $x\in X$,
 \[
@@ -4414,3 +4418,1197 @@ Also, $f$ is continuous on the compact interval $[0,1]$, so it's bounded, so we 
 Thus, DCT says this is true. As for II, this is not necessarily true; we cannot conclude anything about 
 differentiability at this point. (note that uniform convergence of the derivative is sufficient, but not necessary).
 \end{solution}
+
+\begin{exercise}
+Let $u=(1,2,-1)^T$ and $v=(2,-1,3)^T$.
+What is
+\[
+\det(I_3+uv^T)?
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $-3$
+\item $-2$
+\item $-1$
+\item $1$
+\item $2$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). This determinant is equalt to 
+\[
+\det(I_1 + vu^T) = \det(1 + -3) = -2.
+\]
+\end{solution}
+
+\begin{exercise}
+Which of the following describes the series
+\[
+\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{\sqrt n}?
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item It converges absolutely.
+\item It converges conditionally.
+\item It diverges to $+\infty$.
+\item It diverges to $-\infty$.
+\item Its partial sums oscillate without converging.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). By alternating series test. It certainly doesn't 
+converge absolutely because of the $p$-series test.
+\end{solution}
+
+\begin{exercise}
+Let $\mathbf F:\mathbb R^3\to\mathbb R^3$
+be given by
+\[
+\mathbf F(x,y,z)=(x^3,y^3,z^3).
+\]
+Let $S$ be the unit sphere
+$x^2+y^2+z^2=1$, oriented outward.
+Evaluate
+\[
+\iint_S\mathbf F\cdot\mathbf n\,dS.
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $\frac{4\pi}{5}$
+\item $\frac{8\pi}{5}$
+\item $\frac{12\pi}{5}$
+\item $4\pi$
+\item $12\pi$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Use divergence theorem.
+\[
+\int_V \divergence \mathbf{F} dV 
+= \int_V 3(x^2 + y^2 + z^2) dV
+=3\int_{0}^{\theta = 2\pi} \int_{0}^{\phi = \pi} \int_0^1 r^2 \cdot r^2 \sin \phi dr d\phi d\theta
+=\frac{3}{5} \cdot 2\pi \cdot 2
+\]
+\end{solution}
+
+\begin{exercise}
+Let $C$ be the positively oriented circle
+$|z|=2$. Evaluate
+\[
+\oint_C\frac{e^z}{(z-i)^2}\,dz.
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $2\pi i e^i$
+\item $2\pi i e^{-i}$
+\item $4\pi i e^i$
+\item $e^i$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). Cauchy's integral formula tells us that this is equal to 
+\[
+f'(i) \cdot \frac{2\pi i }{1!}, 
+\]
+where $f(z) = e^z$. Thus, we have $2\pi i e^i$.
+\end{solution}
+
+\begin{exercise}
+An urn contains $3$ red balls and $2$ blue balls. Two balls are drawn uniformly
+without replacement.
+What is the probability that the two balls have the same color?
+\begin{enumerate}[label=(\Alph*)]
+\item $\frac15$
+\item $\frac3{10}$
+\item $\frac25$
+\item $\frac12$
+\item $\frac35$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). The ways to pick two balls is ${5 \choose 2}$. The ways to pick red 
+are ${3 \choose 2}$. The ways to pick blue are ${2 \choose 2}$.
+Thus, $\frac{3+1}{10}$.
+\end{solution}
+
+\begin{exercise}
+Let $X$ be a connected, compact topological space and let $f:X\to\mathbb R$ be continuous.
+Suppose that $-1,2\in f(X)$.
+Which of the following must be true? \begin{enumerate}[label=(\Alph*)]
+\item $f$ is injective.
+\item $f(X)=\mathbb R$.
+\item There exists $x\in X$ with $f(x)=0$.
+\item $f$ is constant.
+\item $f$ is an open mapping.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). $f(X)$ is connected, becuase continuity preserves continuity. Therefore, 
+the IVT implies there is some zero of $f$.
+\end{solution}
+
+\begin{exercise}
+Let $y:\mathbb R\to\mathbb R$ satisfy
+\[
+y'+2y=e^{-x},
+\qquad y(0)=0.
+\]
+What is $y(x)$?
+\begin{enumerate}[label=(\Alph*)]
+\item $e^{-x}+e^{-2x}$
+\item $e^{-x}-e^{-2x}$
+\item $e^{-2x}-e^{-x}$
+\item $xe^{-2x}$
+\item $xe^{-x}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B). The integrating factor is $e^{2x}$. Therefore,
+\[
+y(x) = e^{-2x} \left(\int e^{2x} \cdot e^{-x}\right)
+= e^{-2x}\left(e^x + C\right).
+\]
+$y(0) - 0$, so $C = -1$. Thus,
+\[
+y(x) = e^{-x} - e^{-2x}.
+\]
+\end{solution}
+
+\begin{exercise}
+Eight distinct people are seated around a circular table. Two seatings are considered
+equivalent if one is obtained from the other by rotation, but not by reflection.
+How many distinct seatings are possible?
+\begin{enumerate}[label=(\Alph*)]
+\item $720$
+\item $2520$
+\item $5040$
+\item $20160$
+\item $40320$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). This is just $7!$.
+\end{solution}
+
+\begin{exercise}
+Let
+\[
+X=(S^1\times S^2)\times S^1.
+\]
+Which of the following groups is
+isomorphic to $\pi_1(X)$?
+\begin{enumerate}[label=(\Alph*)]
+\item The trivial group.
+\item $\mathbb Z$
+\item $\mathbb Z\times\mathbb Z$
+\item $\mathbb Z/2\mathbb Z$
+\item The free group on two generators.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Products of spaces and fundamental group commute. Note that 
+$\pi_1(\S^2) = \{e\}$ and $\pi_1(\S^1) = \Z$.
+\end{solution}
+
+\begin{exercise}
+What is the maximum value of $xy$
+subject to
+\[
+x^2+y^2=8,
+\qquad x,y\in\mathbb R?
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $2$
+\item $4$
+\item $8$
+\item $16$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+For each positive integer $n$, define
+\[
+f_n(x)=x^n,\qquad x\in[0,1].
+\]
+Which of the following is true?
+\begin{enumerate}[label=(\Alph*)]
+\item $(f_n)$ converges uniformly on $[0,1]$.
+\item $(f_n)$ converges pointwise but not
+uniformly on $[0,1]$.
+\item $(f_n)$ does not converge pointwise
+at $x=1$.
+\item $(f_n)$ converges uniformly on $(0,1)$.
+\item The pointwise limit is continuous on $[0,1]$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $f$ be holomorphic on the open unit disk
+and continuous on its closure. Suppose
+\[
+|f(z)|\leq3\qquad (|z|=1),
+\]
+and $f(0)=3$.
+
+Which of the following must hold?
+\begin{enumerate}[label=(\Alph*)]
+\item $f(z)=3$ for all $|z|<1$.
+\item $f(z)=3z$ for all $|z|<1$.
+\item $f(z)=-3$ for all $|z|<1$.
+\item $f$ has a zero in the open unit disk.
+\item $|f(z)|<3$ for all $|z|<1$.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). This is maximum modulus principle. Precisely, the analytic conditions of $f$
+allow us to apply it, and the principle states that 
+\[
+\max_{|z| \leq 1} |f(z)| = \max_{|z| = 1} |f(z)|.
+\]
+Since an interior point of the unit disk achieves the maximum modulus, the 
+local maximum modulus principle implies that $f$ is constant on the do
+\end{solution}
+
+\begin{exercise}
+Let
+\[
+A=
+\begin{pmatrix}
+2&1&0\\
+0&2&1\\
+0&0&2
+\end{pmatrix}.
+\]
+What is the minimal polynomial of $A$?
+\begin{enumerate}[label=(\Alph*)]
+\item $(t-2)$
+\item $(t-2)^2$
+\item $(t-2)^3$
+\item $(t-2)^4$
+\item $t^3-8$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). This is the Jordan block $J_3(2)$, but calculating directly is easier.
+\end{solution}
+
+\begin{exercise}
+Consider the series
+\[
+\sum_{n=1}^{\infty}
+\left(\frac{n}{n+1}\right)^{n^2}.
+\]
+Which of the following is correct?
+\begin{enumerate}[label=(\Alph*)]
+\item The series converges absolutely.
+\item The series converges conditionally.
+\item The series diverges to $+\infty$.
+\item The terms do not converge to zero.
+\item The root test is inconclusive.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). Use the root test: 
+\[
+\lim_{n \rightarrow \infty} \left|\sqrt[n]{\left(\frac{n}{n + 1}\right)^{n^2}} \right|
+= \lim_{n \rightarrow \infty} \left|\left(\frac{n}{n + 1}\right)^n\right|
+= e^{-1}
+\]
+since $e^{-1} < 1$, it converges absolutely.
+\end{solution}
+\begin{remark}
+Note that 
+\[
+e = \lim_{n \rightarrow \infty} \left(1 + \frac{1}{n}\right)^n.
+\]
+\end{remark}
+
+\begin{exercise}
+Let $y$ satisfy
+\[
+y'=y(1-y),
+\qquad y(0)=\frac12.
+\]
+What is $y(\log3)$?
+\begin{enumerate}[label=(\Alph*)]
+\item $\frac14$
+\item $\frac13$
+\item $\frac12$
+\item $\frac34$
+\item $\frac9{10}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(D). First divide and split:
+\[
+\frac{1}{y} + \frac{1}{1 - y} dy = dx,
+\]
+which gives $\ln|\frac{y}{1-y}| = x + C$.
+Now, $C = \ln 1 = 0$. When $x = \ln(3)$, we get $y = \frac{3}{4}$.
+\end{solution}
+
+\begin{exercise}
+Let
+\[
+\mathbf F(x,y,z)=(yz,xz,xy),
+\]
+and let $C$ be the circle
+\[
+x^2+y^2=1,\qquad z=1,
+\]
+oriented counterclockwise as viewed from above. Evaluate
+\[
+\oint_C\mathbf F\cdot d\mathbf r.
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $\pi$
+\item $2\pi$
+\item $-2\pi$
+\item $4\pi$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). We note that $\R^3$ is simply connected and $C$ is a closed curve, and
+$\mathbf{F}$ is a continuously differnetiable vector field. Further,
+$\mathbf{F} = \nabla f$, where $f(x,y,z) = xyz$. Thus, $\mathbf{F}$ is a conservative 
+vector field, so the integral is zero.
+\end{solution}
+
+\begin{exercise}
+Let $G$ be a group of order $21$.
+Which of the following must be true?
+\begin{enumerate}[label=(\Alph*)]
+\item $G$ has a normal Sylow $7$-subgroup.
+\item $G$ has a normal Sylow $3$-subgroup.
+\item $G$ is cyclic.
+\item $G$ is simple.
+\item $G$ is abelian.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). By Sylow III, $n_7 \mid 3$ and $n_7 \equiv 1 \pmod{7}$. This forces 
+$n_7 = 1$, so $n_7$ is normal.
+\end{solution}
+
+\begin{exercise}
+A fair coin is tossed repeatedly and independently until the first head appears.
+What is the expected number of tosses?
+\begin{enumerate}[label=(\Alph*)]
+\item $1$
+\item $\frac32$
+\item $2$
+\item $3$
+\item $4$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). We have
+\[
+\E[X] = \sum_{n = 1}^{\infty} n \cdot \frac{1}{2^n}
+\]
+Now, note that 
+\[
+\sum_{n \geq 1} nx^n = \frac{x}{(1-x)^2}
+\]
+because
+\[
+\sum_{n \geq 1} nx^{n - 1} = \Dfrac{}{x} \sum_{n \geq 1} x^n
+= \Dfrac{}{x} \frac{1}{1-x} = \frac{1}{(1-x)^2}.
+\]
+We're missng a power of $x$, so we multiply by $x$.
+$x = \frac{1}{2}$ in our case, so 
+\[
+\E[X] = \frac{1}{2} \cdot \frac{1}{\frac{1}{4}} = 2.
+\]
+\end{solution}
+
+\begin{exercise}
+Consider the statement
+\[
+\forall x\in\mathbb R\;
+\exists y\in\mathbb R
+\quad x<y.
+\]
+Which of the following is its logical
+negation?
+\begin{enumerate}[label=(\Alph*)]
+\item $\forall x\in\mathbb R\;
+\forall y\in\mathbb R,\ x\geq y$
+\item $\exists x\in\mathbb R\;
+\forall y\in\mathbb R,\ x\geq y$
+\item $\forall x\in\mathbb R\;
+\exists y\in\mathbb R,\ x\geq y$
+\item $\exists x\in\mathbb R\;
+\exists y\in\mathbb R,\ x\geq y$
+\item $\exists y\in\mathbb R\;
+\forall x\in\mathbb R,\ x\geq y$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(B).
+\end{solution}
+
+\begin{exercise}
+The region bounded by
+\[
+y=\sqrt{x},\qquad y=0,\qquad x=4
+\]
+is revolved around the $x$-axis. What is the volume of the resulting solid?
+\begin{enumerate}[label=(\Alph*)]
+\item $4\pi$
+\item $6\pi$
+\item $8\pi$
+\item $12\pi$
+\item $16\pi$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). The desired integral is 
+\[
+\pi\int_0^4 x dx = \pi \cdot \frac{16}{2} = 8\pi.
+\]
+\end{solution}
+
+\begin{exercise}
+For each positive integer $n$, let
+\[
+f_n(x)=\frac{x}{1+nx},
+\qquad x\in[0,1].
+\]
+Which of the following holds?
+\begin{enumerate}[label=(\Alph*)]
+\item $f_n\to0$ uniformly on $[0,1]$.
+\item $f_n\to0$ pointwise but not uniformly.
+\item $f_n\to1$ uniformly on $[0,1]$.
+\item $(f_n)$ fails to converge at $x=0$.
+\item $(f_n)$ has no pointwise limit.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). When $x = 0$, sequence tends to $0$. When $x \neq 0$, $x$ is positive, so
+\[
+f_n(x) = \frac{1}{\frac{1}{x} + n}.
+\] 
+Sending $n \rightarrow \infty$, $f_n(x) \rightarrow 0$. We check uniform convergence.
+Since $f_n(x) = 0$, we consider $x \neq 0$. Then, 
+\[
+\left|\frac{x}{1 + nx} \right| \leq \frac{1}{n},
+\]
+so
+\[
+\sup_{x \in [0,1]} \left|\frac{x}{1 + nx} \right| \leq \frac{1}{n},
+\]
+whose limit tends to $0$. Thus, we're done.
+\end{solution}
+
+\begin{exercise}
+Let $A$ be a $3\times3$ complex matrix
+with characteristic polynomial
+\[
+\chi_A(t)=(t-2)^2(t+1)
+\]
+and minimal polynomial
+\[
+m_A(t)=(t-2)(t+1).
+\]
+Which of the following must be true?
+\begin{enumerate}[label=(\Alph*)]
+\item $A$ is diagonalizable over $\mathbb C$.
+\item $A$ is not diagonalizable.
+\item $A$ is singular.
+\item $A$ is nilpotent.
+\item $A=2I_3$.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(A). The minimum polynomial is a product of distinct linear factors.
+\end{solution}
+
+\begin{exercise}
+For which real numbers $p$ does the series
+\[
+\sum_{n=2}^{\infty}
+\frac{1}{n(\log n)^p}
+\]
+converge?
+\begin{enumerate}[label=(\Alph*)]
+\item $p>0$
+\item $p\geq1$
+\item $p>1$
+\item $p\geq0$
+\item All $p\in\mathbb R$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+(C). Use integral test. We can use 
+\[
+\int_2^{\infty} \frac{1}{x(\log x)^p} dx.
+\]
+This is positive, decreasing, and fits the series.
+For this, we can $u$-sub and integrate to get
+\[
+\frac{1}{-p+1}\frac{1}{(\log x)^{p - 1}}, \qquad p \neq 1.
+\]
+The evaluation at $2$ isn't scary, but the $\infty$ is. This requires 
+$p > 1$. What about $p = 1$? The integral is now $\log (\log x)$, but this clearly diverges.
+\end{solution}
+
+\begin{exercise}
+Let
+\[
+f(z)=\frac{z^2+1}{(z-1)(z+3)}
+\]
+and let $C$ be the positively oriented
+circle $|z|=2$.
+
+Evaluate
+\[
+\frac{1}{2\pi i}
+\oint_C\frac{f'(z)}{f(z)}\,dz.
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $-1$
+\item $0$
+\item $1$
+\item $2$
+\item $3$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+How many distinct arrangements of the
+letters of the word
+\[
+\text{BANANA}
+\]
+are there?
+\begin{enumerate}[label=(\Alph*)]
+\item $30$
+\item $60$
+\item $90$
+\item $120$
+\item $180$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let
+\[
+h(x)=\int_1^{x^2}e^{-t^2}\,dt.
+\]
+What is $h'(1)$?
+\begin{enumerate}[label=(\Alph*)]
+\item $e^{-1}$
+\item $2e^{-1}$
+\item $2e^{-2}$
+\item $e^{-2}$
+\item $0$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $A$ be a real $4\times4$ matrix
+whose characteristic polynomial is
+\[
+\chi_A(t)=(t^2+1)^2
+\]
+and whose minimal polynomial is
+\[
+m_A(t)=t^2+1.
+\]
+Which of the following must be true?
+\begin{enumerate}[label=(\Alph*)]
+\item $A$ is diagonalizable over $\mathbb R$.
+\item $A$ is diagonalizable over $\mathbb C$.
+\item $0$ is an eigenvalue of $A$.
+\item $\det A=-1$.
+\item $A$ is nilpotent.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $X=S^1\vee S^1$ be the wedge sum of
+two circles at a single point.
+
+Which group is isomorphic to $\pi_1(X)$?
+\begin{enumerate}[label=(\Alph*)]
+\item The trivial group.
+\item $\mathbb Z$
+\item $\mathbb Z\times\mathbb Z$
+\item $\mathbb Z/2\mathbb Z$
+\item The free group on two generators.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let
+\[
+\mathbf F(x,y,z)
+=
+(x^2y,y^2z,z^2x).
+\]
+What is
+\[
+(\nabla\cdot\mathbf F)(1,2,3)?
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $11$
+\item $16$
+\item $20$
+\item $22$
+\item $24$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $y:\mathbb R\to\mathbb R$ satisfy
+\[
+y''-3y'+2y=0,
+\qquad
+y(0)=0,\quad y'(0)=1.
+\]
+What is $y(x)$?
+\begin{enumerate}[label=(\Alph*)]
+\item $e^{2x}+e^x$
+\item $e^{2x}-e^x$
+\item $e^x-e^{2x}$
+\item $xe^x$
+\item $\sinh x$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $X\sim\operatorname{Bin}(5,\frac12)$.
+What is
+\[
+P(X\geq4)?
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $\frac1{16}$
+\item $\frac3{16}$
+\item $\frac5{16}$
+\item $\frac14$
+\item $\frac12$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Evaluate
+\[
+\lim_{n\to\infty}
+n\left(\sqrt{n^2+1}-n\right).
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $\frac14$
+\item $\frac12$
+\item $1$
+\item $+\infty$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Define $f:\mathbb R\to\mathbb R$ by
+\[
+f(x)=
+\begin{cases}
+1,&x\in\mathbb Q,\\
+0,&x\notin\mathbb Q.
+\end{cases}
+\]
+At which points is $f$ continuous?
+\begin{enumerate}[label=(\Alph*)]
+\item Every rational point.
+\item Every irrational point.
+\item Only at $x=0$.
+\item Every point of $\mathbb R$.
+\item No points of $\mathbb R$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $G$ be a group of order $35$.
+Which of the following must be true?
+\begin{enumerate}[label=(\Alph*)]
+\item $G$ is cyclic.
+\item $G$ is nonabelian.
+\item $G$ has exactly two Sylow $5$-subgroups.
+\item $G$ is simple.
+\item $G$ is isomorphic to
+$\mathbb Z/5\mathbb Z\times\mathbb Z/5\mathbb Z$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Consider the alternating harmonic series
+\[
+\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}n.
+\]
+Which of the following statements is true?
+\begin{enumerate}[label=(\Alph*)]
+\item Every rearrangement has the same sum.
+\item There exists a rearrangement
+that converges to $7$.
+\item Every rearrangement converges.
+\item The series converges absolutely.
+\item Every convergent rearrangement
+has a nonnegative sum.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let
+\[
+A=\begin{pmatrix}0&1\\0&0\end{pmatrix}.
+\]
+What is the matrix exponential $e^A$?
+\begin{enumerate}[label=(\Alph*)]
+\item $\begin{pmatrix}1&0\\0&1\end{pmatrix}$
+\item $\begin{pmatrix}1&1\\0&1\end{pmatrix}$
+\item $\begin{pmatrix}e&1\\0&e\end{pmatrix}$
+\item $\begin{pmatrix}0&e\\0&0\end{pmatrix}$
+\item $\begin{pmatrix}e&e\\0&e\end{pmatrix}$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let
+\[
+\mathbf F(x,y,z)=
+\left(-\frac y2,\frac x2,0\right).
+\]
+Let $S$ be the portion of the plane
+\[
+x+y+z=2
+\]
+in the first octant, oriented with an
+upward-pointing normal. Let $C=\partial S$
+have the induced orientation.
+
+Evaluate
+\[
+\oint_C\mathbf F\cdot d\mathbf r.
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $1$
+\item $2$
+\item $4$
+\item $6$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Consider the function
+\[
+f(z)=z^2\sin\left(\frac1z\right).
+\]
+How is the isolated singularity at
+$z=0$ classified?
+\begin{enumerate}[label=(\Alph*)]
+\item Removable singularity.
+\item Simple pole.
+\item Pole of order $2$.
+\item Essential singularity.
+\item No singularity; $f$ extends
+holomorphically with a zero at $0$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $P$ and $Q$ be propositions.
+Which of the following is logically
+equivalent to
+\[
+(P\Rightarrow Q)\land
+(P\Rightarrow\neg Q)?
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $P$
+\item $Q$
+\item $\neg Q$
+\item $\neg P$
+\item $P\land Q$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let
+\[
+F(x)=\int_0^x|t|\,dt,
+\qquad x\in\mathbb R.
+\]
+Which of the following is true?
+\begin{enumerate}[label=(\Alph*)]
+\item $F$ is not continuous at $0$.
+\item $F'(0)$ does not exist.
+\item $F''(0)$ exists and equals $0$.
+\item $F'$ is continuous everywhere
+but is not differentiable at $0$.
+\item $F''$ exists everywhere.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let
+\[
+K=\{0\}\cup
+\left\{\frac1n:n\in\mathbb N,\ n\geq1\right\}
+\subseteq\mathbb R
+\]
+with the usual topology.
+
+Which of the following is true?
+\begin{enumerate}[label=(\Alph*)]
+\item $K$ is open in $\mathbb R$.
+\item $K$ is compact.
+\item $K$ is connected.
+\item $K$ has no limit points.
+\item $K$ is uncountable.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+A permutation $\sigma$ of
+$\{1,2,3,4\}$ is called a derangement
+if $\sigma(i)\neq i$ for every $i$.
+
+How many derangements of four elements
+are there?
+\begin{enumerate}[label=(\Alph*)]
+\item $6$
+\item $8$
+\item $9$
+\item $12$
+\item $18$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $A$ be a real $3\times3$ matrix
+satisfying
+\[
+A^2=I_3,
+\qquad \operatorname{tr}(A)=1.
+\]
+What is $\det A$?
+\begin{enumerate}[label=(\Alph*)]
+\item $-2$
+\item $-1$
+\item $0$
+\item $1$
+\item $2$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let
+\[
+\mathbf F(x,y)=(-y^2,x^2)
+\]
+and let $C$ be the positively oriented
+boundary of the square $[0,1]^2$.
+
+Evaluate
+\[
+\oint_C -y^2\,dx+x^2\,dy.
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $1$
+\item $2$
+\item $3$
+\item $4$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $y$ satisfy
+\[
+y'=2xy^2,
+\qquad y(0)=1.
+\]
+What is $y(\frac12)$?
+\begin{enumerate}[label=(\Alph*)]
+\item $\frac34$
+\item $1$
+\item $\frac43$
+\item $\frac32$
+\item $2$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Define the real sequence
+\[
+a_n=\sum_{k=1}^{n}\frac1{k(k+1)}.
+\]
+What is
+\[
+\lim_{n\to\infty}a_n?
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $\frac12$
+\item $1$
+\item $2$
+\item The limit does not exist.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+How many isomorphism classes of finite
+abelian groups of order $72$ are there?
+\begin{enumerate}[label=(\Alph*)]
+\item $3$
+\item $4$
+\item $5$
+\item $6$
+\item $8$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $f$ be holomorphic on
+\[
+D=\{z\in\mathbb C:|z|<2\}
+\]
+and suppose
+\[
+|f(z)|\leq10
+\qquad\text{for every }z\in D.
+\]
+What is the largest possible value
+of $|f''(0)|$?
+\begin{enumerate}[label=(\Alph*)]
+\item $\frac52$
+\item $5$
+\item $10$
+\item $20$
+\item $40$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $(a_n)$ be a sequence of real numbers
+and let $L\in\mathbb R$.
+
+Which of the following is the logical
+negation of
+\[
+\forall\varepsilon>0\;
+\exists N\in\mathbb N\;
+\forall n\geq N,\quad
+|a_n-L|<\varepsilon?
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $\exists\varepsilon>0\;
+\forall N\in\mathbb N\;
+\exists n\geq N:
+|a_n-L|\geq\varepsilon$
+
+\item $\forall\varepsilon>0\;
+\exists N\in\mathbb N\;
+\exists n\geq N:
+|a_n-L|\geq\varepsilon$
+
+\item $\exists\varepsilon>0\;
+\exists N\in\mathbb N\;
+\forall n\geq N:
+|a_n-L|\geq\varepsilon$
+
+\item $\forall\varepsilon>0\;
+\forall N\in\mathbb N\;
+\exists n\geq N:
+|a_n-L|\geq\varepsilon$
+
+\item $\exists\varepsilon>0\;
+\exists n\in\mathbb N:
+|a_n-L|\geq\varepsilon$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Evaluate the improper integral
+\[
+\int_0^1 x\log x\,dx.
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $-1$
+\item $-\frac12$
+\item $-\frac14$
+\item $0$
+\item $\frac14$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $V=\mathbb R[x]_{\leq4}$ be the
+vector space of real polynomials of
+degree at most $4$. Define
+\[
+D:V\to V,\qquad D(p)=p'.
+\]
+
+What is the minimal polynomial of $D$?
+\begin{enumerate}[label=(\Alph*)]
+\item $t$
+\item $t^2$
+\item $t^3$
+\item $t^4$
+\item $t^5$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Consider the series
+\[
+\sum_{n=1}^{\infty}
+\left(\frac{n+1}{2n+1}\right)^n.
+\]
+Which of the following is true?
+\begin{enumerate}[label=(\Alph*)]
+\item It converges by the root test.
+\item It diverges because its terms
+approach $\frac12$.
+\item It converges conditionally.
+\item It diverges by comparison with
+the harmonic series.
+\item The root test is inconclusive.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+What is the fundamental group of the
+real projective plane $\mathbb{RP}^2$?
+\begin{enumerate}[label=(\Alph*)]
+\item The trivial group.
+\item $\mathbb Z$
+\item $\mathbb Z/2\mathbb Z$
+\item $\mathbb Z\times\mathbb Z$
+\item The free group on two generators.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $X$ be a compact topological space,
+$Y$ a Hausdorff topological space,
+and $f:X\to Y$ a continuous bijection.
+
+Which of the following must be true?
+\begin{enumerate}[label=(\Alph*)]
+\item $f$ is a homeomorphism.
+\item $X$ and $Y$ are simply connected.
+\item $X$ is finite.
+\item $f$ is a contraction.
+\item $Y$ is connected.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $\mathbf F(x,y,z)=(x,y,z)$.
+Let $S$ be the ellipsoid
+\[
+\frac{x^2}{4}+y^2+\frac{z^2}{9}=1
+\]
+oriented outward.
+
+What is
+\[
+\iint_S\mathbf F\cdot\mathbf n\,dS?
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $6\pi$
+\item $8\pi$
+\item $12\pi$
+\item $18\pi$
+\item $24\pi$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $\sigma$ be chosen uniformly
+at random from the symmetric group $S_6$.
+
+Let $X$ be the number of fixed points
+of $\sigma$, i.e.,
+\[
+X=\#\{i\in\{1,\dots,6\}:\sigma(i)=i\}.
+\]
+
+What is $\mathbb E[X]$?
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $1$
+\item $2$
+\item $3$
+\item $6$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $J_k(0)$ denote the $k\times k$
+nilpotent Jordan block with eigenvalue $0$.
+
+Suppose $A$ is a $5\times5$ complex matrix
+whose Jordan canonical form is
+\[
+J_2(0)\oplus J_3(0).
+\]
+
+What is $\operatorname{rank}(A^2)$?
+\begin{enumerate}[label=(\Alph*)]
+\item $0$
+\item $1$
+\item $2$
+\item $3$
+\item $4$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+How many group homomorphisms are there
+from $\mathbb Z/12\mathbb Z$ to
+$\mathbb Z/18\mathbb Z$?
+\begin{enumerate}[label=(\Alph*)]
+\item $2$
+\item $3$
+\item $6$
+\item $12$
+\item $18$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+For which of the following open sets
+$U\subseteq\mathbb C$ does there exist
+a holomorphic function $g:U\to\mathbb C$
+such that
+\[
+e^{g(z)}=z
+\qquad\text{for every }z\in U?
+\]
+\begin{enumerate}[label=(\Alph*)]
+\item $\mathbb C\setminus\{0\}$
+\item $\{z:1<|z|<2\}$
+\item $\{z:\operatorname{Re}z>0\}$
+\item $\{z:0<|z|<1\}$
+\item $\mathbb C$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $A$ and $B$ be finite sets with
+\[
+|A|=4,\qquad |B|=3.
+\]
+
+How many surjective functions
+$f:A\to B$ are there?
+\begin{enumerate}[label=(\Alph*)]
+\item $24$
+\item $30$
+\item $36$
+\item $48$
+\item $54$
+\end{enumerate}
+\end{exercise}

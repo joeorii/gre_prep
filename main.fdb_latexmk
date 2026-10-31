@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1793410240 -1
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1793460395 -1
   "./references.bib" 1786898238 279 8e30965969931c4ea55601a886934924 ""
-  "main.bcf" 1793410240 107890 ae77a22361c07a6b0a1258ed37ee4bfd "pdflatex"
+  "main.bcf" 1793460394 107890 ae77a22361c07a6b0a1258ed37ee4bfd "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1793410238 "/Users/joeorii/Desktop/Folder/Math/projects/GRE_prep/gre_prep_mycode/main.tex" "main.pdf" "main" 1793410240 0
+["pdflatex"] 1793460393 "/Users/joeorii/Desktop/Folder/Math/projects/GRE_prep/gre_prep_mycode/main.tex" "main.pdf" "main" 1793460395 0
   "/Users/joeorii/Desktop/Folder/Math/projects/GRE_prep/gre_prep_mycode/main.tex" 1790491669 431 0cab5e321d51289617db44079dd822c1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -284,22 +284,22 @@
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1704623306 7883457 b13af6f197584bb69f5294d92356b1b8 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "ODE.tex" 1790488011 3451 2117b31a8e1452daf3eed5d72e2f107e ""
-  "anal_top.tex" 1793404676 11904 b24e96e83a35b19454400c7b35d54892 ""
+  "anal_top.tex" 1793459162 12912 555e1714524cad0b306ddb79a5bf197f ""
   "calc.tex" 1793113287 4827 e1e5752359d7a676efce10b22a5e4a0d ""
   "complexana.tex" 1793408112 11256 7897cae110ab6a928bee14de8174ef87 ""
   "groups.tex" 1793269293 6680 9585850bd6a0292e8666895b134c72d9 ""
-  "la.tex" 1793115587 15632 3b5dd71c9b6146c369f23896154398a1 ""
-  "main.aux" 1793410240 8664 f4f3d119b059cdc4eff3b8bc4582028a "pdflatex"
-  "main.bbl" 1793267239 1868 6b26ec6131afb651a1cf4be724e35004 "biber main"
-  "main.out" 1793410240 10019 9a63f72d8c24283869a50a10ca2794eb "pdflatex"
-  "main.run.xml" 1793410240 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "la.tex" 1793451803 15632 3b5dd71c9b6146c369f23896154398a1 ""
+  "main.aux" 1793460394 8791 9016264cd401a4697fd343cdee7d7b79 "pdflatex"
+  "main.bbl" 1793457010 1868 6b26ec6131afb651a1cf4be724e35004 "biber main"
+  "main.out" 1793460394 10129 d5bac959e94b04ceb4b3746e526732c1 "pdflatex"
+  "main.run.xml" 1793460394 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
   "main.tex" 1790491669 431 0cab5e321d51289617db44079dd822c1 ""
-  "main.toc" 1793410240 5307 79d6c2319b86322e26d7a765c1aaed96 "pdflatex"
-  "miscellanious.tex" 1793115210 1500 16e62493281e322dc33cfe6d1d5d38a2 ""
-  "mvc.tex" 1793410238 23614 afb5d083ca29be4e0c4f4928eb70bb31 ""
-  "obscure_mcq.tex" 1793409614 120808 150f58456c9729bc694e35fdc7377210 ""
+  "main.toc" 1793460394 5393 27cdd334f848eaf8046d8a18fa020c31 "pdflatex"
+  "miscellanious.tex" 1793453905 2902 e74bb14aea94af37bd9393d73e1b783d ""
+  "mvc.tex" 1793453094 29474 6dcd84984e35b8a5e5c7e9e81f52b67b ""
+  "obscure_mcq.tex" 1793460393 145077 735c9eb04070c96ffe08f2338f53cb81 ""
   "prob_stats.tex" 1793319070 19201 e468382c534a2ec6edf8624896965b05 ""
-  "specifics.tex" 1793227122 4686 67022b540d8c8c3dcf3d1fce16e2156c ""
+  "specifics.tex" 1793453801 4716 6af22a023fc6127ceb34adddc352f5d3 ""
   (generated)
   "main.aux"
   "main.bcf"
